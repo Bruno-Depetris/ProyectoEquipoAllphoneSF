@@ -13,8 +13,9 @@ namespace ProyectoAllphoneSF {
         public Form1() {
             InitializeComponent();
         }
-        private void LimpiarCampos() {
-
+        private void LimpiarCampos()
+        {
+            string factos = "Bruno gay";   
         }
 
         private void Form1_Load(object sender, EventArgs e)
