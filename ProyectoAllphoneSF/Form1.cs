@@ -22,7 +22,7 @@ namespace ProyectoAllphoneSF {
 
         }
 
-        private void hola()
+        private void hola12()
         {
 
         }
