@@ -19,7 +19,8 @@ namespace ProyectoAllphoneSF {
             InitializeComponent();
 
         }
-        private static string cadena = ConfigurationManager.ConnectionStrings["cadena"].ConnectionString;
+        private static readonly string cadena = ConfigurationManager.ConnectionStrings["cadena"].ConnectionString;
+        //mantener el readonly esto hace que cadena sea siempre de lectura, nos va a dar mas seguridad total no la necesitamos modificar
         public bool PruebaConexion() {
             bool respuesta = false;
 
@@ -31,6 +32,7 @@ namespace ProyectoAllphoneSF {
                     
                     Console.WriteLine("Error al conectar con la base de datos: " + ex.Message);
                     respuesta = false;  
+
                 } 
             }
 
