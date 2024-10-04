@@ -16,7 +16,7 @@ namespace ProyectoAllphoneSF {
         }
         private void LimpiarCampos()
         {
-            string factos = "Bruno gay";   
+            string factos = "mati gay";   
              factos += "y le gusta el miembro";   
         }
         private void datos() {
