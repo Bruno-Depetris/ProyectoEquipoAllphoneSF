@@ -13,5 +13,8 @@ namespace ProyectoAllphoneSF {
         public Form1() {
             InitializeComponent();
         }
+        private void LimpiarCampos() {
+
+        }
     }
 }
