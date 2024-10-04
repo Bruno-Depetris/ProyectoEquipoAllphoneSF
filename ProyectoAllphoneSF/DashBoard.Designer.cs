@@ -1,5 +1,5 @@
 ﻿namespace ProyectoAllphoneSF {
-    partial class Form1 {
+    partial class DashBoard {
         /// <summary>
         /// Variable del diseñador necesaria.
         /// </summary>
@@ -23,21 +23,35 @@
         /// el contenido de este método con el editor de código.
         /// </summary>
         private void InitializeComponent() {
+            this.label_EstadoBaseDatos = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // Form1
+            // label_EstadoBaseDatos
+            // 
+            this.label_EstadoBaseDatos.AutoSize = true;
+            this.label_EstadoBaseDatos.Location = new System.Drawing.Point(245, 92);
+            this.label_EstadoBaseDatos.Name = "label_EstadoBaseDatos";
+            this.label_EstadoBaseDatos.Size = new System.Drawing.Size(35, 13);
+            this.label_EstadoBaseDatos.TabIndex = 0;
+            this.label_EstadoBaseDatos.Text = "label1";
+            // 
+            // DashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "Form1";
+            this.Controls.Add(this.label_EstadoBaseDatos);
+            this.Name = "DashBoard";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Label label_EstadoBaseDatos;
     }
 }
 
