@@ -14,9 +14,15 @@ namespace ProyectoAllphoneSF {
             InitializeComponent();
 
         }
-        private void LimpiarCampos() {
+        private void LimpiarCampos()
+        {
+            string factos = "Bruno gay";   
+             factos += "y le gusta el miembro";   
+        }
+        private void datos() {
 
         }
+
 
         private void CargarCosas() {
 
