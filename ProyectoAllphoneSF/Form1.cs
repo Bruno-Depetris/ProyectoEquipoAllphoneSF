@@ -16,6 +16,10 @@ namespace ProyectoAllphoneSF {
         private void LimpiarCampos() {
 
         }
+        private void datos() {
+
+        }
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
