@@ -6,5 +6,8 @@ using System.Threading.Tasks;
 
 namespace ProyectoAllphoneSF.MODELO {
     internal class TiposProductos {
+        public int TipoID { get; set; }    
+        public int NombreTipo { get; set; }    
+
     }
 }

@@ -83,6 +83,10 @@
       <DependentUpon>DashBoard.cs</DependentUpon>
     </Compile>
     <Compile Include="LOGICA\LogicaCliente.cs" />
+    <Compile Include="LOGICA\LogicaDatosCompra.cs" />
+    <Compile Include="LOGICA\LogicaProducto.cs" />
+    <Compile Include="LOGICA\LogicaTipoProducto.cs" />
+    <Compile Include="LOGICA\LogicaZona.cs" />
     <Compile Include="MODELO\Caja .cs" />
     <Compile Include="MODELO\Cliente.cs" />
     <Compile Include="MODELO\DatosCompra .cs" />

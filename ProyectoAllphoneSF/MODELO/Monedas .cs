@@ -6,5 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoAllphoneSF.MODELO {
     internal class Monedas {
+        int MonedaID { get; set; }
+        string MonedaName { get; set; }
     }
 }
