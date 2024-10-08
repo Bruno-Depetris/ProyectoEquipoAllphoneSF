@@ -19,37 +19,5 @@ namespace ProyectoAllphoneSF {
             InitializeComponent();
 
         }
-        private static readonly string cadena = ConfigurationManager.ConnectionStrings["cadena"].ConnectionString;
-        //mantener el readonly esto hace que cadena sea siempre de lectura, nos va a dar mas seguridad total no la necesitamos modificar
-        public bool PruebaConexion() {
-            bool respuesta = false;
-
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena)) {
-                try {
-                    conexion.Open();
-                    respuesta = true;
-                } catch (Exception ex) {
-                    
-                    Console.WriteLine("Error al conectar con la base de datos: " + ex.Message);
-                    respuesta = false;  
-
-                } 
-            }
-
-            return respuesta;
-        }
-    
-    private void Form1_Load(object sender, EventArgs e)
-        {
-            if (PruebaConexion()) {
-                label_EstadoBaseDatos.Text = "Conectada";
-                label_EstadoBaseDatos.ForeColor = System.Drawing.Color.Green;
-            } else {
-                label_EstadoBaseDatos.Text = "Desconectada";
-                label_EstadoBaseDatos.ForeColor = System.Drawing.Color.Red;
-            }
-
-
-        }
     }
 }
