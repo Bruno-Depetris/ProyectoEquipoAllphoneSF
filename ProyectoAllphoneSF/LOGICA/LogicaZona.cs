@@ -29,12 +29,7 @@ namespace ProyectoAllphoneSF.LOGICA {
         }
 
 
-        public bool CargarZona(Cliente cli) {
 
-
-
-
-        }
 
     }
 }

@@ -16,7 +16,8 @@
             base.Dispose(disposing);
         }
 
-        #region Código generado por el Diseñador de Windows Forms
+                 
+#region Código generado por el Diseñador de Windows Forms
 
         /// <summary>
         /// Método necesario para admitir el Diseñador. No se puede modificar
@@ -29,7 +30,7 @@
             // label_EstadoBaseDatos
             // 
             this.label_EstadoBaseDatos.AutoSize = true;
-            this.label_EstadoBaseDatos.Location = new System.Drawing.Point(245, 92);
+            this.label_EstadoBaseDatos.Location = new System.Drawing.Point(249, 95);
             this.label_EstadoBaseDatos.Name = "label_EstadoBaseDatos";
             this.label_EstadoBaseDatos.Size = new System.Drawing.Size(35, 13);
             this.label_EstadoBaseDatos.TabIndex = 0;
@@ -50,8 +51,8 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label_EstadoBaseDatos;
+        
+private System.Windows.Forms.Label label_EstadoBaseDatos;
     }
 }
 

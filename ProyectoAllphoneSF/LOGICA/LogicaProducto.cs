@@ -17,17 +17,13 @@ namespace ProyectoAllphoneSF.LOGICA {
 
         private static LogicaProducto _logicaProducto;
 
-        public LogicaProducto()
-        {
+        public LogicaProducto() {
 
         }
 
-        public static LogicaProducto Instancia
-        {
-            get
-            {
-                if (_logicaProducto == null)
-                {
+        public static LogicaProducto Instancia {
+            get {
+                if (_logicaProducto == null) {
                     _logicaProducto = new LogicaProducto();
 
                 }
@@ -35,12 +31,10 @@ namespace ProyectoAllphoneSF.LOGICA {
             }
         }
 
-        public bool cargarProducto (Productos produc)
-        {
+        public bool cargarProducto(Productos produc) {
             bool respuesta = false;
 
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena)) {
                 conexion.Open();
 
 
@@ -55,8 +49,7 @@ namespace ProyectoAllphoneSF.LOGICA {
                 cmd.Parameters.Add(new SQLiteParameter("@Stock", produc.Stock));
 
 
-                if (cmd.ExecuteNonQuery() < 1)
-                {
+                if (cmd.ExecuteNonQuery() < 1) {
                     Console.WriteLine("Error Logica CARGAR PRODUCTO");
                     return respuesta;
                 }
@@ -67,12 +60,10 @@ namespace ProyectoAllphoneSF.LOGICA {
             return respuesta = true;
         }
 
-        public bool EliminarProducto(Productos produc)
-        {
+        public bool EliminarProducto(Productos produc) {
             bool respuesta = false;
 
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena)) {
                 conexion.Open();
 
 
@@ -84,8 +75,7 @@ namespace ProyectoAllphoneSF.LOGICA {
 
                 cmd.Parameters.Add(new SQLiteParameter("@ProductoID", produc.ProductoID));
 
-                if (cmd.ExecuteNonQuery() < 1)
-                {
+                if (cmd.ExecuteNonQuery() < 1) {
                     Console.WriteLine("Error al borrar Producto");
                     return respuesta;
                 }
@@ -95,12 +85,10 @@ namespace ProyectoAllphoneSF.LOGICA {
             return respuesta = true;
         }
 
-        public bool EditarProducto(Productos produc)
-        {
+        public bool EditarProducto(Productos produc) {
             bool respuesta = false;
 
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena)) {
                 conexion.Open();
 
 
@@ -116,8 +104,7 @@ namespace ProyectoAllphoneSF.LOGICA {
                 cmd.Parameters.Add(new SQLiteParameter("@Stock", produc.Stock));
 
 
-                if (cmd.ExecuteNonQuery() < 1)
-                {
+                if (cmd.ExecuteNonQuery() < 1) {
                     Console.WriteLine("Error Logica EDITAR PRODUCTO");
                     return respuesta;
                 }
@@ -128,13 +115,11 @@ namespace ProyectoAllphoneSF.LOGICA {
             return respuesta = true;
         }
 
-        public List<Productos> ListarCliente(Productos produc)
-        {
+        public List<Productos> ListarCliente(Productos produc) {
 
             List<Productos> DatosProductos = new List<Productos>();
 
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena)) {
                 conexion.Open();
 
                 string query = "SELECT ProductoID,Nombre,TipoID,PrecioCosto,PrecioVenta,Stock";
@@ -142,14 +127,11 @@ namespace ProyectoAllphoneSF.LOGICA {
 
                 SQLiteCommand cmd = new SQLiteCommand(query, conexion);
 
-                using (SQLiteDataReader reader = cmd.ExecuteReader())
-                {
+                using (SQLiteDataReader reader = cmd.ExecuteReader()) {
 
-                    while (reader.Read())
-                    {
+                    while (reader.Read()) {
 
-                        DatosProductos.Add(new Productos()
-                        {
+                        DatosProductos.Add(new Productos() {
 
                             ProductoID = int.Parse(reader["ProductoID"].ToString()),
                             Nombre = reader["Nombre"].ToString(),
@@ -165,5 +147,7 @@ namespace ProyectoAllphoneSF.LOGICA {
 
                 }
             }
+        }
+    }
     
 }
