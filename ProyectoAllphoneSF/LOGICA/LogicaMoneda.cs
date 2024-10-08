@@ -105,7 +105,7 @@ namespace ProyectoAllphoneSF.LOGICA {
             }
             return respuesta=true;
         }
-        public List<Monedas> ListarMoneda(Productos produc)
+        public List<Monedas> ListarMoneda(Monedas mon)
         {
 
             List<Monedas> DatosMonedas = new List<Monedas>();
