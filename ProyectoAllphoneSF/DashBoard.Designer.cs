@@ -24,16 +24,17 @@
         /// el contenido de este método con el editor de código.
         /// </summary>
         private void InitializeComponent() {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashBoard));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel_Contenedor = new System.Windows.Forms.Panel();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.Lbl_Dashboard = new System.Windows.Forms.Label();
@@ -50,6 +51,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.lbl_Ventas = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
@@ -60,15 +62,13 @@
             this.btn_GestionarStock = new System.Windows.Forms.Button();
             this.btn_CargarCliente = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel3.SuspendLayout();
             this.panel_Contenedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -149,6 +149,33 @@
             this.panel_Contenedor.Size = new System.Drawing.Size(619, 450);
             this.panel_Contenedor.TabIndex = 6;
             this.panel_Contenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Contenedor_Paint);
+            this.panel_Contenedor.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_Contenedor_MouseDown);
+            // 
+            // chart1
+            // 
+            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Enabled = false;
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(297, 70);
+            this.chart1.Name = "chart1";
+            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            this.chart1.PaletteCustomColors = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(85)))), ((int)(((byte)(141))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(146)))), ((int)(((byte)(213))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(201)))), ((int)(((byte)(239))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(218)))), ((int)(((byte)(216))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(234)))), ((int)(((byte)(233)))))};
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(300, 300);
+            this.chart1.TabIndex = 15;
+            this.chart1.Text = "chart1";
             // 
             // button6
             // 
@@ -163,6 +190,7 @@
             this.button6.TabIndex = 14;
             this.button6.Text = "-";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click_1);
             // 
             // button5
             // 
@@ -177,6 +205,7 @@
             this.button5.TabIndex = 13;
             this.button5.Text = "X";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
             // 
             // Lbl_Dashboard
             // 
@@ -318,6 +347,18 @@
             this.panel1.Size = new System.Drawing.Size(181, 450);
             this.panel1.TabIndex = 4;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(181, 97);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // button4
             // 
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -332,6 +373,7 @@
             this.button4.TabIndex = 7;
             this.button4.Text = "Configuraciones";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // panel2
             // 
@@ -356,8 +398,9 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(181, 37);
             this.button3.TabIndex = 8;
-            this.button3.Text = "Estadistica 1";
+            this.button3.Text = "Zonas";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -371,8 +414,9 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(181, 40);
             this.button2.TabIndex = 7;
-            this.button2.Text = "Estadistica 2";
+            this.button2.Text = "Monetarias";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -386,8 +430,9 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(181, 40);
             this.button1.TabIndex = 6;
-            this.button1.Text = "Estadistica 1";
+            this.button1.Text = "Zonas";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btn_Estadisticas
             // 
@@ -403,6 +448,7 @@
             this.btn_Estadisticas.TabIndex = 5;
             this.btn_Estadisticas.Text = "Estadisticas";
             this.btn_Estadisticas.UseVisualStyleBackColor = true;
+            this.btn_Estadisticas.Click += new System.EventHandler(this.btn_Estadisticas_Click);
             // 
             // btn_MovimientosCaja
             // 
@@ -418,6 +464,7 @@
             this.btn_MovimientosCaja.TabIndex = 3;
             this.btn_MovimientosCaja.Text = "Movimientos Caja";
             this.btn_MovimientosCaja.UseVisualStyleBackColor = true;
+            this.btn_MovimientosCaja.Click += new System.EventHandler(this.btn_MovimientosCaja_Click);
             // 
             // btn_GestionarStock
             // 
@@ -433,6 +480,7 @@
             this.btn_GestionarStock.TabIndex = 2;
             this.btn_GestionarStock.Text = "Gestionar Stock";
             this.btn_GestionarStock.UseVisualStyleBackColor = true;
+            this.btn_GestionarStock.Click += new System.EventHandler(this.btn_GestionarStock_Click);
             // 
             // btn_CargarCliente
             // 
@@ -449,6 +497,7 @@
             this.btn_CargarCliente.TabIndex = 1;
             this.btn_CargarCliente.Text = "Cargar Cliente";
             this.btn_CargarCliente.UseVisualStyleBackColor = true;
+            this.btn_CargarCliente.Click += new System.EventHandler(this.btn_CargarCliente_Click);
             // 
             // pictureBox1
             // 
@@ -461,42 +510,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(181, 97);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
-            // 
-            // chart1
-            // 
-            chartArea2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Enabled = false;
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
-            this.chart1.Location = new System.Drawing.Point(307, 80);
-            this.chart1.Name = "chart1";
-            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            this.chart1.PaletteCustomColors = new System.Drawing.Color[] {
-        System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(85)))), ((int)(((byte)(141))))),
-        System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(146)))), ((int)(((byte)(213))))),
-        System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(201)))), ((int)(((byte)(239))))),
-        System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(218)))), ((int)(((byte)(216))))),
-        System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(234)))), ((int)(((byte)(233)))))};
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart1.Series.Add(series2);
-            this.chart1.Size = new System.Drawing.Size(300, 300);
-            this.chart1.TabIndex = 15;
-            this.chart1.Text = "chart1";
-            // 
             // DashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -505,17 +518,18 @@
             this.Controls.Add(this.panel_Contenedor);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DashBoard";
             this.Text = "Form1";
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel_Contenedor.ResumeLayout(false);
             this.panel_Contenedor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
 
         }

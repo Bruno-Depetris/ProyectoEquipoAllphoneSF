@@ -77,11 +77,23 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BtnNuevoProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BtnNuevoProducto.Designer.cs">
+      <DependentUpon>BtnNuevoProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cargar_Clientes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Cargar_Clientes.Designer.cs">
       <DependentUpon>Cargar_Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configuraciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuraciones.Designer.cs">
+      <DependentUpon>Configuraciones.cs</DependentUpon>
     </Compile>
     <Compile Include="DashBoard.cs">
       <SubType>Form</SubType>
@@ -94,6 +106,24 @@
     </Compile>
     <Compile Include="Estadisticas.Designer.cs">
       <DependentUpon>Estadisticas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Est_Fecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Est_Fecha.Designer.cs">
+      <DependentUpon>Est_Fecha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Est_Monetaria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Est_Monetaria.Designer.cs">
+      <DependentUpon>Est_Monetaria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Est_Zona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Est_Zona.Designer.cs">
+      <DependentUpon>Est_Zona.cs</DependentUpon>
     </Compile>
     <Compile Include="LOGICA\LogicaCliente.cs" />
     <Compile Include="LOGICA\LogicaDatosCompra.cs" />
@@ -124,14 +154,32 @@
     <Compile Include="Stock.Designer.cs">
       <DependentUpon>Stock.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BtnNuevoProducto.resx">
+      <DependentUpon>BtnNuevoProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cargar_Clientes.resx">
       <DependentUpon>Cargar_Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configuraciones.resx">
+      <DependentUpon>Configuraciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DashBoard.resx">
       <DependentUpon>DashBoard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Estadisticas.resx">
       <DependentUpon>Estadisticas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Est_Fecha.resx">
+      <DependentUpon>Est_Fecha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Est_Monetaria.resx">
+      <DependentUpon>Est_Monetaria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Est_Zona.resx">
+      <DependentUpon>Est_Zona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MovimientoCaja.resx">
+      <DependentUpon>MovimientoCaja.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -142,6 +190,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Stock.resx">
+      <DependentUpon>Stock.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

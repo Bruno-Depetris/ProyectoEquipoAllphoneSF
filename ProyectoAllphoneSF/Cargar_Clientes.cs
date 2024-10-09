@@ -21,22 +21,7 @@ namespace ProyectoAllphoneSF {
             RedondearBoton(btn_ConcretarVenta, 7);
         }
 
-        private void button8_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
 
-        private void button7_Click(object sender, EventArgs e)
-        {
-            // Accede al formulario principal y lo minimiza
-            Form formularioPrincipal = Application.OpenForms[0]; // Asume que el formulario principal es el primero abierto
-            formularioPrincipal.WindowState = FormWindowState.Minimized;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void Cargar_Clientes_Load(object sender, EventArgs e)
         {
@@ -79,24 +64,6 @@ namespace ProyectoAllphoneSF {
             SendMessage(this.ParentForm.Handle, 0x112, 0xf012, 0); // 0x112 = WM_SYSCOMMAND, 0xf012 = SC_MOVE + HTCAPTION
         }
 
-        private void btn_ConcretarVenta_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_Registro_Click(object sender, EventArgs e)
-        {
-            if (ValidarTextBox(textBox1) == true) { string nombe = textBox1.Text; }
-
-            if (ValidarTextBox(textBox2) == true) { string apellido = textBox2.Text; }
-
-            if (ValidarTextBox(textBox3) == true) { string direccion = textBox3.Text; }
-
-            if (ValidarTextBox(textBox4) == true) { string tekefono = textBox4.Text; }
-
-            if (ValidarTextBox(textBox6) == true) { string email = textBox6.Text; }
-        }
-
         private bool ValidarTextBox(TextBox textBox)
         {
             int minLength = 1;
@@ -122,6 +89,41 @@ namespace ProyectoAllphoneSF {
             }
 
             return true;
+        }
+
+        private void button8_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btn_ConcretarVenta_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Registro_Click_1(object sender, EventArgs e)
+        {
+            if (ValidarTextBox(textBox1) == true) { string nombe = textBox1.Text; }
+
+            if (ValidarTextBox(textBox2) == true) { string apellido = textBox2.Text; }
+
+            if (ValidarTextBox(textBox3) == true) { string direccion = textBox3.Text; }
+
+            if (ValidarTextBox(textBox4) == true) { string tekefono = textBox4.Text; }
+
+            if (ValidarTextBox(textBox6) == true) { string email = textBox6.Text; }
+        }
+
+        private void button7_Click_1(object sender, EventArgs e)
+        {
+            // Accede al formulario principal y lo minimiza
+            Form formularioPrincipal = Application.OpenForms[0]; // Asume que el formulario principal es el primero abierto
+            formularioPrincipal.WindowState = FormWindowState.Minimized;
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

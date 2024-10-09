@@ -34,11 +34,11 @@
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbl_cant_productos = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_balance_bruto = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lbl = new System.Windows.Forms.Label();
+            this.lbl_valor_stok = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -53,60 +53,61 @@
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.label3);
+            this.groupBox6.Controls.Add(this.lbl_cant_productos);
             this.groupBox6.Location = new System.Drawing.Point(194, 298);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(212, 100);
             this.groupBox6.TabIndex = 24;
             this.groupBox6.TabStop = false;
             // 
-            // label3
+            // lbl_cant_productos
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Nirmala UI", 10F);
-            this.label3.Location = new System.Drawing.Point(4, 38);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(208, 19);
-            this.label3.TabIndex = 35;
-            this.label3.Text = "Cantidad de productos vendidos";
+            this.lbl_cant_productos.AutoSize = true;
+            this.lbl_cant_productos.Font = new System.Drawing.Font("Nirmala UI", 10F);
+            this.lbl_cant_productos.Location = new System.Drawing.Point(4, 38);
+            this.lbl_cant_productos.Name = "lbl_cant_productos";
+            this.lbl_cant_productos.Size = new System.Drawing.Size(208, 19);
+            this.lbl_cant_productos.TabIndex = 35;
+            this.lbl_cant_productos.Text = "Cantidad de productos vendidos";
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.label2);
+            this.groupBox4.Controls.Add(this.lbl_balance_bruto);
             this.groupBox4.Location = new System.Drawing.Point(194, 177);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(200, 100);
             this.groupBox4.TabIndex = 25;
             this.groupBox4.TabStop = false;
             // 
-            // label2
+            // lbl_balance_bruto
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(19, 38);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(166, 21);
-            this.label2.TabIndex = 35;
-            this.label2.Text = "Total del balance bruto";
+            this.lbl_balance_bruto.AutoSize = true;
+            this.lbl_balance_bruto.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_balance_bruto.Location = new System.Drawing.Point(19, 38);
+            this.lbl_balance_bruto.Name = "lbl_balance_bruto";
+            this.lbl_balance_bruto.Size = new System.Drawing.Size(166, 21);
+            this.lbl_balance_bruto.TabIndex = 35;
+            this.lbl_balance_bruto.Text = "Total del balance bruto";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.lbl);
+            this.groupBox1.Controls.Add(this.lbl_valor_stok);
             this.groupBox1.Location = new System.Drawing.Point(194, 66);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 100);
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
             // 
-            // lbl
+            // lbl_valor_stok
             // 
-            this.lbl.AutoSize = true;
-            this.lbl.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl.Location = new System.Drawing.Point(43, 38);
-            this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(111, 21);
-            this.lbl.TabIndex = 35;
-            this.lbl.Text = "Valor del stock";
+            this.lbl_valor_stok.AutoSize = true;
+            this.lbl_valor_stok.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_valor_stok.Location = new System.Drawing.Point(43, 38);
+            this.lbl_valor_stok.Name = "lbl_valor_stok";
+            this.lbl_valor_stok.Size = new System.Drawing.Size(111, 21);
+            this.lbl_valor_stok.TabIndex = 35;
+            this.lbl_valor_stok.Text = "Valor del stock";
+            this.lbl_valor_stok.Click += new System.EventHandler(this.lbl_Click);
             // 
             // label12
             // 
@@ -133,6 +134,7 @@
             this.button6.TabIndex = 21;
             this.button6.Text = "-";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click_1);
             // 
             // button5
             // 
@@ -147,6 +149,7 @@
             this.button5.TabIndex = 20;
             this.button5.Text = "X";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
             // 
             // chart1
             // 
@@ -224,8 +227,10 @@
             this.Controls.Add(this.label12);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Estadisticas";
             this.Text = "Estadisticas";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Estadisticas_MouseDown_1);
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -242,11 +247,11 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbl_cant_productos;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl_balance_bruto;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label lbl;
+        private System.Windows.Forms.Label lbl_valor_stok;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;

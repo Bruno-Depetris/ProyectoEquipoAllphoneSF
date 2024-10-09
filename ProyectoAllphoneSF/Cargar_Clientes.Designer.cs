@@ -65,6 +65,7 @@
             this.button8.TabIndex = 50;
             this.button8.Text = "X";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click_1);
             // 
             // button7
             // 
@@ -79,6 +80,7 @@
             this.button7.TabIndex = 49;
             this.button7.Text = "-";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click_1);
             // 
             // btn_Registro
             // 
@@ -92,6 +94,7 @@
             this.btn_Registro.TabIndex = 48;
             this.btn_Registro.Text = "Registro";
             this.btn_Registro.UseVisualStyleBackColor = false;
+            this.btn_Registro.Click += new System.EventHandler(this.btn_Registro_Click_1);
             // 
             // btn_ConcretarVenta
             // 
@@ -106,6 +109,7 @@
             this.btn_ConcretarVenta.TabIndex = 47;
             this.btn_ConcretarVenta.Text = "Concretar Venta";
             this.btn_ConcretarVenta.UseVisualStyleBackColor = false;
+            this.btn_ConcretarVenta.Click += new System.EventHandler(this.btn_ConcretarVenta_Click_1);
             // 
             // comboBox1
             // 
@@ -224,6 +228,7 @@
             this.label6.Size = new System.Drawing.Size(68, 21);
             this.label6.TabIndex = 34;
             this.label6.Text = "Nombre";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label12
             // 
@@ -260,6 +265,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label12);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Cargar_Clientes";
             this.Text = "Cargar_Clientes";
             this.Load += new System.EventHandler(this.Cargar_Clientes_Load);
