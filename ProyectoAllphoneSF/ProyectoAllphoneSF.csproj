@@ -63,6 +63,7 @@
     <Reference Include="System.Data.SQLite.Linq, Version=1.0.119.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Data.SQLite.Linq.1.0.119.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
     </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -123,8 +124,14 @@
     <Compile Include="Stock.Designer.cs">
       <DependentUpon>Stock.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Cargar_Clientes.resx">
+      <DependentUpon>Cargar_Clientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DashBoard.resx">
       <DependentUpon>DashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estadisticas.resx">
+      <DependentUpon>Estadisticas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -135,10 +142,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="bin\Debug\AllphoneSF_BD.db">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="bin\Debug\AllphoneSF_BD_FILES.db.sqbpro" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -153,7 +156,29 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="bin\Debug\System.Data.SQLite.Linq.dll" />
+    <Content Include="bin\Debug\System.Data.SQLite.xml" />
+    <Content Include="IMG\caja-registradora %281%29.png" />
+    <Content Include="IMG\Captura de pantalla 2024-10-05 030139 %281%29 %281%29.png" />
+    <Content Include="IMG\Captura de pantalla 2024-10-05 030139 %281%29.png" />
+    <Content Include="IMG\Captura de pantalla 2024-10-05 030139.png" />
+    <Content Include="IMG\cerrar.png" />
+    <Content Include="IMG\clientes.png" />
+    <Content Include="IMG\compras.png" />
+    <Content Include="IMG\configuraciones %281%29 %281%29.png" />
+    <Content Include="IMG\configuraciones %281%29.png" />
+    <Content Include="IMG\configuraciones.png" />
+    <Content Include="IMG\minimazar.png" />
+    <Content Include="IMG\pagos.png" />
+    <Content Include="IMG\producto.png" />
+    <Content Include="IMG\reportes.png" />
+    <Content Include="IMG\venta.png" />
+    <Content Include="IMG\WhatsApp Image 2024-10-04 at 21.03.11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="NewFolder1\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
