@@ -96,6 +96,7 @@
     </Compile>
     <Compile Include="LOGICA\LogicaCliente.cs" />
     <Compile Include="LOGICA\LogicaDatosCompra.cs" />
+    <Compile Include="LOGICA\LogicaFormaPago.cs" />
     <Compile Include="LOGICA\LogicaMoneda.cs" />
     <Compile Include="LOGICA\LogicaProducto.cs" />
     <Compile Include="LOGICA\LogicaTipoProducto.cs" />
