@@ -135,10 +135,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="bin\Debug\AllphoneSF_BD.db">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="bin\Debug\AllphoneSF_BD_FILES.db.sqbpro" />
+    <None Include="bin\Debug\BD_allphoneSF.db" />
+    <None Include="bin\Debug\BD_allphoneSF.sqbpro" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
