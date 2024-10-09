@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace ProyectoAllphoneSF.MODELO {
     internal class FormaPago {
-        int FormaPagoID { get; set; }
-        string Metodopago { get; set; }
-        decimal Descuento { get; set; }
+        public int FormaPagoID { get; set; }
+        public string Metodopago { get; set; }
+        public decimal Descuento { get; set; }
     }
 }
