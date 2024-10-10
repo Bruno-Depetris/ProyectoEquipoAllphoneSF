@@ -9,15 +9,25 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProyectoAllphoneSF {
-    public partial class Estadisticas : Form {
-        public Estadisticas() {
+namespace ProyectoAllphoneSF
+{
+    public partial class Est_Fecha : Form
+    {
+        public Est_Fecha()
+        {
             InitializeComponent();
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void button8_Click(object sender, EventArgs e)
         {
+            Application.Exit();
+        }
 
+        private void button7_Click(object sender, EventArgs e)
+        {
+            // Accede al formulario principal y lo minimiza
+            Form formularioPrincipal = Application.OpenForms[0]; // Asume que el formulario principal es el primero abierto
+            formularioPrincipal.WindowState = FormWindowState.Minimized;
         }
         // Importar funciones de la API de Windows para mover la ventana
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -25,35 +35,17 @@ namespace ProyectoAllphoneSF {
 
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-        private void Estadisticas_MouseDown(object sender, MouseEventArgs e)
+        private void button7_MouseDown(object sender, MouseEventArgs e)
         {
-            ReleaseCapture();
-            // Enviar el mensaje para mover la ventana al formulario principal (ParentForm)
-            SendMessage(this.ParentForm.Handle, 0x112, 0xf012, 0); // 0x112 = WM_SYSCOMMAND, 0xf012 = SC_MOVE + HTCAPTION
+            
         }
 
-        private void label12_Click(object sender, EventArgs e)
+        private void Est_Fecha_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void button5_Click_1(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void button6_Click_1(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-
-        }
-
-        private void lbl_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Estadisticas_MouseDown_1(object sender, MouseEventArgs e)
+        private void Est_Fecha_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             // Enviar el mensaje para mover la ventana al formulario principal (ParentForm)
