@@ -17,18 +17,20 @@ namespace ProyectoAllphoneSF {
         public Cargar_Clientes()
         {
             InitializeComponent();
-            RedondearBoton(btn_Registro, 7);
-            RedondearBoton(btn_ConcretarVenta, 7);
+            RedondearBoton(Button_Registro, 20);
+            RedondearBoton(Button_ConcretarVenta, 20);
+
+            comboBox_Producto.Items.Insert(0, "Seleccione un producto");
+            comboBox_Producto.SelectedIndex = 0;
+
+            comboBox_MedioPago.Items.Insert(0, "Selccionar Medio Pago");
+            comboBox_MedioPago.SelectedIndex = 0;
+
         }
 
 
+        #region Redondear Botones
 
-        private void Cargar_Clientes_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        //metodo para redondear botones
         public void RedondearBoton(Button boton, int radio)
         {
             // Asegurar que el radio no sea mayor que la mitad del tamaño del botón
@@ -63,67 +65,88 @@ namespace ProyectoAllphoneSF {
             // Enviar el mensaje para mover la ventana al formulario principal (ParentForm)
             SendMessage(this.ParentForm.Handle, 0x112, 0xf012, 0); // 0x112 = WM_SYSCOMMAND, 0xf012 = SC_MOVE + HTCAPTION
         }
+        #endregion
 
-        private bool ValidarTextBox(TextBox textBox)
-        {
-            int minLength = 1;
-            int maxLength = 50;
-            string invalidCharsPattern = @"[^a-zA-Z0-9 ]";
 
-            if (string.IsNullOrWhiteSpace(textBox.Text))
-            {
-                MessageBox.Show("El campo no puede estar vacío o contener solo espacios en blanco.");
-                return false;
+        private bool Validaciones() {
+            bool respuesta = false;
+
+            if (string.IsNullOrEmpty(textBox_Nombre.Text) || textBox_Nombre.Text.All(char.IsDigit)) {
+                MessageBox.Show("Errora al ingresar Nombre");
+                textBox_Nombre.Clear();
+                textBox_Nombre.Focus();
+                return respuesta;
+            }
+            if (string.IsNullOrEmpty(textBox_Apellido.Text) || textBox_Apellido.Text.All(char.IsDigit)) {
+                MessageBox.Show("Errora al ingresar Apellido");
+                textBox_Apellido.Clear();
+                textBox_Apellido.Focus();
+                return respuesta;
+            }
+            if (string.IsNullOrEmpty(textBox_Direccion.Text) || textBox_Direccion.Text.All(char.IsDigit)) {
+                MessageBox.Show("Errora al ingresar Direccion");
+                textBox_Direccion.Clear();
+                textBox_Direccion.Focus();
+                return respuesta;
+            }
+            if (string.IsNullOrEmpty(textBox_Telefono.Text) || textBox_Telefono.Text.All(char.IsLetter)) {
+                MessageBox.Show("Error al ingresar Telefono");
+                textBox_Telefono.Clear();
+                textBox_Telefono.Focus();
+                return respuesta;
+            }
+            if (string.IsNullOrEmpty(textBox_Email.Text) || textBox_Email.Text.IndexOf('@') == -1) {
+                MessageBox.Show("Error al ingresar Email");
+                textBox_Email.Clear();
+                textBox_Email.Focus();
+                return respuesta;
+            }
+            if (comboBox_Producto.SelectedIndex == 0) {
+                MessageBox.Show("Por favor seleccione un producto");
+                comboBox_Producto.SelectedIndex = 0;
+                comboBox_Producto.Focus();
+                return respuesta;
+            }
+            if (comboBox_MedioPago.SelectedIndex == 0) {
+                MessageBox.Show("Por favor seleccione un producto");
+                comboBox_MedioPago.SelectedIndex = 0;
+                comboBox_MedioPago.Focus();
+                return respuesta;
             }
 
-            if (textBox.Text.Length < minLength || textBox.Text.Length > maxLength)
-            {
-                MessageBox.Show($"El campo debe tener entre {minLength} y {maxLength} caracteres.");
-                return false;
+
+
+
+
+            return respuesta = true;
+        }
+
+        private void RestaurarInputs() {
+            textBox_Nombre.Text = string.Empty;
+            textBox_Apellido.Text = string.Empty;
+            textBox_Direccion.Text = string.Empty;
+            textBox_Email.Text = string.Empty;
+            textBox_Telefono.Text = string.Empty;
+            comboBox_MedioPago.SelectedIndex = 0;
+            comboBox_Producto.SelectedIndex = 0;
+        }
+        private void Button_ConcretarVenta_Click(object sender, EventArgs e) {
+            if (Validaciones()) {
+                DialogResult resultado = MessageBox.Show("Desea cargar esta compra?","ADVERTENCIA",MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
+
+                if (resultado == DialogResult.Yes) {
+                    try {
+                        MessageBox.Show("Datos Cargados con exito");
+                        RestaurarInputs();
+                    } catch (Exception ex) {
+                        MessageBox.Show(ex.Message); 
+                    }
+
+                }
+                if (resultado == DialogResult.No) {
+                    return;
+                }
             }
-
-            if (System.Text.RegularExpressions.Regex.IsMatch(textBox.Text, invalidCharsPattern))
-            {
-                MessageBox.Show("El campo contiene caracteres no permitidos.");
-                return false;
-            }
-
-            return true;
-        }
-
-        private void button8_Click_1(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void btn_ConcretarVenta_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_Registro_Click_1(object sender, EventArgs e)
-        {
-            if (ValidarTextBox(textBox1) == true) { string nombe = textBox1.Text; }
-
-            if (ValidarTextBox(textBox2) == true) { string apellido = textBox2.Text; }
-
-            if (ValidarTextBox(textBox3) == true) { string direccion = textBox3.Text; }
-
-            if (ValidarTextBox(textBox4) == true) { string tekefono = textBox4.Text; }
-
-            if (ValidarTextBox(textBox6) == true) { string email = textBox6.Text; }
-        }
-
-        private void button7_Click_1(object sender, EventArgs e)
-        {
-            // Accede al formulario principal y lo minimiza
-            Form formularioPrincipal = Application.OpenForms[0]; // Asume que el formulario principal es el primero abierto
-            formularioPrincipal.WindowState = FormWindowState.Minimized;
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -23,17 +23,15 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.btn_Registro = new System.Windows.Forms.Button();
-            this.btn_ConcretarVenta = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.comboBox_MedioPago = new System.Windows.Forms.ComboBox();
+            this.Button_Registro = new System.Windows.Forms.Button();
+            this.Button_ConcretarVenta = new System.Windows.Forms.Button();
+            this.comboBox_Producto = new System.Windows.Forms.ComboBox();
+            this.textBox_Email = new System.Windows.Forms.TextBox();
+            this.textBox_Telefono = new System.Windows.Forms.TextBox();
+            this.textBox_Direccion = new System.Windows.Forms.TextBox();
+            this.textBox_Apellido = new System.Windows.Forms.TextBox();
+            this.textBox_Nombre = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -44,126 +42,109 @@
             this.label12 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // comboBox2
+            // comboBox_MedioPago
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(318, 289);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(168, 21);
-            this.comboBox2.TabIndex = 51;
+            this.comboBox_MedioPago.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBox_MedioPago.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_MedioPago.FormattingEnabled = true;
+            this.comboBox_MedioPago.Location = new System.Drawing.Point(205, 295);
+            this.comboBox_MedioPago.Name = "comboBox_MedioPago";
+            this.comboBox_MedioPago.Size = new System.Drawing.Size(377, 29);
+            this.comboBox_MedioPago.TabIndex = 51;
             // 
-            // button8
+            // Button_Registro
             // 
-            this.button8.BackColor = System.Drawing.Color.Transparent;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(752, -1);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(47, 23);
-            this.button8.TabIndex = 50;
-            this.button8.Text = "X";
-            this.button8.UseVisualStyleBackColor = false;
-            this.button8.Click += new System.EventHandler(this.button8_Click_1);
+            this.Button_Registro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(191)))), ((int)(((byte)(236)))));
+            this.Button_Registro.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Button_Registro.FlatAppearance.BorderSize = 0;
+            this.Button_Registro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button_Registro.Location = new System.Drawing.Point(326, 411);
+            this.Button_Registro.Name = "Button_Registro";
+            this.Button_Registro.Size = new System.Drawing.Size(144, 27);
+            this.Button_Registro.TabIndex = 48;
+            this.Button_Registro.Text = "Registro";
+            this.Button_Registro.UseVisualStyleBackColor = false;
             // 
-            // button7
+            // Button_ConcretarVenta
             // 
-            this.button7.BackColor = System.Drawing.Color.Transparent;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(699, -1);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(47, 23);
-            this.button7.TabIndex = 49;
-            this.button7.Text = "-";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click_1);
+            this.Button_ConcretarVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(191)))), ((int)(((byte)(236)))));
+            this.Button_ConcretarVenta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Button_ConcretarVenta.FlatAppearance.BorderSize = 0;
+            this.Button_ConcretarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button_ConcretarVenta.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_ConcretarVenta.Location = new System.Drawing.Point(282, 330);
+            this.Button_ConcretarVenta.Name = "Button_ConcretarVenta";
+            this.Button_ConcretarVenta.Size = new System.Drawing.Size(222, 45);
+            this.Button_ConcretarVenta.TabIndex = 47;
+            this.Button_ConcretarVenta.Text = "Concretar Venta";
+            this.Button_ConcretarVenta.UseVisualStyleBackColor = false;
+            this.Button_ConcretarVenta.Click += new System.EventHandler(this.Button_ConcretarVenta_Click);
             // 
-            // btn_Registro
+            // comboBox_Producto
             // 
-            this.btn_Registro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(191)))), ((int)(((byte)(236)))));
-            this.btn_Registro.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Registro.FlatAppearance.BorderSize = 0;
-            this.btn_Registro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Registro.Location = new System.Drawing.Point(587, 354);
-            this.btn_Registro.Name = "btn_Registro";
-            this.btn_Registro.Size = new System.Drawing.Size(144, 27);
-            this.btn_Registro.TabIndex = 48;
-            this.btn_Registro.Text = "Registro";
-            this.btn_Registro.UseVisualStyleBackColor = false;
-            this.btn_Registro.Click += new System.EventHandler(this.btn_Registro_Click_1);
+            this.comboBox_Producto.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBox_Producto.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_Producto.FormattingEnabled = true;
+            this.comboBox_Producto.Location = new System.Drawing.Point(205, 260);
+            this.comboBox_Producto.Name = "comboBox_Producto";
+            this.comboBox_Producto.Size = new System.Drawing.Size(377, 29);
+            this.comboBox_Producto.TabIndex = 46;
             // 
-            // btn_ConcretarVenta
+            // textBox_Email
             // 
-            this.btn_ConcretarVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(191)))), ((int)(((byte)(236)))));
-            this.btn_ConcretarVenta.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_ConcretarVenta.FlatAppearance.BorderSize = 0;
-            this.btn_ConcretarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ConcretarVenta.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ConcretarVenta.Location = new System.Drawing.Point(252, 354);
-            this.btn_ConcretarVenta.Name = "btn_ConcretarVenta";
-            this.btn_ConcretarVenta.Size = new System.Drawing.Size(187, 27);
-            this.btn_ConcretarVenta.TabIndex = 47;
-            this.btn_ConcretarVenta.Text = "Concretar Venta";
-            this.btn_ConcretarVenta.UseVisualStyleBackColor = false;
-            this.btn_ConcretarVenta.Click += new System.EventHandler(this.btn_ConcretarVenta_Click_1);
+            this.textBox_Email.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox_Email.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox_Email.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_Email.Location = new System.Drawing.Point(205, 225);
+            this.textBox_Email.Name = "textBox_Email";
+            this.textBox_Email.Size = new System.Drawing.Size(377, 29);
+            this.textBox_Email.TabIndex = 45;
             // 
-            // comboBox1
+            // textBox_Telefono
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(318, 263);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(168, 21);
-            this.comboBox1.TabIndex = 46;
+            this.textBox_Telefono.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox_Telefono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox_Telefono.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_Telefono.Location = new System.Drawing.Point(205, 190);
+            this.textBox_Telefono.Name = "textBox_Telefono";
+            this.textBox_Telefono.Size = new System.Drawing.Size(377, 29);
+            this.textBox_Telefono.TabIndex = 44;
             // 
-            // textBox6
+            // textBox_Direccion
             // 
-            this.textBox6.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.textBox6.Location = new System.Drawing.Point(318, 233);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(168, 20);
-            this.textBox6.TabIndex = 45;
+            this.textBox_Direccion.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox_Direccion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox_Direccion.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_Direccion.Location = new System.Drawing.Point(205, 155);
+            this.textBox_Direccion.Name = "textBox_Direccion";
+            this.textBox_Direccion.Size = new System.Drawing.Size(377, 29);
+            this.textBox_Direccion.TabIndex = 43;
             // 
-            // textBox4
+            // textBox_Apellido
             // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.textBox4.Location = new System.Drawing.Point(318, 203);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(168, 20);
-            this.textBox4.TabIndex = 44;
+            this.textBox_Apellido.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox_Apellido.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox_Apellido.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_Apellido.Location = new System.Drawing.Point(205, 120);
+            this.textBox_Apellido.Name = "textBox_Apellido";
+            this.textBox_Apellido.Size = new System.Drawing.Size(377, 29);
+            this.textBox_Apellido.TabIndex = 42;
             // 
-            // textBox3
+            // textBox_Nombre
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.textBox3.Location = new System.Drawing.Point(318, 174);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(168, 20);
-            this.textBox3.TabIndex = 43;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.textBox2.Location = new System.Drawing.Point(318, 142);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(168, 20);
-            this.textBox2.TabIndex = 42;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.textBox1.Location = new System.Drawing.Point(318, 113);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(168, 20);
-            this.textBox1.TabIndex = 41;
+            this.textBox_Nombre.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox_Nombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox_Nombre.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_Nombre.Location = new System.Drawing.Point(205, 80);
+            this.textBox_Nombre.Name = "textBox_Nombre";
+            this.textBox_Nombre.Size = new System.Drawing.Size(377, 29);
+            this.textBox_Nombre.TabIndex = 41;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(184, 289);
+            this.label11.Location = new System.Drawing.Point(85, 298);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(114, 21);
             this.label11.TabIndex = 40;
@@ -173,7 +154,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(225, 260);
+            this.label10.Location = new System.Drawing.Point(127, 263);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(73, 21);
             this.label10.TabIndex = 39;
@@ -183,7 +164,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(248, 230);
+            this.label9.Location = new System.Drawing.Point(146, 227);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(48, 21);
             this.label9.TabIndex = 38;
@@ -193,7 +174,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(230, 200);
+            this.label8.Location = new System.Drawing.Point(126, 192);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(68, 21);
             this.label8.TabIndex = 37;
@@ -203,7 +184,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(223, 171);
+            this.label7.Location = new System.Drawing.Point(123, 157);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(75, 21);
             this.label7.TabIndex = 36;
@@ -213,7 +194,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(231, 139);
+            this.label5.Location = new System.Drawing.Point(131, 122);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(67, 21);
             this.label5.TabIndex = 35;
@@ -223,19 +204,19 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(230, 110);
+            this.label6.Location = new System.Drawing.Point(132, 82);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 21);
             this.label6.TabIndex = 34;
             this.label6.Text = "Nombre";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Dock = System.Windows.Forms.DockStyle.Top;
             this.label12.Font = new System.Drawing.Font("Nirmala UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(182, 22);
+            this.label12.Location = new System.Drawing.Point(0, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(349, 54);
             this.label12.TabIndex = 33;
@@ -245,18 +226,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.btn_Registro);
-            this.Controls.Add(this.btn_ConcretarVenta);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.comboBox_MedioPago);
+            this.Controls.Add(this.Button_Registro);
+            this.Controls.Add(this.Button_ConcretarVenta);
+            this.Controls.Add(this.comboBox_Producto);
+            this.Controls.Add(this.textBox_Email);
+            this.Controls.Add(this.textBox_Telefono);
+            this.Controls.Add(this.textBox_Direccion);
+            this.Controls.Add(this.textBox_Apellido);
+            this.Controls.Add(this.textBox_Nombre);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -268,7 +248,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Cargar_Clientes";
             this.Text = "Cargar_Clientes";
-            this.Load += new System.EventHandler(this.Cargar_Clientes_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -276,17 +255,15 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button btn_Registro;
-        private System.Windows.Forms.Button btn_ConcretarVenta;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox comboBox_MedioPago;
+        private System.Windows.Forms.Button Button_Registro;
+        private System.Windows.Forms.Button Button_ConcretarVenta;
+        private System.Windows.Forms.ComboBox comboBox_Producto;
+        private System.Windows.Forms.TextBox textBox_Email;
+        private System.Windows.Forms.TextBox textBox_Telefono;
+        private System.Windows.Forms.TextBox textBox_Direccion;
+        private System.Windows.Forms.TextBox textBox_Apellido;
+        private System.Windows.Forms.TextBox textBox_Nombre;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;

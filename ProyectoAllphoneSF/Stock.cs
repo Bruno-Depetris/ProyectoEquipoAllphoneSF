@@ -17,7 +17,7 @@ namespace ProyectoAllphoneSF {
             RedondearBoton(btn_CargarNuevoProducto, 7);
         }
 
-        //metodo para redondear botones
+        #region redondear botones
         public void RedondearBoton(Button boton, int radio)
         {
             // Asegurar que el radio no sea mayor que la mitad del tamaño del botón
@@ -38,9 +38,11 @@ namespace ProyectoAllphoneSF {
             // Asignar la región redondeada al botón
             boton.Region = new Region(path);
         }
+
+        #endregion
         private void Stock_Load(object sender, EventArgs e)
         {
-
+            button_BuscarPorProducto.Enabled = false;
         }
 
         private void btn_CargarNuevoProducto_Click(object sender, EventArgs e)
@@ -49,16 +51,16 @@ namespace ProyectoAllphoneSF {
             formNuevoProducto.ShowDialog();
         }
 
-        private void button7_Click(object sender, EventArgs e)
-        {
-            // Accede al formulario principal y lo minimiza
-            Form formularioPrincipal = Application.OpenForms[0]; // Asume que el formulario principal es el primero abierto
-            formularioPrincipal.WindowState = FormWindowState.Minimized;
+        private void button_BuscarPorProducto_Click(object sender, EventArgs e) {
+ 
         }
 
-        private void button8_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
+        private void textBox1_TextChanged(object sender, EventArgs e) {
+            if(textBox1.Text.Length > 0) {
+                button_BuscarPorProducto.Enabled = true;
+            } else {
+                button_BuscarPorProducto.Enabled = false;
+            }
         }
     }
 }
