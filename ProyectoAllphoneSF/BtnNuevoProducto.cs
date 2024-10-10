@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProyectoAllphoneSF.LOGICA;
+using ProyectoAllphoneSF.MODELO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -85,6 +87,21 @@ namespace ProyectoAllphoneSF
 
                 if (resultado == DialogResult.Yes) {
                     try {
+
+                        Productos NuevoProducto = new Productos();
+                        NuevoProducto.Nombre = textBox_Nombre.Text;
+                        NuevoProducto.TipoID = comboBox_Tipo.SelectedIndex;
+                        NuevoProducto.PrecioCosto = PrecioCosto;
+                        NuevoProducto.PrecioVenta = PrecioVenta;
+
+
+                        bool Estado = LogicaProducto.Instancia.cargarProducto(NuevoProducto);
+
+                        if (Estado) {
+                            MessageBox.Show("Producto cargado");
+                        }
+
+
 
                     } catch (Exception ex) {
                         MessageBox.Show(ex.Message);
