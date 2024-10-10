@@ -98,6 +98,9 @@ namespace ProyectoAllphoneSF {
             AbrirFormNuevo(new Estadisticas());
         }
 
-
+        private void HoraFecha_Tick(object sender, EventArgs e) {
+            label_Hora.Text = DateTime.Now.ToLongTimeString();
+            label_Fecha.Text = DateTime.Now.ToShortDateString();
+        }
     }
 }

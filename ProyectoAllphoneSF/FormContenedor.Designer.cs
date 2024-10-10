@@ -23,6 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormContenedor));
             this.panel_ContenedorMenu = new System.Windows.Forms.Panel();
             this.panel_Botones = new System.Windows.Forms.Panel();
@@ -36,11 +37,11 @@
             this.panel_ContenedorTop = new System.Windows.Forms.Panel();
             this.label_Hora = new System.Windows.Forms.Label();
             this.label = new System.Windows.Forms.Label();
-            this.label_MostrarHora = new System.Windows.Forms.Label();
+            this.label_Fecha = new System.Windows.Forms.Label();
             this.label_EstadoBaseDatos = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
             this.panel_ContenedorMain = new System.Windows.Forms.Panel();
+            this.HoraFecha = new System.Windows.Forms.Timer(this.components);
             this.panel_ContenedorMenu.SuspendLayout();
             this.panel_Botones.SuspendLayout();
             this.panel_Logo.SuspendLayout();
@@ -171,7 +172,7 @@
             this.panel_ContenedorTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(191)))), ((int)(((byte)(236)))));
             this.panel_ContenedorTop.Controls.Add(this.label_Hora);
             this.panel_ContenedorTop.Controls.Add(this.label);
-            this.panel_ContenedorTop.Controls.Add(this.label_MostrarHora);
+            this.panel_ContenedorTop.Controls.Add(this.label_Fecha);
             this.panel_ContenedorTop.Controls.Add(this.label_EstadoBaseDatos);
             this.panel_ContenedorTop.Controls.Add(this.label1);
             this.panel_ContenedorTop.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -202,16 +203,16 @@
             this.label.TabIndex = 18;
             this.label.Text = "hs           ";
             // 
-            // label_MostrarHora
+            // label_Fecha
             // 
-            this.label_MostrarHora.AutoSize = true;
-            this.label_MostrarHora.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label_MostrarHora.Font = new System.Drawing.Font("Arboria Book", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_MostrarHora.Location = new System.Drawing.Point(719, 0);
-            this.label_MostrarHora.Name = "label_MostrarHora";
-            this.label_MostrarHora.Size = new System.Drawing.Size(104, 29);
-            this.label_MostrarHora.TabIndex = 17;
-            this.label_MostrarHora.Text = "19:34:22";
+            this.label_Fecha.AutoSize = true;
+            this.label_Fecha.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label_Fecha.Font = new System.Drawing.Font("Arboria Book", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Fecha.Location = new System.Drawing.Point(719, 0);
+            this.label_Fecha.Name = "label_Fecha";
+            this.label_Fecha.Size = new System.Drawing.Size(104, 29);
+            this.label_Fecha.TabIndex = 17;
+            this.label_Fecha.Text = "19:34:22";
             // 
             // label_EstadoBaseDatos
             // 
@@ -235,12 +236,6 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "Base Datos: ";
             // 
-            // directorySearcher1
-            // 
-            this.directorySearcher1.ClientTimeout = System.TimeSpan.Parse("-00:00:01");
-            this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
-            this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
-            // 
             // panel_ContenedorMain
             // 
             this.panel_ContenedorMain.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -248,7 +243,11 @@
             this.panel_ContenedorMain.Name = "panel_ContenedorMain";
             this.panel_ContenedorMain.Size = new System.Drawing.Size(823, 526);
             this.panel_ContenedorMain.TabIndex = 21;
-
+            // 
+            // HoraFecha
+            // 
+            this.HoraFecha.Enabled = true;
+            this.HoraFecha.Tick += new System.EventHandler(this.HoraFecha_Tick);
             // 
             // FormContenedor
             // 
@@ -282,8 +281,7 @@
         private System.Windows.Forms.Label label_EstadoBaseDatos;
         private System.Windows.Forms.Panel panel_Logo;
         private System.Windows.Forms.PictureBox pictureBox_LogoNegocio;
-        private System.DirectoryServices.DirectorySearcher directorySearcher1;
-        private System.Windows.Forms.Label label_MostrarHora;
+        private System.Windows.Forms.Label label_Fecha;
         private System.Windows.Forms.Label label;
         private System.Windows.Forms.Label label_Hora;
         private System.Windows.Forms.Panel panel_Botones;
@@ -293,5 +291,6 @@
         private System.Windows.Forms.Button ButtonGestionarStock;
         private System.Windows.Forms.Button Button_CargarCliente;
         private System.Windows.Forms.Panel panel_ContenedorMain;
+        private System.Windows.Forms.Timer HoraFecha;
     }
 }
