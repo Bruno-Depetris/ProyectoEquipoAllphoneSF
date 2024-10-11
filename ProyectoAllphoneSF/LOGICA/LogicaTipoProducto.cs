@@ -38,7 +38,7 @@ namespace ProyectoAllphoneSF.LOGICA {
             using (SQLiteConnection conexion = new SQLiteConnection(cadena))
             {
                 conexion.Open();
-                string query = "INSERT INTO TipoProductos (NombreTipo) VALUES (@NombreTipo)";
+                string query = "INSERT INTO TiposProductos (NombreTipo) VALUES (@NombreTipo)";
 
                 SQLiteCommand cmd = new SQLiteCommand(query, conexion);
                 cmd.Parameters.Add(new SQLiteParameter("@NombreTipo", TipoProduc.NombreTipo));
@@ -58,7 +58,7 @@ namespace ProyectoAllphoneSF.LOGICA {
 
             using (SQLiteConnection conexion = new SQLiteConnection(cadena)) {
                 conexion.Open();
-                string query = "DELETE FROM TipoProductos WHERE TipoID = @TipoID";
+                string query = "DELETE FROM TiposProductos WHERE TipoID = @TipoID";
 
                 SQLiteCommand cmd = new SQLiteCommand(query, conexion);
 
@@ -96,6 +96,34 @@ namespace ProyectoAllphoneSF.LOGICA {
                 Console.WriteLine("Tipo Producto Eliminado con EXITO");
             }
             return respuesta = true;
+        }
+
+
+        public List<TiposProductos> ListarTipos() {
+            List<TiposProductos> DatosLista = new List<TiposProductos>();
+
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena)) {
+                conexion.Open();
+
+                string query = "SELECT TipoID, NombreTipo FROM TiposProductos";
+
+                SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+
+                using (SQLiteDataReader reader = cmd.ExecuteReader()) {
+                    while (reader.Read()) {
+                        DatosLista.Add(new TiposProductos() {
+                            TipoID = int.Parse(reader["TipoID"].ToString()),
+                            NombreTipo = reader["NombreTipo"].ToString(),
+
+                        });
+                        
+
+                            
+                    }
+
+                    return DatosLista;
+                }
+            }
         }
     }
 }

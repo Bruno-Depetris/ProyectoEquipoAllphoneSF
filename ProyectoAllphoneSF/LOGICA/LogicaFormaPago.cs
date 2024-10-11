@@ -110,7 +110,7 @@ namespace ProyectoAllphoneSF.LOGICA
             }
             return respuesta = true;
         }
-        public List<FormaPago> ListarFormaPago(FormaPago forma)
+        public List<FormaPago> ListarFormaPago()
         {
 
             List<FormaPago> DatosFormaPago = new List<FormaPago>();
