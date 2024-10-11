@@ -29,7 +29,6 @@
             this.comboBox_Producto = new System.Windows.Forms.ComboBox();
             this.textBox_Email = new System.Windows.Forms.TextBox();
             this.textBox_Telefono = new System.Windows.Forms.TextBox();
-            this.textBox_Direccion = new System.Windows.Forms.TextBox();
             this.textBox_Apellido = new System.Windows.Forms.TextBox();
             this.textBox_Nombre = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -40,17 +39,24 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.comboBox_Zona = new System.Windows.Forms.ComboBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.gradientPanel1 = new ProyectoAllphoneSF.GradientPanel();
+            this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // comboBox_MedioPago
             // 
-            this.comboBox_MedioPago.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBox_MedioPago.BackColor = System.Drawing.Color.White;
             this.comboBox_MedioPago.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_MedioPago.FormattingEnabled = true;
-            this.comboBox_MedioPago.Location = new System.Drawing.Point(205, 295);
+            this.comboBox_MedioPago.Location = new System.Drawing.Point(139, 251);
             this.comboBox_MedioPago.Name = "comboBox_MedioPago";
-            this.comboBox_MedioPago.Size = new System.Drawing.Size(377, 29);
-            this.comboBox_MedioPago.TabIndex = 51;
+            this.comboBox_MedioPago.Size = new System.Drawing.Size(333, 29);
+            this.comboBox_MedioPago.TabIndex = 7;
             // 
             // Button_Registro
             // 
@@ -58,7 +64,7 @@
             this.Button_Registro.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Button_Registro.FlatAppearance.BorderSize = 0;
             this.Button_Registro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button_Registro.Location = new System.Drawing.Point(326, 411);
+            this.Button_Registro.Location = new System.Drawing.Point(68, 382);
             this.Button_Registro.Name = "Button_Registro";
             this.Button_Registro.Size = new System.Drawing.Size(144, 27);
             this.Button_Registro.TabIndex = 48;
@@ -67,12 +73,13 @@
             // 
             // Button_ConcretarVenta
             // 
-            this.Button_ConcretarVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(191)))), ((int)(((byte)(236)))));
+            this.Button_ConcretarVenta.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Button_ConcretarVenta.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Button_ConcretarVenta.FlatAppearance.BorderSize = 0;
+            this.Button_ConcretarVenta.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(191)))), ((int)(((byte)(236)))));
+            this.Button_ConcretarVenta.FlatAppearance.BorderSize = 2;
             this.Button_ConcretarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button_ConcretarVenta.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_ConcretarVenta.Location = new System.Drawing.Point(282, 330);
+            this.Button_ConcretarVenta.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_ConcretarVenta.Location = new System.Drawing.Point(162, 364);
             this.Button_ConcretarVenta.Name = "Button_ConcretarVenta";
             this.Button_ConcretarVenta.Size = new System.Drawing.Size(222, 45);
             this.Button_ConcretarVenta.TabIndex = 47;
@@ -82,69 +89,59 @@
             // 
             // comboBox_Producto
             // 
-            this.comboBox_Producto.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBox_Producto.BackColor = System.Drawing.Color.White;
             this.comboBox_Producto.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_Producto.FormattingEnabled = true;
-            this.comboBox_Producto.Location = new System.Drawing.Point(205, 260);
+            this.comboBox_Producto.Location = new System.Drawing.Point(88, 211);
             this.comboBox_Producto.Name = "comboBox_Producto";
-            this.comboBox_Producto.Size = new System.Drawing.Size(377, 29);
-            this.comboBox_Producto.TabIndex = 46;
+            this.comboBox_Producto.Size = new System.Drawing.Size(384, 29);
+            this.comboBox_Producto.TabIndex = 6;
             // 
             // textBox_Email
             // 
-            this.textBox_Email.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox_Email.BackColor = System.Drawing.Color.White;
             this.textBox_Email.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_Email.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Email.Location = new System.Drawing.Point(205, 225);
+            this.textBox_Email.Location = new System.Drawing.Point(88, 176);
             this.textBox_Email.Name = "textBox_Email";
-            this.textBox_Email.Size = new System.Drawing.Size(377, 29);
-            this.textBox_Email.TabIndex = 45;
+            this.textBox_Email.Size = new System.Drawing.Size(384, 29);
+            this.textBox_Email.TabIndex = 5;
             // 
             // textBox_Telefono
             // 
-            this.textBox_Telefono.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox_Telefono.BackColor = System.Drawing.Color.White;
             this.textBox_Telefono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_Telefono.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Telefono.Location = new System.Drawing.Point(205, 190);
+            this.textBox_Telefono.Location = new System.Drawing.Point(88, 141);
             this.textBox_Telefono.Name = "textBox_Telefono";
-            this.textBox_Telefono.Size = new System.Drawing.Size(377, 29);
-            this.textBox_Telefono.TabIndex = 44;
-            // 
-            // textBox_Direccion
-            // 
-            this.textBox_Direccion.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox_Direccion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_Direccion.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Direccion.Location = new System.Drawing.Point(205, 155);
-            this.textBox_Direccion.Name = "textBox_Direccion";
-            this.textBox_Direccion.Size = new System.Drawing.Size(377, 29);
-            this.textBox_Direccion.TabIndex = 43;
+            this.textBox_Telefono.Size = new System.Drawing.Size(384, 29);
+            this.textBox_Telefono.TabIndex = 4;
             // 
             // textBox_Apellido
             // 
-            this.textBox_Apellido.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox_Apellido.BackColor = System.Drawing.Color.White;
             this.textBox_Apellido.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_Apellido.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Apellido.Location = new System.Drawing.Point(205, 120);
+            this.textBox_Apellido.Location = new System.Drawing.Point(192, 74);
             this.textBox_Apellido.Name = "textBox_Apellido";
-            this.textBox_Apellido.Size = new System.Drawing.Size(377, 29);
-            this.textBox_Apellido.TabIndex = 42;
+            this.textBox_Apellido.Size = new System.Drawing.Size(280, 29);
+            this.textBox_Apellido.TabIndex = 2;
             // 
             // textBox_Nombre
             // 
-            this.textBox_Nombre.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox_Nombre.BackColor = System.Drawing.Color.White;
             this.textBox_Nombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_Nombre.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Nombre.Location = new System.Drawing.Point(205, 80);
+            this.textBox_Nombre.Location = new System.Drawing.Point(15, 74);
             this.textBox_Nombre.Name = "textBox_Nombre";
-            this.textBox_Nombre.Size = new System.Drawing.Size(377, 29);
-            this.textBox_Nombre.TabIndex = 41;
+            this.textBox_Nombre.Size = new System.Drawing.Size(171, 29);
+            this.textBox_Nombre.TabIndex = 1;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(85, 298);
+            this.label11.Location = new System.Drawing.Point(17, 254);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(114, 21);
             this.label11.TabIndex = 40;
@@ -154,7 +151,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(127, 263);
+            this.label10.Location = new System.Drawing.Point(11, 214);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(73, 21);
             this.label10.TabIndex = 39;
@@ -164,7 +161,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(146, 227);
+            this.label9.Location = new System.Drawing.Point(34, 184);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(48, 21);
             this.label9.TabIndex = 38;
@@ -174,7 +171,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(126, 192);
+            this.label8.Location = new System.Drawing.Point(17, 143);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(68, 21);
             this.label8.TabIndex = 37;
@@ -184,17 +181,17 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(123, 157);
+            this.label7.Location = new System.Drawing.Point(37, 109);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(75, 21);
+            this.label7.Size = new System.Drawing.Size(45, 21);
             this.label7.TabIndex = 36;
-            this.label7.Text = "Dirección";
+            this.label7.Text = "Zona";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(131, 122);
+            this.label5.Location = new System.Drawing.Point(201, 59);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(67, 21);
             this.label5.TabIndex = 35;
@@ -204,7 +201,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(132, 82);
+            this.label6.Location = new System.Drawing.Point(26, 59);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 21);
             this.label6.TabIndex = 34;
@@ -218,9 +215,73 @@
             this.label12.Font = new System.Drawing.Font("Nirmala UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(0, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(349, 54);
+            this.label12.Size = new System.Drawing.Size(428, 54);
             this.label12.TabIndex = 33;
-            this.label12.Text = "CARGAR CLIENTE";
+            this.label12.Text = "GESTIONAR COMPRA";
+            // 
+            // comboBox_Zona
+            // 
+            this.comboBox_Zona.BackColor = System.Drawing.Color.White;
+            this.comboBox_Zona.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_Zona.FormattingEnabled = true;
+            this.comboBox_Zona.Location = new System.Drawing.Point(88, 106);
+            this.comboBox_Zona.Name = "comboBox_Zona";
+            this.comboBox_Zona.Size = new System.Drawing.Size(384, 29);
+            this.comboBox_Zona.TabIndex = 3;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.comboBox_Zona);
+            this.panel1.Controls.Add(this.comboBox_MedioPago);
+            this.panel1.Controls.Add(this.Button_ConcretarVenta);
+            this.panel1.Controls.Add(this.comboBox_Producto);
+            this.panel1.Controls.Add(this.textBox_Email);
+            this.panel1.Controls.Add(this.textBox_Telefono);
+            this.panel1.Controls.Add(this.textBox_Apellido);
+            this.panel1.Controls.Add(this.textBox_Nombre);
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.label12);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(514, 450);
+            this.panel1.TabIndex = 53;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(514, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(2, 450);
+            this.panel2.TabIndex = 54;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.gradientPanel1);
+            this.panel3.Controls.Add(this.Button_Registro);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(516, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(284, 450);
+            this.panel3.TabIndex = 55;
+            // 
+            // gradientPanel1
+            // 
+            this.gradientPanel1.ColorLeft = System.Drawing.Color.Silver;
+            this.gradientPanel1.ColorRight = System.Drawing.Color.Empty;
+            this.gradientPanel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.gradientPanel1.Location = new System.Drawing.Point(0, 0);
+            this.gradientPanel1.Name = "gradientPanel1";
+            this.gradientPanel1.Size = new System.Drawing.Size(10, 450);
+            this.gradientPanel1.TabIndex = 49;
             // 
             // Cargar_Clientes
             // 
@@ -228,28 +289,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.comboBox_MedioPago);
-            this.Controls.Add(this.Button_Registro);
-            this.Controls.Add(this.Button_ConcretarVenta);
-            this.Controls.Add(this.comboBox_Producto);
-            this.Controls.Add(this.textBox_Email);
-            this.Controls.Add(this.textBox_Telefono);
-            this.Controls.Add(this.textBox_Direccion);
-            this.Controls.Add(this.textBox_Apellido);
-            this.Controls.Add(this.textBox_Nombre);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label12);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Cargar_Clientes";
             this.Text = "Cargar_Clientes";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -261,7 +310,6 @@
         private System.Windows.Forms.ComboBox comboBox_Producto;
         private System.Windows.Forms.TextBox textBox_Email;
         private System.Windows.Forms.TextBox textBox_Telefono;
-        private System.Windows.Forms.TextBox textBox_Direccion;
         private System.Windows.Forms.TextBox textBox_Apellido;
         private System.Windows.Forms.TextBox textBox_Nombre;
         private System.Windows.Forms.Label label11;
@@ -272,5 +320,10 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox comboBox_Zona;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private GradientPanel gradientPanel1;
     }
 }

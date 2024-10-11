@@ -17,8 +17,7 @@ namespace ProyectoAllphoneSF {
         public Cargar_Clientes()
         {
             InitializeComponent();
-            RedondearBoton(Button_Registro, 20);
-            RedondearBoton(Button_ConcretarVenta, 20);
+
 
             comboBox_Producto.Items.Insert(0, "Seleccione un producto");
             comboBox_Producto.SelectedIndex = 0;
@@ -26,46 +25,13 @@ namespace ProyectoAllphoneSF {
             comboBox_MedioPago.Items.Insert(0, "Selccionar Medio Pago");
             comboBox_MedioPago.SelectedIndex = 0;
 
+            comboBox_Zona.Items.Insert(0, "Selecciona una Zona");
+            comboBox_Zona.SelectedIndex = 0;
+
         }
 
 
-        #region Redondear Botones
-
-        public void RedondearBoton(Button boton, int radio)
-        {
-            // Asegurar que el radio no sea mayor que la mitad del tamaño del botón
-            if (radio > boton.Height / 2 || radio > boton.Width / 2)
-            {
-                radio = Math.Min(boton.Height, boton.Width) / 2;
-            }
-
-            GraphicsPath path = new GraphicsPath();
-
-            // Crear las esquinas redondeadas
-            path.AddArc(new Rectangle(0, 0, radio, radio), 180, 90); // Esquina superior izquierda
-            path.AddArc(new Rectangle(boton.Width - radio - 1, 0, radio, radio), 270, 90); // Esquina superior derecha
-            path.AddArc(new Rectangle(boton.Width - radio - 1, boton.Height - radio - 1, radio, radio), 0, 90); // Esquina inferior derecha
-            path.AddArc(new Rectangle(0, boton.Height - radio - 1, radio, radio), 90, 90); // Esquina inferior izquierda
-            path.CloseFigure();
-
-            // Asignar la región redondeada al botón
-            boton.Region = new Region(path);
-        }
-
-
-        // Importar funciones de la API de Windows para mover la ventana
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-        private void Cargar_Clientes_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            // Enviar el mensaje para mover la ventana al formulario principal (ParentForm)
-            SendMessage(this.ParentForm.Handle, 0x112, 0xf012, 0); // 0x112 = WM_SYSCOMMAND, 0xf012 = SC_MOVE + HTCAPTION
-        }
-        #endregion
+   
 
 
         private bool Validaciones() {
@@ -83,10 +49,8 @@ namespace ProyectoAllphoneSF {
                 textBox_Apellido.Focus();
                 return respuesta;
             }
-            if (string.IsNullOrEmpty(textBox_Direccion.Text) || textBox_Direccion.Text.All(char.IsDigit)) {
-                MessageBox.Show("Errora al ingresar Direccion");
-                textBox_Direccion.Clear();
-                textBox_Direccion.Focus();
+            if (comboBox_Zona.SelectedIndex == 0) {
+                MessageBox.Show("Errora al ingresar Zona");
                 return respuesta;
             }
             if (string.IsNullOrEmpty(textBox_Telefono.Text) || textBox_Telefono.Text.All(char.IsLetter)) {
@@ -124,7 +88,7 @@ namespace ProyectoAllphoneSF {
         private void RestaurarInputs() {
             textBox_Nombre.Text = string.Empty;
             textBox_Apellido.Text = string.Empty;
-            textBox_Direccion.Text = string.Empty;
+            comboBox_Zona.SelectedIndex = 0;
             textBox_Email.Text = string.Empty;
             textBox_Telefono.Text = string.Empty;
             comboBox_MedioPago.SelectedIndex = 0;

@@ -102,12 +102,6 @@
     <Compile Include="DashBoard.Designer.cs">
       <DependentUpon>DashBoard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Estadisticas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Estadisticas.Designer.cs">
-      <DependentUpon>Estadisticas.cs</DependentUpon>
-    </Compile>
     <Compile Include="Est_Fecha.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +125,12 @@
     </Compile>
     <Compile Include="FormContenedor.Designer.cs">
       <DependentUpon>FormContenedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GradienteBarraMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GradienteButtonTop.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="LOGICA\LogicaCliente.cs" />
     <Compile Include="LOGICA\LogicaDatosCompra.cs" />
@@ -173,9 +173,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DashBoard.resx">
       <DependentUpon>DashBoard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Estadisticas.resx">
-      <DependentUpon>Estadisticas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Est_Fecha.resx">
       <DependentUpon>Est_Fecha.cs</DependentUpon>

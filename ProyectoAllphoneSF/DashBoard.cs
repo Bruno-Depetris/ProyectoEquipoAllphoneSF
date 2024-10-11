@@ -44,9 +44,13 @@ namespace ProyectoAllphoneSF {
             chart_GraficoDonaVentas.Series.Add(series);
 
             // Opcional: Personalizar el gráfico
-            chart_GraficoDonaVentas.Titles.Add("Gráfico de Dona");
             chart_GraficoDonaVentas.Legends.Add(new Legend("Leyenda"));
-            chart_GraficoDonaVentas.Legends["Leyenda"].Docking = Docking.Bottom;  // Colocar la leyenda en la parte inferior
+            chart_GraficoDonaVentas.Legends["Leyenda"].Docking = Docking.Bottom; 
+          
+        }
+
+        private void label6_Click(object sender, EventArgs e) {
+
         }
     }
 }
