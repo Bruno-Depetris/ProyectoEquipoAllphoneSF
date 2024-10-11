@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProyectoAllphoneSF.LOGICA;
+using ProyectoAllphoneSF.MODELO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,39 +9,119 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 using System.Windows.Forms;
 
 namespace ProyectoAllphoneSF
 {
-    public partial class Configuraciones : Form
-    {
-        public Configuraciones()
-        {
+    public partial class Configuraciones : Form {
+        public Configuraciones() {
             InitializeComponent();
+            CargarDatasGreed();
+        }
+        private void CargarDatasGreed() {
+            dataGridView_Monedas.DataSource = null;
+            dataGridView_MediosPago.DataSource = null;
+            dataGridView_Seccion.DataSource = null;
+            dataGridView_Zona.DataSource = null;
+            
+            var datosMoneda = LogicaMoneda.Instancia.ListarMoneda();
+            var datosMP = LogicaFormaPago.Instancia.ListarFormaPago();
+            //var datosSecciones = LogicaTipoProducto.Instancia.();
+            var datosZona = LogicaZona.Instancia.ListarZonas();
+
+            dataGridView_Monedas.DataSource = datosMoneda;
+            dataGridView_MediosPago.DataSource = datosMP;
+            dataGridView_Seccion.DataSource = null;
+            dataGridView_Zona.DataSource = datosZona;
+
+        }
+        private void iconButton_Monedas_Click(object sender, EventArgs e) {
+            if (string.IsNullOrEmpty(textBox_Monedas.Text) || textBox_Monedas.Text.All(char.IsDigit)) {
+                MessageBox.Show("Error al ingresar las monedas", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                textBox_Monedas.Focus();
+                textBox_Monedas.Clear();
+                return;
+
+            }
+            try {
+                Monedas NuevaMoneda = new Monedas();
+
+                NuevaMoneda.MonedaName = textBox_Monedas.Text;
+
+                LogicaMoneda.Instancia.CargarMoneda(NuevaMoneda);
+
+                MessageBox.Show("Moneda Cargada con exito", "FELICIDAD😎");
+                textBox_Monedas.Focus();
+                textBox_Monedas.Clear();
+                CargarDatasGreed();
+
+
+            } catch (Exception ex){
+                MessageBox.Show($"Hubo algun error al cargar o mostrar{ex}", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+
+
         }
 
-        private void button8_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
+        private void iconButton_MediosPago_Click(object sender, EventArgs e) {
+            if (string.IsNullOrEmpty(textBox_MediosPago.Text) || textBox_MediosPago.Text.All(char.IsDigit)) {
+                MessageBox.Show("Error al ingresar los medios de pago", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                textBox_MediosPago.Focus();
+                textBox_MediosPago.Clear();
+                return;
+
+            }
+            try {
+                FormaPago NuevaFormaPago = new FormaPago();
+
+                NuevaFormaPago.Metodopago = textBox_MediosPago.Text;
+                NuevaFormaPago.Descuento = 12;
+
+                LogicaFormaPago.Instancia.CargarFormaPago(NuevaFormaPago);
+
+                MessageBox.Show("Forma de pago Cargada con exito", "FELICIDAD😎");
+                textBox_MediosPago.Focus();
+                textBox_MediosPago.Clear();
+                CargarDatasGreed();
+
+
+
+
+            } catch (Exception ex) {
+                MessageBox.Show($"Hubo algun error al cargar o mostrar{ex}", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
-        private void button7_Click(object sender, EventArgs e)
-        {
-            // Accede al formulario principal y lo minimiza
-            Form formularioPrincipal = Application.OpenForms[0]; // Asume que el formulario principal es el primero abierto
-            formularioPrincipal.WindowState = FormWindowState.Minimized;
-        }
-        // Importar funciones de la API de Windows para mover la ventana
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
+        private void iconButton_Secciones_Click(object sender, EventArgs e) {
+            if (string.IsNullOrEmpty(textBox_Seccion.Text) || textBox_Seccion.Text.All(char.IsDigit)) {
+                MessageBox.Show("Error al ingresar los tipos", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                textBox_Seccion.Focus();
+                textBox_Seccion.Clear();
+                return;
 
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-        private void Configuraciones_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            // Enviar el mensaje para mover la ventana al formulario principal (ParentForm)
-            SendMessage(this.ParentForm.Handle, 0x112, 0xf012, 0); // 0x112 = WM_SYSCOMMAND, 0xf012 = SC_MOVE + HTCAPTION
+            }
+            try{
+
+            }catch{ 
+
+            }
+        }
+
+        private void iconButton_Zonas_Click(object sender, EventArgs e) {
+            if (string.IsNullOrEmpty(textBox_Zona.Text) || textBox_Zona.Text.All(char.IsDigit)) {
+                MessageBox.Show("Error al ingresar los tipos", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                textBox_Zona.Focus();
+                textBox_Zona.Clear();
+                return;
+
+            }
+            try {
+
+            } catch {
+
+            }
         }
     }
 }

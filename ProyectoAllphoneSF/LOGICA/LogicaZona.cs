@@ -109,7 +109,7 @@ namespace ProyectoAllphoneSF.LOGICA {
         }
 
 
-        List<Zonas> ListarZonas(Zonas zon) {
+        public List<Zonas> ListarZonas() {
             List<Zonas> MostrarZonas = new List<Zonas>();
 
 
