@@ -24,7 +24,6 @@
         /// </summary>
         private void InitializeComponent() {
             this.comboBox_MedioPago = new System.Windows.Forms.ComboBox();
-            this.Button_Registro = new System.Windows.Forms.Button();
             this.Button_ConcretarVenta = new System.Windows.Forms.Button();
             this.comboBox_Producto = new System.Windows.Forms.ComboBox();
             this.textBox_Email = new System.Windows.Forms.TextBox();
@@ -43,9 +42,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.iconButton_BuscarFecha = new FontAwesome.Sharp.IconButton();
             this.gradientPanel1 = new ProyectoAllphoneSF.GradientPanel();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBox_MedioPago
@@ -58,28 +61,16 @@
             this.comboBox_MedioPago.Size = new System.Drawing.Size(333, 29);
             this.comboBox_MedioPago.TabIndex = 7;
             // 
-            // Button_Registro
-            // 
-            this.Button_Registro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(191)))), ((int)(((byte)(236)))));
-            this.Button_Registro.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Button_Registro.FlatAppearance.BorderSize = 0;
-            this.Button_Registro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button_Registro.Location = new System.Drawing.Point(68, 382);
-            this.Button_Registro.Name = "Button_Registro";
-            this.Button_Registro.Size = new System.Drawing.Size(144, 27);
-            this.Button_Registro.TabIndex = 48;
-            this.Button_Registro.Text = "Registro";
-            this.Button_Registro.UseVisualStyleBackColor = false;
-            // 
             // Button_ConcretarVenta
             // 
-            this.Button_ConcretarVenta.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Button_ConcretarVenta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.Button_ConcretarVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.Button_ConcretarVenta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Button_ConcretarVenta.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(191)))), ((int)(((byte)(236)))));
-            this.Button_ConcretarVenta.FlatAppearance.BorderSize = 2;
             this.Button_ConcretarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button_ConcretarVenta.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_ConcretarVenta.Location = new System.Drawing.Point(162, 364);
+            this.Button_ConcretarVenta.ForeColor = System.Drawing.SystemColors.Control;
+            this.Button_ConcretarVenta.Location = new System.Drawing.Point(139, 393);
             this.Button_ConcretarVenta.Name = "Button_ConcretarVenta";
             this.Button_ConcretarVenta.Size = new System.Drawing.Size(222, 45);
             this.Button_ConcretarVenta.TabIndex = 47;
@@ -265,13 +256,47 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.dateTimePicker1);
+            this.panel3.Controls.Add(this.iconButton_BuscarFecha);
+            this.panel3.Controls.Add(this.dataGridView1);
             this.panel3.Controls.Add(this.gradientPanel1);
-            this.panel3.Controls.Add(this.Button_Registro);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(516, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(284, 450);
+            this.panel3.Size = new System.Drawing.Size(484, 450);
             this.panel3.TabIndex = 55;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(16, 59);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(456, 379);
+            this.dataGridView1.TabIndex = 50;
+            // 
+            // iconButton_BuscarFecha
+            // 
+            this.iconButton_BuscarFecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(191)))), ((int)(((byte)(236)))));
+            this.iconButton_BuscarFecha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.iconButton_BuscarFecha.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton_BuscarFecha.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.iconButton_BuscarFecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton_BuscarFecha.Font = new System.Drawing.Font("Arboria Book", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton_BuscarFecha.IconChar = FontAwesome.Sharp.IconChar.Searchengin;
+            this.iconButton_BuscarFecha.IconColor = System.Drawing.Color.Black;
+            this.iconButton_BuscarFecha.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton_BuscarFecha.IconSize = 25;
+            this.iconButton_BuscarFecha.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton_BuscarFecha.Location = new System.Drawing.Point(281, 12);
+            this.iconButton_BuscarFecha.Name = "iconButton_BuscarFecha";
+            this.iconButton_BuscarFecha.Size = new System.Drawing.Size(109, 29);
+            this.iconButton_BuscarFecha.TabIndex = 51;
+            this.iconButton_BuscarFecha.Text = "Buscar";
+            this.iconButton_BuscarFecha.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.iconButton_BuscarFecha.UseVisualStyleBackColor = false;
             // 
             // gradientPanel1
             // 
@@ -283,12 +308,21 @@
             this.gradientPanel1.Size = new System.Drawing.Size(10, 450);
             this.gradientPanel1.TabIndex = 49;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Arboria Book", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Font = new System.Drawing.Font("Arboria Book", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(16, 14);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(224, 27);
+            this.dateTimePicker1.TabIndex = 52;
+            // 
             // Cargar_Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1000, 450);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -298,6 +332,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -305,7 +340,6 @@
         #endregion
 
         private System.Windows.Forms.ComboBox comboBox_MedioPago;
-        private System.Windows.Forms.Button Button_Registro;
         private System.Windows.Forms.Button Button_ConcretarVenta;
         private System.Windows.Forms.ComboBox comboBox_Producto;
         private System.Windows.Forms.TextBox textBox_Email;
@@ -325,5 +359,8 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private GradientPanel gradientPanel1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private FontAwesome.Sharp.IconButton iconButton_BuscarFecha;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

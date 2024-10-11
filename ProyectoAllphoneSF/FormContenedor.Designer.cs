@@ -187,7 +187,7 @@
             this.panel_ContenedorTop.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel_ContenedorTop.Location = new System.Drawing.Point(211, 526);
             this.panel_ContenedorTop.Name = "panel_ContenedorTop";
-            this.panel_ContenedorTop.Size = new System.Drawing.Size(823, 35);
+            this.panel_ContenedorTop.Size = new System.Drawing.Size(1073, 35);
             this.panel_ContenedorTop.TabIndex = 20;
             // 
             // label_Hora
@@ -196,7 +196,7 @@
             this.label_Hora.Dock = System.Windows.Forms.DockStyle.Right;
             this.label_Hora.Font = new System.Drawing.Font("Arboria Book", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Hora.ForeColor = System.Drawing.Color.Transparent;
-            this.label_Hora.Location = new System.Drawing.Point(556, 0);
+            this.label_Hora.Location = new System.Drawing.Point(806, 0);
             this.label_Hora.Name = "label_Hora";
             this.label_Hora.Size = new System.Drawing.Size(71, 29);
             this.label_Hora.TabIndex = 19;
@@ -208,7 +208,7 @@
             this.label.Dock = System.Windows.Forms.DockStyle.Right;
             this.label.Font = new System.Drawing.Font("Arboria Book", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label.ForeColor = System.Drawing.Color.Transparent;
-            this.label.Location = new System.Drawing.Point(627, 0);
+            this.label.Location = new System.Drawing.Point(877, 0);
             this.label.Name = "label";
             this.label.Size = new System.Drawing.Size(92, 29);
             this.label.TabIndex = 18;
@@ -220,7 +220,7 @@
             this.label_Fecha.Dock = System.Windows.Forms.DockStyle.Right;
             this.label_Fecha.Font = new System.Drawing.Font("Arboria Book", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Fecha.ForeColor = System.Drawing.Color.Transparent;
-            this.label_Fecha.Location = new System.Drawing.Point(719, 0);
+            this.label_Fecha.Location = new System.Drawing.Point(969, 0);
             this.label_Fecha.Name = "label_Fecha";
             this.label_Fecha.Size = new System.Drawing.Size(104, 29);
             this.label_Fecha.TabIndex = 17;
@@ -256,7 +256,7 @@
             this.panel_ContenedorMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_ContenedorMain.Location = new System.Drawing.Point(211, 0);
             this.panel_ContenedorMain.Name = "panel_ContenedorMain";
-            this.panel_ContenedorMain.Size = new System.Drawing.Size(823, 526);
+            this.panel_ContenedorMain.Size = new System.Drawing.Size(1073, 526);
             this.panel_ContenedorMain.TabIndex = 21;
             // 
             // HoraFecha
@@ -297,7 +297,7 @@
             this.gradienteButtonTop1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.gradienteButtonTop1.Location = new System.Drawing.Point(0, 516);
             this.gradienteButtonTop1.Name = "gradienteButtonTop1";
-            this.gradienteButtonTop1.Size = new System.Drawing.Size(823, 10);
+            this.gradienteButtonTop1.Size = new System.Drawing.Size(1073, 10);
             this.gradienteButtonTop1.TabIndex = 0;
             // 
             // gradienteButtonTop2
@@ -316,7 +316,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1034, 561);
+            this.ClientSize = new System.Drawing.Size(1284, 561);
             this.Controls.Add(this.panel_ContenedorMain);
             this.Controls.Add(this.panel_ContenedorTop);
             this.Controls.Add(this.panel_ContenedorMenu);
