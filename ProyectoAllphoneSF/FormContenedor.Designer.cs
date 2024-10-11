@@ -27,10 +27,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormContenedor));
             this.panel_ContenedorMenu = new System.Windows.Forms.Panel();
             this.panel_Botones = new System.Windows.Forms.Panel();
+            this.panel_SeguirSeleccion = new System.Windows.Forms.Panel();
+            this.gradienteButtonTop2 = new ProyectoAllphoneSF.GradienteButtonTop();
             this.button_CrearBackup = new System.Windows.Forms.Button();
             this.Button_MovimientosCaja = new System.Windows.Forms.Button();
             this.ButtonGestionarStock = new System.Windows.Forms.Button();
             this.Button_CargarCliente = new System.Windows.Forms.Button();
+            this.button_Configuracion = new System.Windows.Forms.Button();
             this.panel_Logo = new System.Windows.Forms.Panel();
             this.pictureBox_LogoNegocio = new System.Windows.Forms.PictureBox();
             this.panel_ContenedorTop = new System.Windows.Forms.Panel();
@@ -40,12 +43,9 @@
             this.label_EstadoBaseDatos = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel_ContenedorMain = new System.Windows.Forms.Panel();
+            this.gradienteButtonTop1 = new ProyectoAllphoneSF.GradienteButtonTop();
             this.HoraFecha = new System.Windows.Forms.Timer(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.panel_SeguirSeleccion = new System.Windows.Forms.Panel();
-            this.button_Configuracion = new System.Windows.Forms.Button();
-            this.gradienteButtonTop1 = new ProyectoAllphoneSF.GradienteButtonTop();
-            this.gradienteButtonTop2 = new ProyectoAllphoneSF.GradienteButtonTop();
             this.panel_ContenedorMenu.SuspendLayout();
             this.panel_Botones.SuspendLayout();
             this.panel_Logo.SuspendLayout();
@@ -80,6 +80,25 @@
             this.panel_Botones.Name = "panel_Botones";
             this.panel_Botones.Size = new System.Drawing.Size(211, 451);
             this.panel_Botones.TabIndex = 1;
+            // 
+            // panel_SeguirSeleccion
+            // 
+            this.panel_SeguirSeleccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(191)))), ((int)(((byte)(236)))));
+            this.panel_SeguirSeleccion.Location = new System.Drawing.Point(0, 62);
+            this.panel_SeguirSeleccion.Name = "panel_SeguirSeleccion";
+            this.panel_SeguirSeleccion.Size = new System.Drawing.Size(3, 100);
+            this.panel_SeguirSeleccion.TabIndex = 13;
+            // 
+            // gradienteButtonTop2
+            // 
+            this.gradienteButtonTop2.BackColor = System.Drawing.Color.Transparent;
+            this.gradienteButtonTop2.ColorButton = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.gradienteButtonTop2.ColorTop = System.Drawing.Color.WhiteSmoke;
+            this.gradienteButtonTop2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gradienteButtonTop2.Location = new System.Drawing.Point(0, 0);
+            this.gradienteButtonTop2.Name = "gradienteButtonTop2";
+            this.gradienteButtonTop2.Size = new System.Drawing.Size(211, 12);
+            this.gradienteButtonTop2.TabIndex = 12;
             // 
             // button_CrearBackup
             // 
@@ -152,6 +171,24 @@
             this.Button_CargarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Button_CargarCliente.UseVisualStyleBackColor = false;
             this.Button_CargarCliente.Click += new System.EventHandler(this.Button_CargarCliente_Click);
+            // 
+            // button_Configuracion
+            // 
+            this.button_Configuracion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.button_Configuracion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_Configuracion.FlatAppearance.BorderSize = 0;
+            this.button_Configuracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Configuracion.Font = new System.Drawing.Font("Arboria Book", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Configuracion.ForeColor = System.Drawing.Color.White;
+            this.button_Configuracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_Configuracion.Location = new System.Drawing.Point(0, 263);
+            this.button_Configuracion.Name = "button_Configuracion";
+            this.button_Configuracion.Size = new System.Drawing.Size(211, 65);
+            this.button_Configuracion.TabIndex = 14;
+            this.button_Configuracion.Text = "Configuracion";
+            this.button_Configuracion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button_Configuracion.UseVisualStyleBackColor = false;
+            this.button_Configuracion.Click += new System.EventHandler(this.button_Configuracion_Click);
             // 
             // panel_Logo
             // 
@@ -259,37 +296,6 @@
             this.panel_ContenedorMain.Size = new System.Drawing.Size(1073, 526);
             this.panel_ContenedorMain.TabIndex = 21;
             // 
-            // HoraFecha
-            // 
-            this.HoraFecha.Enabled = true;
-            this.HoraFecha.Tick += new System.EventHandler(this.HoraFecha_Tick);
-            // 
-            // panel_SeguirSeleccion
-            // 
-            this.panel_SeguirSeleccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(191)))), ((int)(((byte)(236)))));
-            this.panel_SeguirSeleccion.Location = new System.Drawing.Point(0, 62);
-            this.panel_SeguirSeleccion.Name = "panel_SeguirSeleccion";
-            this.panel_SeguirSeleccion.Size = new System.Drawing.Size(3, 100);
-            this.panel_SeguirSeleccion.TabIndex = 13;
-            // 
-            // button_Configuracion
-            // 
-            this.button_Configuracion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.button_Configuracion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_Configuracion.FlatAppearance.BorderSize = 0;
-            this.button_Configuracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Configuracion.Font = new System.Drawing.Font("Arboria Book", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Configuracion.ForeColor = System.Drawing.Color.White;
-            this.button_Configuracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_Configuracion.Location = new System.Drawing.Point(0, 263);
-            this.button_Configuracion.Name = "button_Configuracion";
-            this.button_Configuracion.Size = new System.Drawing.Size(211, 65);
-            this.button_Configuracion.TabIndex = 14;
-            this.button_Configuracion.Text = "Configuracion";
-            this.button_Configuracion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_Configuracion.UseVisualStyleBackColor = false;
-            this.button_Configuracion.Click += new System.EventHandler(this.button_Configuracion_Click);
-            // 
             // gradienteButtonTop1
             // 
             this.gradienteButtonTop1.ColorButton = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
@@ -300,16 +306,10 @@
             this.gradienteButtonTop1.Size = new System.Drawing.Size(1073, 10);
             this.gradienteButtonTop1.TabIndex = 0;
             // 
-            // gradienteButtonTop2
+            // HoraFecha
             // 
-            this.gradienteButtonTop2.BackColor = System.Drawing.Color.Transparent;
-            this.gradienteButtonTop2.ColorButton = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.gradienteButtonTop2.ColorTop = System.Drawing.Color.WhiteSmoke;
-            this.gradienteButtonTop2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gradienteButtonTop2.Location = new System.Drawing.Point(0, 0);
-            this.gradienteButtonTop2.Name = "gradienteButtonTop2";
-            this.gradienteButtonTop2.Size = new System.Drawing.Size(211, 12);
-            this.gradienteButtonTop2.TabIndex = 12;
+            this.HoraFecha.Enabled = true;
+            this.HoraFecha.Tick += new System.EventHandler(this.HoraFecha_Tick);
             // 
             // FormContenedor
             // 

@@ -30,6 +30,9 @@ namespace ProyectoAllphoneSF
             var datosSecciones = LogicaTipoProducto.Instancia.ListarTipos();
             var datosZona = LogicaZona.Instancia.ListarZonas();
 
+
+            
+
             dataGridView_Monedas.DataSource = datosMoneda;
             dataGridView_MediosPago.DataSource = datosMP;
             dataGridView_Seccion.DataSource = datosSecciones;

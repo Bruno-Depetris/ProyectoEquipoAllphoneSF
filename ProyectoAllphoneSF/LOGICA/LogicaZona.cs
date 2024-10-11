@@ -29,7 +29,7 @@ namespace ProyectoAllphoneSF.LOGICA {
                     string query = "INSERT INTO Zonas (Localidad) VALUES (@Localidad)";
                     SQLiteCommand cmd = new SQLiteCommand(query, conexion);
                     cmd.Parameters.Add(new SQLiteParameter("@Localidad", zon.Localidad));
-
+ 
                     cmd.ExecuteNonQuery();
                 }
                 return true;  // Si la operación fue exitosa, devolver true
