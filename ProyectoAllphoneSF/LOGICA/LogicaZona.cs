@@ -97,8 +97,7 @@ namespace ProyectoAllphoneSF.LOGICA {
 
                     cmd.ExecuteNonQuery();
 
-                    return true;
-
+                    
 
                 }
             } catch (Exception ex) {
@@ -106,6 +105,8 @@ namespace ProyectoAllphoneSF.LOGICA {
 
                 return false;
             }
+
+            return true;
         }
 
 
@@ -128,8 +129,8 @@ namespace ProyectoAllphoneSF.LOGICA {
 
                         MostrarZonas.Add(new Zonas() {
 
-                            ZonaID = int.Parse(reader["MonedaID"].ToString()),
-                            Localidad = reader["MonedaName"].ToString(),
+                            ZonaID = int.Parse(reader["ZonaID"].ToString()),
+                            Localidad = reader["Localidad"].ToString(),
                         });
 
                     }

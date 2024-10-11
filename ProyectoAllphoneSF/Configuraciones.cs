@@ -27,12 +27,12 @@ namespace ProyectoAllphoneSF
             
             var datosMoneda = LogicaMoneda.Instancia.ListarMoneda();
             var datosMP = LogicaFormaPago.Instancia.ListarFormaPago();
-            //var datosSecciones = LogicaTipoProducto.Instancia.();
+            var datosSecciones = LogicaTipoProducto.Instancia.ListarTipos();
             var datosZona = LogicaZona.Instancia.ListarZonas();
 
             dataGridView_Monedas.DataSource = datosMoneda;
             dataGridView_MediosPago.DataSource = datosMP;
-            dataGridView_Seccion.DataSource = null;
+            dataGridView_Seccion.DataSource = datosSecciones;
             dataGridView_Zona.DataSource = datosZona;
 
         }
@@ -104,8 +104,19 @@ namespace ProyectoAllphoneSF
             }
             try{
 
-            }catch{ 
+                TiposProductos nuevoTipo = new TiposProductos();
 
+                nuevoTipo.NombreTipo = textBox_Seccion.Text;
+
+                LogicaTipoProducto.Instancia.CargarTipoProducto(nuevoTipo);
+
+                MessageBox.Show("Seccion Cargada con exito", "FELICIDAD😎");
+                textBox_Seccion.Focus();
+                textBox_Seccion.Clear();
+                CargarDatasGreed();
+
+            } catch(Exception ex) {
+                MessageBox.Show($"Hubo algun error al cargar o mostrar{ex}", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -119,8 +130,19 @@ namespace ProyectoAllphoneSF
             }
             try {
 
-            } catch {
+                Zonas nuevaZona = new Zonas();
 
+                nuevaZona.Localidad = textBox_Zona.Text;
+
+                LogicaZona.Instancia.CargarZona(nuevaZona);
+
+                MessageBox.Show("Zona Cargada con exito", "FELICIDAD😎");
+                textBox_Zona.Focus();
+                textBox_Zona.Clear();
+                CargarDatasGreed();
+
+            } catch (Exception ex) {
+                MessageBox.Show($"Hubo algun error al cargar o mostrar{ex}", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }
