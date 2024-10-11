@@ -23,11 +23,9 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.bttn_Cerrar = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
-            this.btn_Minimizar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btn_IngredarMovimiento = new System.Windows.Forms.Button();
+            this.Button_Movimiento = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -48,27 +46,14 @@
             this.label8 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.btn_CerrarCaja = new System.Windows.Forms.Button();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBox10 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // bttn_Cerrar
-            // 
-            this.bttn_Cerrar.BackColor = System.Drawing.Color.Transparent;
-            this.bttn_Cerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bttn_Cerrar.FlatAppearance.BorderSize = 0;
-            this.bttn_Cerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.bttn_Cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bttn_Cerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bttn_Cerrar.Location = new System.Drawing.Point(878, 1);
-            this.bttn_Cerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bttn_Cerrar.Name = "bttn_Cerrar";
-            this.bttn_Cerrar.Size = new System.Drawing.Size(55, 30);
-            this.bttn_Cerrar.TabIndex = 22;
-            this.bttn_Cerrar.Text = "X";
-            this.bttn_Cerrar.UseVisualStyleBackColor = false;
-            this.bttn_Cerrar.Click += new System.EventHandler(this.bttn_Cerrar_Click);
             // 
             // label12
             // 
@@ -79,55 +64,45 @@
             this.label12.Location = new System.Drawing.Point(0, 0);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(361, 54);
+            this.label12.Size = new System.Drawing.Size(419, 54);
             this.label12.TabIndex = 21;
-            this.label12.Text = "Movimientos Caja";
-            // 
-            // btn_Minimizar
-            // 
-            this.btn_Minimizar.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Minimizar.FlatAppearance.BorderSize = 0;
-            this.btn_Minimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btn_Minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Minimizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Minimizar.Location = new System.Drawing.Point(817, 1);
-            this.btn_Minimizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btn_Minimizar.Name = "btn_Minimizar";
-            this.btn_Minimizar.Size = new System.Drawing.Size(55, 30);
-            this.btn_Minimizar.TabIndex = 23;
-            this.btn_Minimizar.Text = "-";
-            this.btn_Minimizar.UseVisualStyleBackColor = false;
-            this.btn_Minimizar.Click += new System.EventHandler(this.btn_Minimizar_Click);
+            this.label12.Text = "MOVIMIENTOS CAJA";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btn_IngredarMovimiento);
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.textBox9);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.textBox10);
+            this.groupBox1.Controls.Add(this.Button_Movimiento);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Location = new System.Drawing.Point(14, 112);
+            this.groupBox1.Location = new System.Drawing.Point(14, 67);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(878, 118);
+            this.groupBox1.Size = new System.Drawing.Size(878, 186);
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
             // 
-            // btn_IngredarMovimiento
+            // Button_Movimiento
             // 
-            this.btn_IngredarMovimiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(191)))), ((int)(((byte)(236)))));
-            this.btn_IngredarMovimiento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_IngredarMovimiento.FlatAppearance.BorderSize = 0;
-            this.btn_IngredarMovimiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_IngredarMovimiento.Location = new System.Drawing.Point(534, 35);
-            this.btn_IngredarMovimiento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btn_IngredarMovimiento.Name = "btn_IngredarMovimiento";
-            this.btn_IngredarMovimiento.Size = new System.Drawing.Size(125, 52);
-            this.btn_IngredarMovimiento.TabIndex = 39;
-            this.btn_IngredarMovimiento.Text = "Ingresar movimiento";
-            this.btn_IngredarMovimiento.UseVisualStyleBackColor = false;
-            this.btn_IngredarMovimiento.Click += new System.EventHandler(this.btn_IngredarMovimiento_Click);
+            this.Button_Movimiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(191)))), ((int)(((byte)(236)))));
+            this.Button_Movimiento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Button_Movimiento.FlatAppearance.BorderSize = 0;
+            this.Button_Movimiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button_Movimiento.Font = new System.Drawing.Font("Arboria Book", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_Movimiento.Location = new System.Drawing.Point(511, 40);
+            this.Button_Movimiento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Button_Movimiento.Name = "Button_Movimiento";
+            this.Button_Movimiento.Size = new System.Drawing.Size(359, 100);
+            this.Button_Movimiento.TabIndex = 39;
+            this.Button_Movimiento.Text = "Ingresar Movimiento";
+            this.Button_Movimiento.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -142,8 +117,9 @@
             // 
             // textBox2
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.textBox2.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox2.Font = new System.Drawing.Font("Arboria Book", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(162, 67);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox2.Name = "textBox2";
@@ -163,8 +139,9 @@
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox1.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Font = new System.Drawing.Font("Arboria Book", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(162, 25);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
@@ -187,15 +164,16 @@
             this.groupBox2.Size = new System.Drawing.Size(878, 137);
             this.groupBox2.TabIndex = 25;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // textBox5
             // 
-            this.textBox5.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.textBox5.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox5.Font = new System.Drawing.Font("Arboria Book", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox5.Location = new System.Drawing.Point(163, 94);
             this.textBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(296, 25);
+            this.textBox5.Size = new System.Drawing.Size(296, 27);
             this.textBox5.TabIndex = 36;
             // 
             // label4
@@ -222,11 +200,13 @@
             // 
             // textBox3
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.textBox3.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox3.Font = new System.Drawing.Font("Arboria Book", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.Location = new System.Drawing.Point(164, 52);
             this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(296, 25);
+            this.textBox3.Size = new System.Drawing.Size(296, 27);
             this.textBox3.TabIndex = 33;
             // 
             // label3
@@ -242,11 +222,13 @@
             // 
             // textBox4
             // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.textBox4.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox4.Font = new System.Drawing.Font("Arboria Book", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox4.Location = new System.Drawing.Point(164, 10);
             this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(296, 25);
+            this.textBox4.Size = new System.Drawing.Size(296, 27);
             this.textBox4.TabIndex = 31;
             // 
             // btn_AbrirCaja
@@ -255,14 +237,14 @@
             this.btn_AbrirCaja.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_AbrirCaja.FlatAppearance.BorderSize = 0;
             this.btn_AbrirCaja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_AbrirCaja.Location = new System.Drawing.Point(534, 42);
+            this.btn_AbrirCaja.Font = new System.Drawing.Font("Arboria Book", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AbrirCaja.Location = new System.Drawing.Point(530, 24);
             this.btn_AbrirCaja.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_AbrirCaja.Name = "btn_AbrirCaja";
-            this.btn_AbrirCaja.Size = new System.Drawing.Size(125, 46);
+            this.btn_AbrirCaja.Size = new System.Drawing.Size(225, 87);
             this.btn_AbrirCaja.TabIndex = 30;
             this.btn_AbrirCaja.Text = "Abrir caja";
             this.btn_AbrirCaja.UseVisualStyleBackColor = false;
-            this.btn_AbrirCaja.Click += new System.EventHandler(this.btn_AbrirCaja_Click);
             // 
             // groupBox3
             // 
@@ -283,11 +265,13 @@
             // 
             // textBox6
             // 
-            this.textBox6.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.textBox6.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox6.Font = new System.Drawing.Font("Arboria Book", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox6.Location = new System.Drawing.Point(163, 94);
             this.textBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(296, 25);
+            this.textBox6.Size = new System.Drawing.Size(296, 27);
             this.textBox6.TabIndex = 36;
             // 
             // label5
@@ -314,11 +298,13 @@
             // 
             // textBox7
             // 
-            this.textBox7.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.textBox7.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox7.Font = new System.Drawing.Font("Arboria Book", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox7.Location = new System.Drawing.Point(164, 52);
             this.textBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(296, 25);
+            this.textBox7.Size = new System.Drawing.Size(296, 27);
             this.textBox7.TabIndex = 33;
             // 
             // label8
@@ -334,11 +320,13 @@
             // 
             // textBox8
             // 
-            this.textBox8.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.textBox8.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox8.Font = new System.Drawing.Font("Arboria Book", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox8.Location = new System.Drawing.Point(164, 10);
             this.textBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(296, 25);
+            this.textBox8.Size = new System.Drawing.Size(296, 27);
             this.textBox8.TabIndex = 31;
             // 
             // btn_CerrarCaja
@@ -347,32 +335,74 @@
             this.btn_CerrarCaja.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_CerrarCaja.FlatAppearance.BorderSize = 0;
             this.btn_CerrarCaja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_CerrarCaja.Location = new System.Drawing.Point(534, 42);
+            this.btn_CerrarCaja.Font = new System.Drawing.Font("Arboria Book", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_CerrarCaja.Location = new System.Drawing.Point(534, 34);
             this.btn_CerrarCaja.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_CerrarCaja.Name = "btn_CerrarCaja";
-            this.btn_CerrarCaja.Size = new System.Drawing.Size(125, 46);
+            this.btn_CerrarCaja.Size = new System.Drawing.Size(225, 87);
             this.btn_CerrarCaja.TabIndex = 30;
             this.btn_CerrarCaja.Text = "Cerrar caja";
             this.btn_CerrarCaja.UseVisualStyleBackColor = false;
-            this.btn_CerrarCaja.Click += new System.EventHandler(this.btn_CerrarCaja_Click);
+            // 
+            // textBox9
+            // 
+            this.textBox9.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox9.Font = new System.Drawing.Font("Arboria Book", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox9.Location = new System.Drawing.Point(161, 146);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(296, 27);
+            this.textBox9.TabIndex = 43;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(64, 142);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(75, 21);
+            this.label9.TabIndex = 42;
+            this.label9.Text = "Cant ARS";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(66, 100);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(77, 21);
+            this.label10.TabIndex = 41;
+            this.label10.Text = "Cant USD";
+            // 
+            // textBox10
+            // 
+            this.textBox10.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox10.Font = new System.Drawing.Font("Arboria Book", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox10.Location = new System.Drawing.Point(162, 104);
+            this.textBox10.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(296, 27);
+            this.textBox10.TabIndex = 40;
             // 
             // MovimientoCaja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(933, 588);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btn_Minimizar);
-            this.Controls.Add(this.bttn_Cerrar);
             this.Controls.Add(this.label12);
             this.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MovimientoCaja";
             this.Text = "MovimientoCaja";
-            this.Load += new System.EventHandler(this.MovimientoCaja_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -385,16 +415,13 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button bttn_Cerrar;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button btn_Minimizar;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button btn_IngredarMovimiento;
+        private System.Windows.Forms.Button Button_Movimiento;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label4;
@@ -411,5 +438,9 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Button btn_CerrarCaja;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox textBox10;
     }
 }

@@ -45,7 +45,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.iconButton_BuscarFecha = new FontAwesome.Sharp.IconButton();
             this.gradientPanel1 = new ProyectoAllphoneSF.GradientPanel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker_Fecha = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -256,7 +256,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.dateTimePicker1);
+            this.panel3.Controls.Add(this.dateTimePicker_Fecha);
             this.panel3.Controls.Add(this.iconButton_BuscarFecha);
             this.panel3.Controls.Add(this.dataGridView1);
             this.panel3.Controls.Add(this.gradientPanel1);
@@ -308,14 +308,14 @@
             this.gradientPanel1.Size = new System.Drawing.Size(10, 450);
             this.gradientPanel1.TabIndex = 49;
             // 
-            // dateTimePicker1
+            // dateTimePicker_Fecha
             // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Arboria Book", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Font = new System.Drawing.Font("Arboria Book", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(16, 14);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(224, 27);
-            this.dateTimePicker1.TabIndex = 52;
+            this.dateTimePicker_Fecha.CalendarFont = new System.Drawing.Font("Arboria Book", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker_Fecha.Font = new System.Drawing.Font("Arboria Book", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker_Fecha.Location = new System.Drawing.Point(16, 14);
+            this.dateTimePicker_Fecha.Name = "dateTimePicker_Fecha";
+            this.dateTimePicker_Fecha.Size = new System.Drawing.Size(224, 27);
+            this.dateTimePicker_Fecha.TabIndex = 52;
             // 
             // Cargar_Clientes
             // 
@@ -361,6 +361,6 @@
         private GradientPanel gradientPanel1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private FontAwesome.Sharp.IconButton iconButton_BuscarFecha;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker_Fecha;
     }
 }

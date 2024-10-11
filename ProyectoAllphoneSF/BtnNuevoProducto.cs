@@ -27,13 +27,13 @@ namespace ProyectoAllphoneSF
             bool respuesta = false;
 
             if (string.IsNullOrEmpty(textBox_Nombre.Text) || textBox_Nombre.Text.All(char.IsDigit)) {
-                MessageBox.Show("Error al ingresar nombre del producto");
+                MessageBox.Show("Error al ingresar nombre del producto","ADVERTENCIA",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 textBox_Nombre.Focus();
                 textBox_Nombre.Clear();
                 return respuesta;
             }
             if (comboBox_Tipo.SelectedIndex == 0) {
-                MessageBox.Show("Error al ingresar una seccion");
+                MessageBox.Show("Error al ingresar una seccion", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return respuesta;
             }
             if (decimal.TryParse(textBox_PrecioCosto.Text.Replace(",", "."),
@@ -45,8 +45,7 @@ namespace ProyectoAllphoneSF
                 textBox_PrecioCosto.Clear();
                 textBox_PrecioCosto.Focus();
 
-                MessageBox.Show("Error al ingresar Precio Costo");
-
+                MessageBox.Show("Error al ingresar Precio Costo", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return respuesta;
             }
             if (decimal.TryParse(textBox_PrecioVenta.Text.Replace(",", "."),
@@ -58,7 +57,7 @@ namespace ProyectoAllphoneSF
                 textBox_PrecioVenta.Clear();
                 textBox_PrecioVenta.Focus();
 
-                MessageBox.Show("Error al ingresar Precio venta");
+                MessageBox.Show("Error al ingresar Precio venta", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                 return respuesta;
             }
@@ -67,7 +66,7 @@ namespace ProyectoAllphoneSF
                 textBox_Cantidad.Clear();
                 textBox_Cantidad.Focus();
 
-                MessageBox.Show("Error al ingresar la cantidad");
+                MessageBox.Show("Error al ingresar la cantidad", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return respuesta;
             }
 
@@ -98,7 +97,7 @@ namespace ProyectoAllphoneSF
                         bool Estado = LogicaProducto.Instancia.cargarProducto(NuevoProducto);
 
                         if (Estado) {
-                            MessageBox.Show("Producto cargado");
+                            MessageBox.Show("Producto cargado", "EXITOS", MessageBoxButtons.OK,MessageBoxIcon.Information);
                         }
 
 
