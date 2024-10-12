@@ -115,7 +115,7 @@ namespace ProyectoAllphoneSF.LOGICA {
             return respuesta = true;
         }
 
-        public List<Productos> ListarCliente(Productos produc) {
+        public List<Productos> ListarProducto() {
 
             List<Productos> DatosProductos = new List<Productos>();
 

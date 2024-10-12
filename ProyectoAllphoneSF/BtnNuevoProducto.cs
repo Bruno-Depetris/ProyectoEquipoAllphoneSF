@@ -19,6 +19,7 @@ namespace ProyectoAllphoneSF
             InitializeComponent();
             comboBox_Tipo.Items.Insert(0, "Seleccine una seccion");
             comboBox_Tipo.SelectedIndex = 0;
+            
         }
 
         decimal PrecioCosto;
@@ -72,15 +73,26 @@ namespace ProyectoAllphoneSF
 
             return respuesta = true;
         }
-        private void BtnNuevoProducto_Load(object sender, EventArgs e) {
-
-        }
 
         private void button_Salir_Click(object sender, EventArgs e) {
             this.Close();
         }
+        int idex = 0;
+        private void GestionarComboBox() {
+            comboBox_Tipo.Items.Clear();
+
+            foreach (TiposProductos tipo in LogicaTipoProducto.Instancia.ListarTipos()) {
+                comboBox_Tipo.Items.Add(tipo.NombreTipo);
+                idex = tipo.TipoID;
+                
+            }
+        }
 
         private void button_CargarNuevoProducto_Click(object sender, EventArgs e) {
+
+            
+            MessageBox.Show("INDEX SELECCIONADO" + idex);
+
             if (Validaciones()) {
                 DialogResult resultado = MessageBox.Show("Desea cargar este producto?","ADVERTENCIA",MessageBoxButtons.YesNo,MessageBoxIcon.Stop);
 
@@ -88,8 +100,13 @@ namespace ProyectoAllphoneSF
                     try {
 
                         Productos NuevoProducto = new Productos();
+
                         NuevoProducto.Nombre = textBox_Nombre.Text;
-                        NuevoProducto.TipoID = comboBox_Tipo.SelectedIndex;
+                        int idSeleccionado = 0;
+                        foreach (TiposProductos tipo in LogicaTipoProducto.Instancia.ListarTipos()) {
+        
+                        }
+                        NuevoProducto.TipoID = idSeleccionado;
                         NuevoProducto.PrecioCosto = PrecioCosto;
                         NuevoProducto.PrecioVenta = PrecioVenta;
 
@@ -108,6 +125,16 @@ namespace ProyectoAllphoneSF
                 } else {
                     this.Close();
                 }
+            }
+        }
+
+        private void comboBox_Tipo_SelectedIndexChanged(object sender, EventArgs e) {
+            comboBox_Tipo.Items.Clear();
+
+            foreach (TiposProductos tipo in LogicaTipoProducto.Instancia.ListarTipos()) {
+                comboBox_Tipo.Items.Add(tipo.NombreTipo);
+                idex = tipo.TipoID;
+
             }
         }
     }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProyectoAllphoneSF.LOGICA;
+using ProyectoAllphoneSF.MODELO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,6 +30,9 @@ namespace ProyectoAllphoneSF {
             comboBox_Zona.Items.Insert(0, "Selecciona una Zona");
             comboBox_Zona.SelectedIndex = 0;
 
+            comboBox_Moneda.Items.Insert(0, "Selecciona una Moneda");
+            comboBox_Moneda.SelectedIndex = 0;
+            GestionarComboBox();
         }
 
 
@@ -110,6 +115,31 @@ namespace ProyectoAllphoneSF {
                 if (resultado == DialogResult.No) {
                     return;
                 }
+            }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e) {
+            
+        }
+
+        private void GestionarComboBox() {
+
+            comboBox_Zona.Items.Clear();
+            comboBox_Producto.Items.Clear();
+            comboBox_MedioPago.Items.Clear();
+            comboBox_Moneda.Items.Clear();  
+
+            foreach (Zonas zonas in LogicaZona.Instancia.ListarZonas()) {
+                comboBox_Zona.Items.Add(zonas.Localidad);
+            }
+            //foreach (Productos prod in LogicaProducto.Instancia.ListarProducto()) { DA ERROR OJO TODAVIA NO TOCAR
+                //comboBox_Producto.Items.Add(prod.Nombre);
+            //}
+            foreach (FormaPago pag in LogicaFormaPago.Instancia.ListarFormaPago()) {
+                comboBox_MedioPago.Items.Add(pag.Metodopago);
+            }
+            foreach (Monedas mon in LogicaMoneda.Instancia.ListarMoneda()) {
+                comboBox_Moneda.Items.Add(mon.MonedaName);
             }
         }
     }
