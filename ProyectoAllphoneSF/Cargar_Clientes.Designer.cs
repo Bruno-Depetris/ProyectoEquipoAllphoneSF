@@ -40,14 +40,14 @@
             this.label12 = new System.Windows.Forms.Label();
             this.comboBox_Zona = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBox_Moneda = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dateTimePicker_Fecha = new System.Windows.Forms.DateTimePicker();
             this.iconButton_BuscarFecha = new FontAwesome.Sharp.IconButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.gradientPanel1 = new ProyectoAllphoneSF.GradientPanel();
-            this.comboBox_Moneda = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -249,6 +249,26 @@
             this.panel1.TabIndex = 53;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // comboBox_Moneda
+            // 
+            this.comboBox_Moneda.BackColor = System.Drawing.Color.White;
+            this.comboBox_Moneda.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_Moneda.FormattingEnabled = true;
+            this.comboBox_Moneda.Location = new System.Drawing.Point(139, 252);
+            this.comboBox_Moneda.Name = "comboBox_Moneda";
+            this.comboBox_Moneda.Size = new System.Drawing.Size(333, 29);
+            this.comboBox_Moneda.TabIndex = 48;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(6, 255);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(127, 21);
+            this.label1.TabIndex = 49;
+            this.label1.Text = "Moneda de pago";
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
@@ -321,26 +341,6 @@
             this.gradientPanel1.Name = "gradientPanel1";
             this.gradientPanel1.Size = new System.Drawing.Size(10, 450);
             this.gradientPanel1.TabIndex = 49;
-            // 
-            // comboBox_Moneda
-            // 
-            this.comboBox_Moneda.BackColor = System.Drawing.Color.White;
-            this.comboBox_Moneda.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox_Moneda.FormattingEnabled = true;
-            this.comboBox_Moneda.Location = new System.Drawing.Point(139, 252);
-            this.comboBox_Moneda.Name = "comboBox_Moneda";
-            this.comboBox_Moneda.Size = new System.Drawing.Size(333, 29);
-            this.comboBox_Moneda.TabIndex = 48;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 255);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 21);
-            this.label1.TabIndex = 49;
-            this.label1.Text = "Moneda de pago";
             // 
             // Cargar_Clientes
             // 
