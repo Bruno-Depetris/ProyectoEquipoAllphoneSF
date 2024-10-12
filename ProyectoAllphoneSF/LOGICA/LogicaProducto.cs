@@ -122,7 +122,7 @@ namespace ProyectoAllphoneSF.LOGICA {
             using (SQLiteConnection conexion = new SQLiteConnection(cadena)) {
                 conexion.Open();
 
-                string query = "SELECT ProductoID,Nombre,TipoID,PrecioCosto,PrecioVenta,Stock";
+                string query = "SELECT ProductoID,Nombre,TipoID,PrecioCosto,PrecioVenta,Stock FROM Productos";
 
 
                 SQLiteCommand cmd = new SQLiteCommand(query, conexion);

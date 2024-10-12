@@ -20,7 +20,7 @@ namespace ProyectoAllphoneSF {
         {
             InitializeComponent();
 
-
+            ListarVentas();
             comboBox_Producto.Items.Insert(0, "Seleccione un producto");
             comboBox_Producto.SelectedIndex = 0;
 
@@ -54,7 +54,7 @@ namespace ProyectoAllphoneSF {
                 textBox_Apellido.Focus();
                 return respuesta;
             }
-            if (comboBox_Zona.SelectedIndex == 0) {
+            if (comboBox_Zona.SelectedIndex == -1) {
                 MessageBox.Show("Errora al ingresar Zona", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return respuesta;
             }
@@ -70,15 +70,15 @@ namespace ProyectoAllphoneSF {
                 textBox_Email.Focus();
                 return respuesta;
             }
-            if (comboBox_Producto.SelectedIndex == 0) {
+            if (comboBox_Producto.SelectedIndex == -1) {
                 MessageBox.Show("Por favor seleccione un producto", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                comboBox_Producto.SelectedIndex = 0;
+                //comboBox_Producto.SelectedIndex = 0;
                 comboBox_Producto.Focus();
                 return respuesta;
             }
-            if (comboBox_MedioPago.SelectedIndex == 0) {
+            if (comboBox_MedioPago.SelectedIndex == -1) {
                 MessageBox.Show("Por favor seleccione un producto", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                comboBox_MedioPago.SelectedIndex = 0;
+                //comboBox_MedioPago.SelectedIndex = 0;
                 comboBox_MedioPago.Focus();
                 return respuesta;
             }
@@ -105,6 +105,25 @@ namespace ProyectoAllphoneSF {
 
                 if (resultado == DialogResult.Yes) {
                     try {
+                       
+                        
+                        Cliente NuevoCliente = new Cliente();
+                        NuevoCliente.Nombre = textBox_Nombre.Text;
+                        NuevoCliente.Apellido = textBox_Apellido.Text;
+                        NuevoCliente.Telefono = textBox_Telefono.Text;
+                        NuevoCliente.Email = textBox_Email.Text;
+                        NuevoCliente.ZonaID = RecuperarZonaID();
+
+                        bool EstadoCliente = LogicaCliente.Instancia.CargarCliente(NuevoCliente);
+                        if (EstadoCliente)
+                        {
+                            MessageBox.Show("Cliente cargado", "EXITOS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se pudo cargar el cliente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        
                         MessageBox.Show("Datos Cargados con exito","FELICITACIONES😎",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
                         RestaurarInputs();
                     } catch (Exception ex) {
@@ -132,15 +151,42 @@ namespace ProyectoAllphoneSF {
             foreach (Zonas zonas in LogicaZona.Instancia.ListarZonas()) {
                 comboBox_Zona.Items.Add(zonas.Localidad);
             }
-            //foreach (Productos prod in LogicaProducto.Instancia.ListarProducto()) { DA ERROR OJO TODAVIA NO TOCAR
-                //comboBox_Producto.Items.Add(prod.Nombre);
-            //}
+            
+            foreach (Productos prod in LogicaProducto.Instancia.ListarProducto()) {
+                comboBox_Producto.Items.Add(prod.Nombre);
+            }
+            
             foreach (FormaPago pag in LogicaFormaPago.Instancia.ListarFormaPago()) {
                 comboBox_MedioPago.Items.Add(pag.Metodopago);
             }
             foreach (Monedas mon in LogicaMoneda.Instancia.ListarMoneda()) {
                 comboBox_Moneda.Items.Add(mon.MonedaName);
             }
+        }
+
+        private void comboBox_Zona_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+
+        private int RecuperarZonaID()
+        {
+            int ID = 0;
+            foreach (Zonas zona in LogicaZona.Instancia.ListarZonas())
+            {
+
+                if (comboBox_Zona.Text.Contains(zona.Localidad))
+                {
+                    var IDSeleccionado = zona.ZonaID;
+                    ID = IDSeleccionado;
+                }
+            }
+            return ID;
+        }
+        private void ListarVentas()
+        {
+            dataGridView1.DataSource = null;
+            var datos = LogicaCliente_Con_Venta.Instancia.ListarDatosCompra();
+            dataGridView1.DataSource = datos;
         }
     }
 }

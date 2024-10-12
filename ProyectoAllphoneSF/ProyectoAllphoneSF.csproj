@@ -133,6 +133,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="LOGICA\LogicaCliente.cs" />
+    <Compile Include="LOGICA\LogicaCliente_Con_Venta.cs" />
     <Compile Include="LOGICA\LogicaDatosCompra.cs" />
     <Compile Include="LOGICA\LogicaFormaPago.cs" />
     <Compile Include="LOGICA\LogicaMoneda.cs" />
@@ -141,6 +142,7 @@
     <Compile Include="LOGICA\LogicaZona.cs" />
     <Compile Include="MODELO\Caja .cs" />
     <Compile Include="MODELO\Cliente.cs" />
+    <Compile Include="MODELO\Cliente_Con_Venta.cs" />
     <Compile Include="MODELO\DatosCompra .cs" />
     <Compile Include="MODELO\FormaPago .cs" />
     <Compile Include="MODELO\Monedas .cs" />
