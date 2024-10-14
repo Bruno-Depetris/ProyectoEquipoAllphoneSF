@@ -20,7 +20,8 @@ namespace ProyectoAllphoneSF {
         {
             InitializeComponent();
 
-            ListarVentas();
+            ListarVentas();     
+                      
             comboBox_Producto.Items.Insert(0, "Seleccione un producto");
             comboBox_Producto.SelectedIndex = 0;
 
@@ -77,9 +78,16 @@ namespace ProyectoAllphoneSF {
                 return respuesta;
             }
             if (comboBox_MedioPago.SelectedIndex == -1) {
-                MessageBox.Show("Por favor seleccione un producto", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Por favor seleccione un medio de pago", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 //comboBox_MedioPago.SelectedIndex = 0;
                 comboBox_MedioPago.Focus();
+                return respuesta;
+            }
+            if (comboBox_Moneda.SelectedIndex == -1)
+            {
+                MessageBox.Show("Por favor seleccione una moneda de pago", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //comboBox_MedioPago.SelectedIndex = 0;
+                comboBox_Moneda.Focus();
                 return respuesta;
             }
 
@@ -93,11 +101,12 @@ namespace ProyectoAllphoneSF {
         private void RestaurarInputs() {
             textBox_Nombre.Text = string.Empty;
             textBox_Apellido.Text = string.Empty;
-            comboBox_Zona.SelectedIndex = 0;
+            comboBox_Zona.SelectedIndex = -1;
             textBox_Email.Text = string.Empty;
             textBox_Telefono.Text = string.Empty;
-            comboBox_MedioPago.SelectedIndex = 0;
-            comboBox_Producto.SelectedIndex = 0;
+            comboBox_MedioPago.SelectedIndex = -1;
+            comboBox_Producto.SelectedIndex = -1;
+            comboBox_Moneda.SelectedIndex = -1;
         }
         private void Button_ConcretarVenta_Click(object sender, EventArgs e) {
             if (Validaciones()) {
@@ -114,6 +123,13 @@ namespace ProyectoAllphoneSF {
                         NuevoCliente.Email = textBox_Email.Text;
                         NuevoCliente.ZonaID = RecuperarZonaID();
 
+                        DatosCompra nuevosdatos = new DatosCompra();
+                        nuevosdatos.ProductoID = RecuperarProductoID();
+                        nuevosdatos.FormaPagoID = RecuperarFormaPagoID();
+                        nuevosdatos.MonedaID = RecuperarMonedaID();
+                        nuevosdatos.Fecha = DateTime.Now;
+                        //datos.Cantidad = 
+
                         bool EstadoCliente = LogicaCliente.Instancia.CargarCliente(NuevoCliente);
                         if (EstadoCliente)
                         {
@@ -123,7 +139,17 @@ namespace ProyectoAllphoneSF {
                         {
                             MessageBox.Show("No se pudo cargar el cliente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
-                        
+
+                        bool EstadoDatosCompra = LogicaDatosCompra.Instancia.cargarDatosCompra(nuevosdatos);
+                        if (EstadoCliente)
+                        {
+                            MessageBox.Show("Datos de compra cargados", "EXITOS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se pudo cargar el cliente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+
                         MessageBox.Show("Datos Cargados con exito","FELICITACIONES😎",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
                         RestaurarInputs();
                     } catch (Exception ex) {
@@ -182,11 +208,55 @@ namespace ProyectoAllphoneSF {
             }
             return ID;
         }
+        private int RecuperarProductoID()
+        {
+            int ID = 0;
+            foreach (Productos producto in LogicaProducto.Instancia.ListarProducto())
+            {
+
+                if (comboBox_Producto.Text.Contains(producto.Nombre))
+                {
+                    var IDSeleccionado = producto.ProductoID;
+                    ID = IDSeleccionado;
+                }
+            }
+            return ID;
+        }
+        private int RecuperarMonedaID()
+        {
+            int ID = 0;
+            foreach (Monedas mon in LogicaMoneda.Instancia.ListarMoneda())
+            {
+
+                if (comboBox_Moneda.Text.Contains(mon.MonedaName))
+                {
+                    var IDSeleccionado = mon.MonedaID;
+                    ID = IDSeleccionado;
+                }
+            }
+            return ID;
+        }
+        private int RecuperarFormaPagoID()
+        {
+            int ID = 0;
+            foreach (FormaPago forma in LogicaFormaPago.Instancia.ListarFormaPago())
+            {
+
+                if (comboBox_MedioPago.Text.Contains(forma.Metodopago))
+                {
+                    var IDSeleccionado = forma.FormaPagoID;
+                    ID = IDSeleccionado;
+                }
+            }
+            return ID;
+        }
+        
         private void ListarVentas()
         {
             dataGridView1.DataSource = null;
-            var datos = LogicaCliente_Con_Venta.Instancia.ListarDatosCompra();
+            var datos = LogicaDatosCompra.Instancia.ListarDatosCompra();
             dataGridView1.DataSource = datos;
         }
+        
     }
 }

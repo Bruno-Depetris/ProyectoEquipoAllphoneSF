@@ -31,47 +31,47 @@ namespace ProyectoAllphoneSF.LOGICA
         }
         public List<Cliente_Con_Venta> ListarDatosCompra()
         {
-            List<Cliente_Con_Venta> DatosCompra = new List<Cliente_Con_Venta> ();
+            List<Cliente_Con_Venta> DatosCompra = new List<Cliente_Con_Venta>();
             using (SQLiteConnection conexion = new SQLiteConnection(cadena))
             {
-                conexion.Open ();
+                conexion.Open();
                 string query = @"
-    SELECT 
-        c.Nombre AS NombreCliente, 
-        c.Apellido, 
-        z.Localidad, 
-        p.Nombre AS NombreProducto, 
-        t.NombreTipo, 
-        d.Fecha, 
-        f.MetodoPago, 
-        m.Moneda 
-    FROM DatosCompra d
-    INNER JOIN Cliente c ON d.ClienteID = c.ClienteID
-    INNER JOIN Zonas z ON z.ZonaID = z.ZonaID
-    INNER JOIN Productos p ON p.ProductoID = p.ProductoID
-    INNER JOIN TiposProductos t ON t.TipoID = t.TipoID
-    INNER JOIN FormaPago f ON f.FormaPagoID = f.FormaPagoID
-    INNER JOIN Monedas m ON m.MonedaID = m.MonedaID";
+            SELECT
+                c.Nombre AS NombreCliente, 
+                c.Apellido AS ApellidoCliente,
+                p.Nombre AS NombreProducto, 
+                t.NombreTipo, 
+                d.Fecha, 
+                f.MetodoPago,
+                f.Descuento,
+                m.Moneda,
+                p.PrecioVenta,
+                d.Cantidad,
+                d.TotalVenta
+            FROM DatosCompra d
+            INNER JOIN Cliente c ON d.ClienteID = c.ClienteID           
+            INNER JOIN Productos p ON d.ProductoID = p.ProductoID
+            INNER JOIN TiposProductos t ON p.TipoID = t.TipoID
+            INNER JOIN FormaPago f ON d.FormaPagoID = f.FormaPagoID
+            INNER JOIN Monedas m ON d.MonedaID = m.MonedaID";
 
-                SQLiteCommand cmd = new SQLiteCommand (query,conexion);
-                using(SQLiteDataReader reader = cmd.ExecuteReader())
+                SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+                using (SQLiteDataReader reader = cmd.ExecuteReader())
                 {
-                    while (reader.Read ())
+                    while (reader.Read())
                     {
                         DatosCompra.Add(new Cliente_Con_Venta()
                         {
-                            ClienteID = int.Parse(reader["ClienteID"].ToString()),
-                            Nombre = reader["Nombre"].ToString(),
-                            Apellido = reader["Apellido"].ToString(),
-                            Localidad = reader["Localidad"].ToString(),
+                            Nombre = reader["NombreCliente"].ToString(),
+                            Apellido = reader["ApellidoCliente"].ToString(),
                             NombreProducto = reader["NombreProducto"].ToString(),
                             NombreTipo = reader["NombreTipo"].ToString(),
-                            PrecioVenta = int.Parse(reader["PrecioVenta"].ToString()),
+                            PrecioVenta = decimal.Parse(reader["PrecioVenta"].ToString()),
                             Metodopago = reader["MetodoPago"].ToString(),
-                            Descuento = int.Parse(reader["Descuento"].ToString()),
-                            Fecha = DateTime.Now,
+                            Descuento = decimal.Parse(reader["Descuento"].ToString()),
+                            Fecha = DateTime.Parse(reader["Fecha"].ToString()),
                             Cantidad = int.Parse(reader["Cantidad"].ToString()),
-                            TotalVenta = int.Parse(reader["TotalVenta"].ToString()),
+                            TotalVenta = decimal.Parse(reader["TotalVenta"].ToString()),
                         });
                     }
                     return DatosCompra;
