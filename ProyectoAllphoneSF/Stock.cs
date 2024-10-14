@@ -154,25 +154,30 @@ namespace ProyectoAllphoneSF {
             var ProductoID = seleccionarRow.Cells[2].Value;
             var Nombre = seleccionarRow.Cells[3].Value;
             var TipoID = seleccionarRow.Cells[4].Value;
-            var PrecioCosto = seleccionarRow.Cells[5].Value;
-            var PrecioVenta = seleccionarRow.Cells[6].Value;
-            var Stock = seleccionarRow.Cells[7].Value;
+            var nombreTipo = seleccionarRow.Cells[5].Value;
+            var PrecioCosto = seleccionarRow.Cells[6].Value;
+            var PrecioVenta = seleccionarRow.Cells[7].Value;
+            var Stock = seleccionarRow.Cells[8].Value;
 
-            // Asegurarse de hacer las conversiones de tipo correctamente
+            
             Productos prod = new Productos() {
                 ProductoID = Convert.ToInt32(ProductoID), // Convertir a int si es un número
                 Nombre = Nombre.ToString(),
+                TipoID = Convert.ToInt32(TipoID),
                 PrecioCosto = Convert.ToDecimal(PrecioCosto), // Convertir a decimal
                 PrecioVenta = Convert.ToDecimal(PrecioVenta),
                 Stock = Convert.ToInt32(Stock) // Convertir a int
                 
             };
 
-            btn_CargarNuevoProducto.(prod);
+            bool estado = LogicaProducto.Instancia.EditarProducto(prod);
 
-            btn_CargarNuevoProducto.Owner = this;
-            btn_CargarNuevoProducto.TopMost = true; // Forzar que el formulario esté al frente
-            btn_CargarNuevoProducto.ShowDialog();
+            if (estado) {
+                List<Productos> EnviarLista = new List<Productos>();
+                
+                
+            }
+
         }
 
         private void BorrarFila(int rowIndex) {
@@ -209,10 +214,10 @@ namespace ProyectoAllphoneSF {
                 string columnName = dataGridView1.Columns[e.ColumnIndex].Name;
 
                 switch (columnName) {
-                    /*case "Edit":
+                   case "Edit":
                         EditarFila(e.RowIndex);
 
-                        break;*/
+                        break;
                     case "Delete":
                         BorrarFila(e.RowIndex);
 

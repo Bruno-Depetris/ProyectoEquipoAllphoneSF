@@ -9,6 +9,7 @@ using System.Configuration;
 using System.Data.SqlClient;
 using ProyectoAllphoneSF.MODELO;
 using System.Reflection;
+using System.Linq.Expressions;
 
 
 namespace ProyectoAllphoneSF.LOGICA {
@@ -64,6 +65,13 @@ namespace ProyectoAllphoneSF.LOGICA {
                 }
             }
         }
+
+
+
+
+
+
+
     }
 
 
