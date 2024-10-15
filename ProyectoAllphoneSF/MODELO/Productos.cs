@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ProyectoAllphoneSF.MODELO {
-    internal class Productos {
+    public class Productos {
         public int ProductoID {  get; set; }  //Clave Primaria
         public String Nombre { get; set; } 
         public int TipoID {  get; set; }   //Clave foranea
