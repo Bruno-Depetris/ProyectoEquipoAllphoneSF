@@ -203,7 +203,6 @@
     <EmbeddedResource Include="Stock.resx">
       <DependentUpon>Stock.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="bin\Debug\AllphoneSF_BD" />
     <None Include="bin\Debug\AllphoneSF_BD.db" />
     <None Include="bin\Debug\AllphoneSF_BD_FILES.db.sqbpro" />
     <None Include="packages.config" />

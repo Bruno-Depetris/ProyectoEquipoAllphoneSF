@@ -13,6 +13,8 @@ using System.Windows.Forms;
 using System.Drawing.Text;
 using System.Runtime.InteropServices;
 using System.Windows.Forms.DataVisualization.Charting;
+using System.Drawing.Drawing2D;
+
 
 
 namespace ProyectoAllphoneSF {
@@ -22,8 +24,10 @@ namespace ProyectoAllphoneSF {
         {
             InitializeComponent();
             CrearGraficoDona();
+            
         }
-        private void CrearGraficoDona()
+       
+    private void CrearGraficoDona()
         {
 
             // Crear una nueva serie de datos
@@ -50,6 +54,11 @@ namespace ProyectoAllphoneSF {
         }
 
         private void label6_Click(object sender, EventArgs e) {
+
+        }
+
+        private void lbl_balance_bruto_Click(object sender, EventArgs e)
+        {
 
         }
     }

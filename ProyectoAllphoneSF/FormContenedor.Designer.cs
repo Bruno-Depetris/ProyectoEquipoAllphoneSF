@@ -75,7 +75,7 @@
             this.panel_Botones.Controls.Add(this.Button_CargarCliente);
             this.panel_Botones.Controls.Add(this.button_Configuracion);
             this.panel_Botones.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel_Botones.Font = new System.Drawing.Font("Arboria Book", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel_Botones.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel_Botones.Location = new System.Drawing.Point(0, 110);
             this.panel_Botones.Name = "panel_Botones";
             this.panel_Botones.Size = new System.Drawing.Size(211, 451);
@@ -106,7 +106,7 @@
             this.button_CrearBackup.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.button_CrearBackup.FlatAppearance.BorderSize = 0;
             this.button_CrearBackup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_CrearBackup.Font = new System.Drawing.Font("Arboria Book", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_CrearBackup.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_CrearBackup.ForeColor = System.Drawing.Color.Transparent;
             this.button_CrearBackup.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_CrearBackup.Location = new System.Drawing.Point(0, 388);
@@ -123,7 +123,7 @@
             this.Button_MovimientosCaja.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Button_MovimientosCaja.FlatAppearance.BorderSize = 0;
             this.Button_MovimientosCaja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button_MovimientosCaja.Font = new System.Drawing.Font("Arboria Book", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_MovimientosCaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button_MovimientosCaja.ForeColor = System.Drawing.Color.White;
             this.Button_MovimientosCaja.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Button_MovimientosCaja.Location = new System.Drawing.Point(0, 192);
@@ -141,7 +141,7 @@
             this.ButtonGestionarStock.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonGestionarStock.FlatAppearance.BorderSize = 0;
             this.ButtonGestionarStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonGestionarStock.Font = new System.Drawing.Font("Arboria Book", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonGestionarStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonGestionarStock.ForeColor = System.Drawing.Color.White;
             this.ButtonGestionarStock.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ButtonGestionarStock.Location = new System.Drawing.Point(0, 120);
@@ -160,7 +160,7 @@
             this.Button_CargarCliente.FlatAppearance.BorderSize = 0;
             this.Button_CargarCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(114)))), ((int)(((byte)(141)))));
             this.Button_CargarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button_CargarCliente.Font = new System.Drawing.Font("Arboria Book", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_CargarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button_CargarCliente.ForeColor = System.Drawing.Color.White;
             this.Button_CargarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Button_CargarCliente.Location = new System.Drawing.Point(0, 49);
@@ -178,7 +178,7 @@
             this.button_Configuracion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_Configuracion.FlatAppearance.BorderSize = 0;
             this.button_Configuracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Configuracion.Font = new System.Drawing.Font("Arboria Book", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Configuracion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Configuracion.ForeColor = System.Drawing.Color.White;
             this.button_Configuracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_Configuracion.Location = new System.Drawing.Point(0, 263);
@@ -231,9 +231,9 @@
             // 
             this.label_Hora.AutoSize = true;
             this.label_Hora.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label_Hora.Font = new System.Drawing.Font("Arboria Book", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Hora.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Hora.ForeColor = System.Drawing.Color.Transparent;
-            this.label_Hora.Location = new System.Drawing.Point(806, 0);
+            this.label_Hora.Location = new System.Drawing.Point(795, 0);
             this.label_Hora.Name = "label_Hora";
             this.label_Hora.Size = new System.Drawing.Size(71, 29);
             this.label_Hora.TabIndex = 19;
@@ -243,11 +243,11 @@
             // 
             this.label.AutoSize = true;
             this.label.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label.Font = new System.Drawing.Font("Arboria Book", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label.ForeColor = System.Drawing.Color.Transparent;
-            this.label.Location = new System.Drawing.Point(877, 0);
+            this.label.Location = new System.Drawing.Point(866, 0);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(92, 29);
+            this.label.Size = new System.Drawing.Size(104, 29);
             this.label.TabIndex = 18;
             this.label.Text = "hs           ";
             // 
@@ -255,11 +255,11 @@
             // 
             this.label_Fecha.AutoSize = true;
             this.label_Fecha.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label_Fecha.Font = new System.Drawing.Font("Arboria Book", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Fecha.ForeColor = System.Drawing.Color.Transparent;
-            this.label_Fecha.Location = new System.Drawing.Point(969, 0);
+            this.label_Fecha.Location = new System.Drawing.Point(970, 0);
             this.label_Fecha.Name = "label_Fecha";
-            this.label_Fecha.Size = new System.Drawing.Size(104, 29);
+            this.label_Fecha.Size = new System.Drawing.Size(103, 29);
             this.label_Fecha.TabIndex = 17;
             this.label_Fecha.Text = "19:34:22";
             // 
@@ -267,10 +267,10 @@
             // 
             this.label_EstadoBaseDatos.AutoSize = true;
             this.label_EstadoBaseDatos.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label_EstadoBaseDatos.Font = new System.Drawing.Font("Arboria Book", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_EstadoBaseDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_EstadoBaseDatos.Location = new System.Drawing.Point(148, 0);
             this.label_EstadoBaseDatos.Name = "label_EstadoBaseDatos";
-            this.label_EstadoBaseDatos.Size = new System.Drawing.Size(49, 29);
+            this.label_EstadoBaseDatos.Size = new System.Drawing.Size(51, 29);
             this.label_EstadoBaseDatos.TabIndex = 16;
             this.label_EstadoBaseDatos.Text = "null";
             // 
@@ -278,7 +278,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label1.Font = new System.Drawing.Font("Arboria Book", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";

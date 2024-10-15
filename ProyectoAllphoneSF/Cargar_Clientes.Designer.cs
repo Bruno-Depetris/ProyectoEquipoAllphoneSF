@@ -40,6 +40,8 @@
             this.label12 = new System.Windows.Forms.Label();
             this.comboBox_Zona = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox_Moneda = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -58,7 +60,7 @@
             this.comboBox_MedioPago.BackColor = System.Drawing.Color.White;
             this.comboBox_MedioPago.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_MedioPago.FormattingEnabled = true;
-            this.comboBox_MedioPago.Location = new System.Drawing.Point(139, 290);
+            this.comboBox_MedioPago.Location = new System.Drawing.Point(139, 316);
             this.comboBox_MedioPago.Name = "comboBox_MedioPago";
             this.comboBox_MedioPago.Size = new System.Drawing.Size(333, 29);
             this.comboBox_MedioPago.TabIndex = 7;
@@ -134,7 +136,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(17, 293);
+            this.label11.Location = new System.Drawing.Point(16, 316);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(114, 21);
             this.label11.TabIndex = 40;
@@ -184,7 +186,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(201, 59);
+            this.label5.Location = new System.Drawing.Point(188, 50);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(67, 21);
             this.label5.TabIndex = 35;
@@ -194,7 +196,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(26, 59);
+            this.label6.Location = new System.Drawing.Point(11, 50);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 21);
             this.label6.TabIndex = 34;
@@ -224,6 +226,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.comboBox_Moneda);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label5);
@@ -249,12 +253,32 @@
             this.panel1.TabIndex = 53;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(9, 248);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(72, 21);
+            this.label2.TabIndex = 51;
+            this.label2.Text = "Cantidad";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.White;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(88, 246);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(384, 29);
+            this.textBox1.TabIndex = 50;
+            // 
             // comboBox_Moneda
             // 
             this.comboBox_Moneda.BackColor = System.Drawing.Color.White;
             this.comboBox_Moneda.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_Moneda.FormattingEnabled = true;
-            this.comboBox_Moneda.Location = new System.Drawing.Point(139, 252);
+            this.comboBox_Moneda.Location = new System.Drawing.Point(139, 281);
             this.comboBox_Moneda.Name = "comboBox_Moneda";
             this.comboBox_Moneda.Size = new System.Drawing.Size(333, 29);
             this.comboBox_Moneda.TabIndex = 48;
@@ -263,7 +287,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 255);
+            this.label1.Location = new System.Drawing.Point(3, 284);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(127, 21);
             this.label1.TabIndex = 49;
@@ -293,11 +317,11 @@
             // 
             // dateTimePicker_Fecha
             // 
-            this.dateTimePicker_Fecha.CalendarFont = new System.Drawing.Font("Arboria Book", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker_Fecha.Font = new System.Drawing.Font("Arboria Book", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker_Fecha.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker_Fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker_Fecha.Location = new System.Drawing.Point(16, 14);
             this.dateTimePicker_Fecha.Name = "dateTimePicker_Fecha";
-            this.dateTimePicker_Fecha.Size = new System.Drawing.Size(224, 27);
+            this.dateTimePicker_Fecha.Size = new System.Drawing.Size(224, 26);
             this.dateTimePicker_Fecha.TabIndex = 52;
             // 
             // iconButton_BuscarFecha
@@ -307,7 +331,7 @@
             this.iconButton_BuscarFecha.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconButton_BuscarFecha.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.iconButton_BuscarFecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton_BuscarFecha.Font = new System.Drawing.Font("Arboria Book", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton_BuscarFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButton_BuscarFecha.IconChar = FontAwesome.Sharp.IconChar.Searchengin;
             this.iconButton_BuscarFecha.IconColor = System.Drawing.Color.Black;
             this.iconButton_BuscarFecha.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -389,5 +413,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker_Fecha;
         private System.Windows.Forms.ComboBox comboBox_Moneda;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

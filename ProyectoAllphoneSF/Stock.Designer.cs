@@ -42,7 +42,7 @@
             this.btn_CargarNuevoProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(191)))), ((int)(((byte)(236)))));
             this.btn_CargarNuevoProducto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_CargarNuevoProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_CargarNuevoProducto.Font = new System.Drawing.Font("Arboria Book", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_CargarNuevoProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_CargarNuevoProducto.Location = new System.Drawing.Point(248, 342);
             this.btn_CargarNuevoProducto.Name = "btn_CargarNuevoProducto";
             this.btn_CargarNuevoProducto.Size = new System.Drawing.Size(271, 43);
@@ -54,10 +54,10 @@
             // textBox1
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Arboria Book", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(4, 6);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(236, 30);
+            this.textBox1.Size = new System.Drawing.Size(236, 29);
             this.textBox1.TabIndex = 42;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -87,11 +87,11 @@
             // 
             // dateTimePicker_Fecha
             // 
-            this.dateTimePicker_Fecha.CalendarFont = new System.Drawing.Font("Arboria Book", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker_Fecha.Font = new System.Drawing.Font("Arboria Book", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker_Fecha.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker_Fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker_Fecha.Location = new System.Drawing.Point(404, 6);
             this.dateTimePicker_Fecha.Name = "dateTimePicker_Fecha";
-            this.dateTimePicker_Fecha.Size = new System.Drawing.Size(224, 30);
+            this.dateTimePicker_Fecha.Size = new System.Drawing.Size(224, 29);
             this.dateTimePicker_Fecha.TabIndex = 53;
             // 
             // panel1
@@ -113,7 +113,7 @@
             this.iconButton_Ordenar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.iconButton_Ordenar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconButton_Ordenar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton_Ordenar.Font = new System.Drawing.Font("Arboria Book", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton_Ordenar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButton_Ordenar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(191)))), ((int)(((byte)(236)))));
             this.iconButton_Ordenar.IconChar = FontAwesome.Sharp.IconChar.RankingStar;
             this.iconButton_Ordenar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(191)))), ((int)(((byte)(236)))));
@@ -133,7 +133,7 @@
             this.iconButton_BuscarNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.iconButton_BuscarNombre.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconButton_BuscarNombre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton_BuscarNombre.Font = new System.Drawing.Font("Arboria Book", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton_BuscarNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButton_BuscarNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(191)))), ((int)(((byte)(236)))));
             this.iconButton_BuscarNombre.IconChar = FontAwesome.Sharp.IconChar.Searchengin;
             this.iconButton_BuscarNombre.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(191)))), ((int)(((byte)(236)))));
@@ -147,6 +147,7 @@
             this.iconButton_BuscarNombre.Text = "Buscar";
             this.iconButton_BuscarNombre.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButton_BuscarNombre.UseVisualStyleBackColor = false;
+            this.iconButton_BuscarNombre.Click += new System.EventHandler(this.iconButton_BuscarNombre_Click);
             // 
             // Stock
             // 

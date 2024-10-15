@@ -40,13 +40,15 @@ namespace ProyectoAllphoneSF {
             ConfigurarColumnas();
 
         }
-        private void btn_CargarNuevoProducto_Click(object sender, EventArgs e) {
-            Form formNuevoProducto = new BtnNuevoProducto();
-            formNuevoProducto.ShowDialog();
+ 
+        private void btn_CargarNuevoProducto_Click(object sender, EventArgs e) 
+        {
+        
         }
 
-        private void button_BuscarPorProducto_Click(object sender, EventArgs e) {
-
+        private void button_BuscarPorProducto_Click(object sender, EventArgs e) 
+        {
+            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e) {
@@ -69,11 +71,6 @@ namespace ProyectoAllphoneSF {
 
             // Ajustar la altura de las filas automáticamente
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-
-
-
-
-
 
 
         }
@@ -168,11 +165,7 @@ namespace ProyectoAllphoneSF {
                 
             };
 
-            btn_CargarNuevoProducto.(prod);
 
-            btn_CargarNuevoProducto.Owner = this;
-            btn_CargarNuevoProducto.TopMost = true; // Forzar que el formulario esté al frente
-            btn_CargarNuevoProducto.ShowDialog();
         }
 
         private void BorrarFila(int rowIndex) {
@@ -220,6 +213,11 @@ namespace ProyectoAllphoneSF {
 
                 }
             }
+        }
+
+        private void iconButton_BuscarNombre_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

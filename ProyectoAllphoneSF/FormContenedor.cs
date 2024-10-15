@@ -26,7 +26,8 @@ namespace ProyectoAllphoneSF {
             panel_SeguirSeleccion.Visible = false;
         }
         private static readonly string cadena = ConfigurationManager.ConnectionStrings["cadena"].ConnectionString;
-        private bool ComprobarConexion() {
+        private bool ComprobarConexion() 
+        {
             bool respuesta = false;
             try {
                 SQLiteConnection conexion = new SQLiteConnection(cadena);
@@ -44,7 +45,8 @@ namespace ProyectoAllphoneSF {
             return respuesta;
 
         }
-        private void FormContenedor_Load(object sender, EventArgs e) {
+        private void FormContenedor_Load(object sender, EventArgs e) 
+        {
             if (ComprobarConexion()) {
                 label_EstadoBaseDatos.Text = "Conectada";
                 label_EstadoBaseDatos.ForeColor = System.Drawing.Color.Green;
@@ -55,7 +57,8 @@ namespace ProyectoAllphoneSF {
         }
 
         private Form FromActivo = null;
-        private void AbrirFormNuevo(Form FormHijo) {
+        private void AbrirFormNuevo(Form FormHijo)
+        {
             if (FromActivo != null) {
                 FromActivo.Close();
             }
@@ -70,7 +73,8 @@ namespace ProyectoAllphoneSF {
             FormHijo.Show();
         }
         private Button ultimoBotonSeleccionado;
-        private void SeguirSeleccion(Button botonSeleccionado) {
+        private void SeguirSeleccion(Button botonSeleccionado)
+        {
 
             if (ultimoBotonSeleccionado != null && ultimoBotonSeleccionado != botonSeleccionado) {
                 ultimoBotonSeleccionado.BackColor = System.Drawing.Color.FromArgb(25,25,25); // Color original del botón
@@ -91,44 +95,53 @@ namespace ProyectoAllphoneSF {
 
         }
 
-        private void pictureBox_LogoNegocio_Click(object sender, EventArgs e) {
+        private void pictureBox_LogoNegocio_Click(object sender, EventArgs e) 
+        {
             AbrirFormNuevo(new DashBoard());
             panel_SeguirSeleccion.Visible = false;
             ultimoBotonSeleccionado.BackColor = System.Drawing.Color.FromArgb(25, 25, 25); // Color original del botón
             ultimoBotonSeleccionado.ForeColor = System.Drawing.Color.White; // Color original del texto
         }
-        private void Button_CargarCliente_Click(object sender, EventArgs e) {
+        private void Button_CargarCliente_Click(object sender, EventArgs e) 
+        {
             SeguirSeleccion(Button_CargarCliente);
             AbrirFormNuevo(new Cargar_Clientes());
 
         }
 
-        private void ButtonGestionarStock_Click(object sender, EventArgs e) {
+        private void ButtonGestionarStock_Click(object sender, EventArgs e) 
+        {
             AbrirFormNuevo(new Stock());
             SeguirSeleccion(ButtonGestionarStock);
         }
 
-        private void Button_MovimientosCaja_Click(object sender, EventArgs e) {
+        private void Button_MovimientosCaja_Click(object sender, EventArgs e) 
+        {
             SeguirSeleccion(Button_MovimientosCaja);
             AbrirFormNuevo(new MovimientoCaja());
         }
 
-        private void Button_Estadistica_Click(object sender, EventArgs e) {
+        private void Button_Estadistica_Click(object sender, EventArgs e)
+        {
+
     
 
         }
 
-        private void HoraFecha_Tick(object sender, EventArgs e) {
+        private void HoraFecha_Tick(object sender, EventArgs e)
+        {
             label_Hora.Text = DateTime.Now.ToLongTimeString();
             label_Fecha.Text = DateTime.Now.ToShortDateString();
         }
 
-        private void button_CrearBackup_Click(object sender, EventArgs e) {
+        private void button_CrearBackup_Click(object sender, EventArgs e)
+        {
             SeguirSeleccion(button_CrearBackup);
             AbrirFormNuevo(new MovimientoCaja());
         }
 
-        private void button_Configuracion_Click(object sender, EventArgs e) {
+        private void button_Configuracion_Click(object sender, EventArgs e) 
+        {
             SeguirSeleccion(button_Configuracion);
             AbrirFormNuevo(new Configuraciones());
         }

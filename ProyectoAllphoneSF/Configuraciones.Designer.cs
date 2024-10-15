@@ -119,10 +119,10 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arboria Thin", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(140, 54);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(718, 132);
+            this.label2.Size = new System.Drawing.Size(729, 124);
             this.label2.TabIndex = 58;
             this.label2.Text = "La configuración previa de las monedas, \r\nmedios de pago y productos es esencial " +
     "para garantizar un \r\ncorrecto funcionamiento del sistema de ventas y lograr una " +
@@ -172,11 +172,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.label6.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.label6.Location = new System.Drawing.Point(836, 18);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 17);
+            this.label6.Size = new System.Drawing.Size(45, 17);
             this.label6.TabIndex = 62;
             this.label6.Text = "Zonas";
             // 
@@ -186,11 +186,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.label5.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.label5.Location = new System.Drawing.Point(576, 20);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 17);
+            this.label5.Size = new System.Drawing.Size(67, 17);
             this.label5.TabIndex = 61;
             this.label5.Text = "Secciones";
             // 
@@ -200,11 +200,11 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.label4.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.label4.Location = new System.Drawing.Point(327, 20);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 17);
+            this.label4.Size = new System.Drawing.Size(88, 17);
             this.label4.TabIndex = 60;
             this.label4.Text = "Medios Pago";
             // 
@@ -214,11 +214,11 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.label3.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.label3.Location = new System.Drawing.Point(88, 18);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 17);
+            this.label3.Size = new System.Drawing.Size(64, 17);
             this.label3.TabIndex = 59;
             this.label3.Text = "Monedas";
             // 
@@ -229,7 +229,7 @@
             this.iconButton_Zonas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.iconButton_Zonas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconButton_Zonas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton_Zonas.Font = new System.Drawing.Font("Arboria Book", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton_Zonas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButton_Zonas.IconChar = FontAwesome.Sharp.IconChar.MapLocationDot;
             this.iconButton_Zonas.IconColor = System.Drawing.Color.Black;
             this.iconButton_Zonas.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -256,12 +256,11 @@
             // textBox_Zona
             // 
             this.textBox_Zona.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_Zona.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox_Zona.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox_Zona.Font = new System.Drawing.Font("Arboria Book", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_Zona.BackColor = System.Drawing.Color.White;
+            this.textBox_Zona.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_Zona.Location = new System.Drawing.Point(741, 38);
             this.textBox_Zona.Name = "textBox_Zona";
-            this.textBox_Zona.Size = new System.Drawing.Size(240, 33);
+            this.textBox_Zona.Size = new System.Drawing.Size(240, 38);
             this.textBox_Zona.TabIndex = 10;
             // 
             // iconButton_Secciones
@@ -271,7 +270,7 @@
             this.iconButton_Secciones.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.iconButton_Secciones.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconButton_Secciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton_Secciones.Font = new System.Drawing.Font("Arboria Book", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton_Secciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButton_Secciones.IconChar = FontAwesome.Sharp.IconChar.Pager;
             this.iconButton_Secciones.IconColor = System.Drawing.Color.Black;
             this.iconButton_Secciones.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -292,7 +291,7 @@
             this.iconButton_MediosPago.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.iconButton_MediosPago.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconButton_MediosPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton_MediosPago.Font = new System.Drawing.Font("Arboria Book", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton_MediosPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButton_MediosPago.IconChar = FontAwesome.Sharp.IconChar.CcVisa;
             this.iconButton_MediosPago.IconColor = System.Drawing.Color.Black;
             this.iconButton_MediosPago.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -314,7 +313,7 @@
             this.iconButton_Monedas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconButton_Monedas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton_Monedas.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
-            this.iconButton_Monedas.Font = new System.Drawing.Font("Arboria Book", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton_Monedas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButton_Monedas.IconChar = FontAwesome.Sharp.IconChar.Btc;
             this.iconButton_Monedas.IconColor = System.Drawing.Color.Black;
             this.iconButton_Monedas.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -357,32 +356,29 @@
             // textBox_Seccion
             // 
             this.textBox_Seccion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_Seccion.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox_Seccion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox_Seccion.Font = new System.Drawing.Font("Arboria Book", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_Seccion.BackColor = System.Drawing.Color.White;
+            this.textBox_Seccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_Seccion.Location = new System.Drawing.Point(495, 38);
             this.textBox_Seccion.Name = "textBox_Seccion";
-            this.textBox_Seccion.Size = new System.Drawing.Size(240, 33);
+            this.textBox_Seccion.Size = new System.Drawing.Size(240, 38);
             this.textBox_Seccion.TabIndex = 3;
             // 
             // textBox_MediosPago
             // 
-            this.textBox_MediosPago.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox_MediosPago.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox_MediosPago.Font = new System.Drawing.Font("Arboria Book", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_MediosPago.BackColor = System.Drawing.Color.White;
+            this.textBox_MediosPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_MediosPago.Location = new System.Drawing.Point(249, 38);
             this.textBox_MediosPago.Name = "textBox_MediosPago";
-            this.textBox_MediosPago.Size = new System.Drawing.Size(240, 33);
+            this.textBox_MediosPago.Size = new System.Drawing.Size(240, 38);
             this.textBox_MediosPago.TabIndex = 2;
             // 
             // textBox_Monedas
             // 
-            this.textBox_Monedas.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox_Monedas.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox_Monedas.Font = new System.Drawing.Font("Arboria Book", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_Monedas.BackColor = System.Drawing.Color.White;
+            this.textBox_Monedas.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_Monedas.Location = new System.Drawing.Point(3, 38);
             this.textBox_Monedas.Name = "textBox_Monedas";
-            this.textBox_Monedas.Size = new System.Drawing.Size(240, 33);
+            this.textBox_Monedas.Size = new System.Drawing.Size(240, 38);
             this.textBox_Monedas.TabIndex = 1;
             // 
             // gradienteButtonTop1
