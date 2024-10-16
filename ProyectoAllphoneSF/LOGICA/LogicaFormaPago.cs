@@ -98,7 +98,7 @@ namespace ProyectoAllphoneSF.LOGICA
             {
                 conexion.Open();
 
-                string query = "SELECT MetodoPago,Descuento FROM FormaPago";
+                string query = "SELECT FormaPagoID,MetodoPago,Descuento FROM FormaPago";
 
 
                 SQLiteCommand cmd = new SQLiteCommand(query, conexion);
@@ -111,6 +111,8 @@ namespace ProyectoAllphoneSF.LOGICA
 
                         DatosFormaPago.Add(new FormaPago()
                         {
+
+                            FormaPagoID = int.Parse(reader["FormaPagoID"].ToString()),
                             Metodopago = reader["MetodoPago"].ToString(),
                             TasaInteres = decimal.Parse(reader["Descuento"].ToString()),
                         });

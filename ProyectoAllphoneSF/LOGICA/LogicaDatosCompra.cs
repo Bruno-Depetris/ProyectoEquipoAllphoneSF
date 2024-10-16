@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Configuration;
 using System.Data.SQLite;
 using ProyectoAllphoneSF.MODELO;
+using System.Windows.Forms;
 
 
 namespace ProyectoAllphoneSF.LOGICA {
@@ -31,42 +32,97 @@ namespace ProyectoAllphoneSF.LOGICA {
             }
         }
 
-
-        /*public List<DatosCompra> ListarCompra(DatosCompra dat, Cliente cli, Productos prod, FormaPago form, Monedas mon) {
-            List<DatosCompra> DatosCompra = new List<DatosCompra>();
+        public bool CargarCompra(DatosCompra comp) {
+            bool respuesta = false;
 
             using (SQLiteConnection conexion = new SQLiteConnection(cadena)) {
                 conexion.Open();
 
-                string query = "SELECT Nombre,Apellido FROM Cliente" +
-                               "SELECT Fecha FROM DatosCompra" +
-                               "SELECT Moneda FROM Monedas" +
-                               "SELECT Nombre, PrecioVneta FROM Productos";
 
+                string query = "INSERT INTO DatosCompra (ClienteID,ProductoID,FormaPagoID,Fecha,MonedaID,Cantidad,TotalVenta) VALUES(@ClienteID,@ProductoID,@FormaPagoID,@Fecha,@MonedaID,@Cantidad,@TotalVenta)";
+
+                SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+
+                cmd.Parameters.Add(new SQLiteParameter("@ClienteID", comp.ClienteID));
+                cmd.Parameters.Add(new SQLiteParameter("@ProductoID", comp.ProductoID));
+                cmd.Parameters.Add(new SQLiteParameter("@FormaPagoID", comp.FormaPagoID));
+                cmd.Parameters.Add(new SQLiteParameter("@Fecha", comp.Fecha));
+                cmd.Parameters.Add(new SQLiteParameter("@MonedaID", comp.MonedaID));
+                cmd.Parameters.Add(new SQLiteParameter("@Cantidad", comp.Cantidad));
+                cmd.Parameters.Add(new SQLiteParameter("@TotalVenta", comp.TotalVenta));
+
+
+
+
+                if (cmd.ExecuteNonQuery() < 1) {
+                    Console.WriteLine("Error Logica CARGAR COMPRA");
+                    return respuesta;
+                }
+
+                Console.WriteLine("COMPRA Guardado con EXITO");
+
+            }
+
+
+            return respuesta = true;
+        }
+
+
+        public List<DatosCompra> ListarCompra() {
+            List<DatosCompra> listaDatosCompra = new List<DatosCompra>();
+
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena)) {
+                conexion.Open();
+
+                string query = @"
+            SELECT 
+                Cliente.ClienteID, 
+                Cliente.Nombre, 
+                Cliente.Apellido, 
+                Cliente.Telefono, 
+                Cliente.Email, 
+                Zonas.Localidad, 
+                Productos.ProductoID, 
+                Productos.Nombre AS ProductoNombre, 
+                Productos.PrecioVenta, 
+                FormaPago.FormaPagoID, 
+                FormaPago.MetodoPago, 
+                FormaPago.Descuento,
+                DatosCompra.Cantidad, 
+                DatosCompra.TotalVenta, 
+                DatosCompra.Fecha
+            FROM
+                Cliente
+            JOIN
+                Zonas ON Cliente.ZonaID = Zonas.ZonaID
+            JOIN
+                DatosCompra ON Cliente.ClienteID = DatosCompra.ClienteID
+            JOIN
+                FormaPago ON DatosCompra.FormaPagoID = FormaPago.FormaPagoID
+            JOIN
+                Productos ON DatosCompra.ProductoID = Productos.ProductoID;
+        ";
 
                 SQLiteCommand cmd = new SQLiteCommand(query, conexion);
 
                 using (SQLiteDataReader reader = cmd.ExecuteReader()) {
                     while (reader.Read()) {
-                        DatosCompra.Add(new DatosCompra() {
-                             = reader.GetInt32(0),
+                        DatosCompra compra = new DatosCompra() {
+                            ClienteID = int.Parse(reader["ClienteID"].ToString()), // Ahora esto funcionará
+                            ProductoID = int.Parse(reader["ProductoID"].ToString()), // Ahora esto funcionará
+                            FormaPagoID = int.Parse(reader["FormaPagoID"].ToString()), // Ahora esto funcionará
+                            Cantidad = int.Parse(reader["Cantidad"].ToString()),
+                            TotalVenta = decimal.Parse(reader["TotalVenta"].ToString()),
+                            Fecha = DateTime.Parse(reader["Fecha"].ToString())
+                        };
 
-
-
-                        });
-
-
+                        listaDatosCompra.Add(compra);
                     }
                 }
-
-
-
-
-
-
             }
-        }*/
 
+            return listaDatosCompra; // Retornar la lista de compras
+        }
 
 
     }

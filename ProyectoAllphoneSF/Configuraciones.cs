@@ -97,19 +97,44 @@ namespace ProyectoAllphoneSF
         }
 
 
-        private void BorrarFila(int rowIndex) {
-            var seleccionarRow = dataGridView_Monedas.Rows[rowIndex];
+        private void BorrarFila(int rowIndex,DataGridView TablaDatos) {
+            var seleccionarRow = TablaDatos.Rows[rowIndex];
 
             var IDselected = seleccionarRow.Cells[1].Value;
 
             DialogResult result = MessageBox.Show("Seguro que desea borrar toda la fila?", "ADVERTENCIA", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes) {
+                bool respuesta = false;
 
-                Monedas mon = new Monedas() {
-                    MonedaID = IDselected.GetHashCode(),
-                };
+                if (TablaDatos == dataGridView_Monedas) {
+                    Monedas mon = new Monedas() {
+                        MonedaID = IDselected.GetHashCode(),
+                    };
 
-                bool respuesta = LogicaMoneda.Instancia.EliminarMoneda(mon);
+                    respuesta = LogicaMoneda.Instancia.EliminarMoneda(mon);
+                }
+                if (TablaDatos == dataGridView_MediosPago) {
+                    FormaPago mon = new FormaPago() {
+                        FormaPagoID = IDselected.GetHashCode(),
+                    };
+
+                    respuesta = LogicaFormaPago.Instancia.EliminarFormaPago(mon);
+                }
+                if (TablaDatos == dataGridView_Seccion) {
+                    TiposProductos mon = new TiposProductos() {
+                        TipoID = IDselected.GetHashCode(),
+                    };
+
+                    respuesta = LogicaTipoProducto.Instancia.EliminarTipoProducto(mon);
+                }
+                if (TablaDatos == dataGridView_Zona) {
+                    Zonas mon = new Zonas() {
+                        ZonaID = IDselected.GetHashCode(),
+                    };
+
+                    respuesta = LogicaZona.Instancia.BorrarZonas(mon);
+                }
+
 
                 if (respuesta) {
                     MessageBox.Show("Fila eliminada");
@@ -157,6 +182,17 @@ namespace ProyectoAllphoneSF
             
 
         }
+        private void dataGridView_Monedas_CellContentClick(object sender, DataGridViewCellEventArgs e) {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0) {
+                string columnName = dataGridView_Monedas.Columns[e.ColumnIndex].Name;
+
+                if (columnName == "Delete") {
+                    BorrarFila(e.RowIndex, dataGridView_Monedas);
+                }
+            }
+        }
+
+
 
         decimal tasaInteres;
         private void iconButton_MediosPago_Click(object sender, EventArgs e) {
@@ -193,6 +229,18 @@ namespace ProyectoAllphoneSF
                 MessageBox.Show($"Hubo algun error al cargar o mostrar{ex}", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+        private void dataGridView_MediosPago_CellContentClick(object sender, DataGridViewCellEventArgs e) {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0) {
+                string columnName = dataGridView_MediosPago.Columns[e.ColumnIndex].Name;
+
+                if (columnName == "Delete") {
+                    BorrarFila(e.RowIndex, dataGridView_MediosPago);
+                }
+            }
+        }
+
+
+
 
         private void iconButton_Secciones_Click(object sender, EventArgs e) {
             if (string.IsNullOrEmpty(textBox_Seccion.Text) || textBox_Seccion.Text.All(char.IsDigit)) {
@@ -217,6 +265,15 @@ namespace ProyectoAllphoneSF
 
             } catch(Exception ex) {
                 MessageBox.Show($"Hubo algun error al cargar o mostrar{ex}", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+        private void dataGridView_Seccion_CellContentClick(object sender, DataGridViewCellEventArgs e) {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0) {
+                string columnName = dataGridView_Seccion.Columns[e.ColumnIndex].Name;
+
+                if (columnName == "Delete") {
+                    BorrarFila(e.RowIndex, dataGridView_Seccion);
+                }
             }
         }
 
@@ -247,12 +304,12 @@ namespace ProyectoAllphoneSF
             }
         }
 
-        private void dataGridView_Monedas_CellContentClick(object sender, DataGridViewCellEventArgs e) {
+        private void dataGridView_Zona_CellContentClick(object sender, DataGridViewCellEventArgs e) {
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0) {
-                string columnName = dataGridView_Monedas.Columns[e.ColumnIndex].Name;
+                string columnName = dataGridView_Zona.Columns[e.ColumnIndex].Name;
 
                 if (columnName == "Delete") {
-                    BorrarFila(e.RowIndex);
+                    BorrarFila(e.RowIndex, dataGridView_Zona);
                 }
             }
         }
@@ -260,5 +317,7 @@ namespace ProyectoAllphoneSF
         private void Configuraciones_Load(object sender, EventArgs e) {
             CargarDatasGreed();
         }
+
+
     }
 }

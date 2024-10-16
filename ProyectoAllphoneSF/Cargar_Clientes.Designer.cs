@@ -40,6 +40,10 @@
             this.label12 = new System.Windows.Forms.Label();
             this.comboBox_Zona = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBox_CantCuotas = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox_Cotizacion = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.comboBox_Moneda = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -56,12 +60,14 @@
             // comboBox_MedioPago
             // 
             this.comboBox_MedioPago.BackColor = System.Drawing.Color.White;
+            this.comboBox_MedioPago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_MedioPago.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_MedioPago.FormattingEnabled = true;
-            this.comboBox_MedioPago.Location = new System.Drawing.Point(139, 290);
+            this.comboBox_MedioPago.Location = new System.Drawing.Point(139, 321);
             this.comboBox_MedioPago.Name = "comboBox_MedioPago";
             this.comboBox_MedioPago.Size = new System.Drawing.Size(333, 29);
             this.comboBox_MedioPago.TabIndex = 7;
+            this.comboBox_MedioPago.SelectedIndexChanged += new System.EventHandler(this.comboBox_MedioPago_SelectedIndexChanged);
             // 
             // Button_ConcretarVenta
             // 
@@ -83,12 +89,14 @@
             // comboBox_Producto
             // 
             this.comboBox_Producto.BackColor = System.Drawing.Color.White;
+            this.comboBox_Producto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_Producto.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_Producto.FormattingEnabled = true;
             this.comboBox_Producto.Location = new System.Drawing.Point(88, 211);
             this.comboBox_Producto.Name = "comboBox_Producto";
             this.comboBox_Producto.Size = new System.Drawing.Size(384, 29);
             this.comboBox_Producto.TabIndex = 6;
+            this.comboBox_Producto.SelectedIndexChanged += new System.EventHandler(this.comboBox_Producto_SelectedIndexChanged);
             // 
             // textBox_Email
             // 
@@ -134,7 +142,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(17, 293);
+            this.label11.Location = new System.Drawing.Point(17, 324);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(114, 21);
             this.label11.TabIndex = 40;
@@ -215,15 +223,21 @@
             // comboBox_Zona
             // 
             this.comboBox_Zona.BackColor = System.Drawing.Color.White;
+            this.comboBox_Zona.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_Zona.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_Zona.FormattingEnabled = true;
             this.comboBox_Zona.Location = new System.Drawing.Point(88, 106);
             this.comboBox_Zona.Name = "comboBox_Zona";
             this.comboBox_Zona.Size = new System.Drawing.Size(384, 29);
             this.comboBox_Zona.TabIndex = 3;
+            this.comboBox_Zona.SelectedIndexChanged += new System.EventHandler(this.comboBox_Zona_SelectedIndexChanged);
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.comboBox_CantCuotas);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.textBox_Cotizacion);
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.comboBox_Moneda);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label5);
@@ -249,15 +263,58 @@
             this.panel1.TabIndex = 53;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // comboBox_CantCuotas
+            // 
+            this.comboBox_CantCuotas.BackColor = System.Drawing.Color.White;
+            this.comboBox_CantCuotas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_CantCuotas.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_CantCuotas.FormattingEnabled = true;
+            this.comboBox_CantCuotas.Location = new System.Drawing.Point(140, 357);
+            this.comboBox_CantCuotas.Name = "comboBox_CantCuotas";
+            this.comboBox_CantCuotas.Size = new System.Drawing.Size(333, 29);
+            this.comboBox_CantCuotas.TabIndex = 53;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(74, 360);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 21);
+            this.label3.TabIndex = 54;
+            this.label3.Text = "Cuotas";
+            // 
+            // textBox_Cotizacion
+            // 
+            this.textBox_Cotizacion.BackColor = System.Drawing.Color.White;
+            this.textBox_Cotizacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox_Cotizacion.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_Cotizacion.Location = new System.Drawing.Point(167, 287);
+            this.textBox_Cotizacion.Name = "textBox_Cotizacion";
+            this.textBox_Cotizacion.Size = new System.Drawing.Size(306, 29);
+            this.textBox_Cotizacion.TabIndex = 52;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(18, 291);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(143, 21);
+            this.label2.TabIndex = 51;
+            this.label2.Text = "Cotizacion Moneda";
+            // 
             // comboBox_Moneda
             // 
             this.comboBox_Moneda.BackColor = System.Drawing.Color.White;
+            this.comboBox_Moneda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_Moneda.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_Moneda.FormattingEnabled = true;
             this.comboBox_Moneda.Location = new System.Drawing.Point(139, 252);
             this.comboBox_Moneda.Name = "comboBox_Moneda";
             this.comboBox_Moneda.Size = new System.Drawing.Size(333, 29);
             this.comboBox_Moneda.TabIndex = 48;
+            this.comboBox_Moneda.SelectedIndexChanged += new System.EventHandler(this.comboBox_Moneda_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -389,5 +446,9 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker_Fecha;
         private System.Windows.Forms.ComboBox comboBox_Moneda;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox_Cotizacion;
+        private System.Windows.Forms.ComboBox comboBox_CantCuotas;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -264,6 +264,7 @@
             this.dataGridView_Zona.Name = "dataGridView_Zona";
             this.dataGridView_Zona.Size = new System.Drawing.Size(240, 150);
             this.dataGridView_Zona.TabIndex = 11;
+            this.dataGridView_Zona.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Zona_CellContentClick);
             // 
             // textBox_Zona
             // 
@@ -349,6 +350,7 @@
             this.dataGridView_Seccion.Name = "dataGridView_Seccion";
             this.dataGridView_Seccion.Size = new System.Drawing.Size(240, 150);
             this.dataGridView_Seccion.TabIndex = 6;
+            this.dataGridView_Seccion.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Seccion_CellContentClick);
             // 
             // dataGridView_MediosPago
             // 
@@ -357,6 +359,7 @@
             this.dataGridView_MediosPago.Name = "dataGridView_MediosPago";
             this.dataGridView_MediosPago.Size = new System.Drawing.Size(240, 150);
             this.dataGridView_MediosPago.TabIndex = 5;
+            this.dataGridView_MediosPago.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_MediosPago_CellContentClick);
             // 
             // dataGridView_Monedas
             // 
