@@ -40,6 +40,8 @@
             this.label12 = new System.Windows.Forms.Label();
             this.comboBox_Zona = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.comboBox_Cantidad = new System.Windows.Forms.ComboBox();
             this.comboBox_CantCuotas = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox_Cotizacion = new System.Windows.Forms.TextBox();
@@ -234,6 +236,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.comboBox_Cantidad);
             this.panel1.Controls.Add(this.comboBox_CantCuotas);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.textBox_Cotizacion);
@@ -263,6 +267,28 @@
             this.panel1.TabIndex = 53;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(300, 289);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(72, 21);
+            this.label4.TabIndex = 56;
+            this.label4.Text = "Cantidad";
+            // 
+            // comboBox_Cantidad
+            // 
+            this.comboBox_Cantidad.BackColor = System.Drawing.Color.White;
+            this.comboBox_Cantidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_Cantidad.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_Cantidad.FormattingEnabled = true;
+            this.comboBox_Cantidad.Location = new System.Drawing.Point(378, 286);
+            this.comboBox_Cantidad.Name = "comboBox_Cantidad";
+            this.comboBox_Cantidad.Size = new System.Drawing.Size(94, 29);
+            this.comboBox_Cantidad.TabIndex = 55;
+            this.comboBox_Cantidad.SelectedIndexChanged += new System.EventHandler(this.comboBox_Cantidad_SelectedIndexChanged);
+            // 
             // comboBox_CantCuotas
             // 
             this.comboBox_CantCuotas.BackColor = System.Drawing.Color.White;
@@ -273,6 +299,7 @@
             this.comboBox_CantCuotas.Name = "comboBox_CantCuotas";
             this.comboBox_CantCuotas.Size = new System.Drawing.Size(333, 29);
             this.comboBox_CantCuotas.TabIndex = 53;
+            this.comboBox_CantCuotas.SelectedIndexChanged += new System.EventHandler(this.comboBox_CantCuotas_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -291,14 +318,14 @@
             this.textBox_Cotizacion.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_Cotizacion.Location = new System.Drawing.Point(167, 287);
             this.textBox_Cotizacion.Name = "textBox_Cotizacion";
-            this.textBox_Cotizacion.Size = new System.Drawing.Size(306, 29);
+            this.textBox_Cotizacion.Size = new System.Drawing.Size(101, 29);
             this.textBox_Cotizacion.TabIndex = 52;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(18, 291);
+            this.label2.Location = new System.Drawing.Point(6, 289);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(143, 21);
             this.label2.TabIndex = 51;
@@ -450,5 +477,7 @@
         private System.Windows.Forms.TextBox textBox_Cotizacion;
         private System.Windows.Forms.ComboBox comboBox_CantCuotas;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox comboBox_Cantidad;
     }
 }

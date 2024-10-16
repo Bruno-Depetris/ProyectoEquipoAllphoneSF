@@ -35,6 +35,25 @@ namespace ProyectoAllphoneSF {
             comboBox_CantCuotas.Items.Insert(12, "11");
             comboBox_CantCuotas.Items.Insert(13, "12");
             comboBox_CantCuotas.SelectedIndex = 0;
+
+
+
+
+            comboBox_Cantidad.Items.Insert(0, "Selecciona Cantidad");
+            comboBox_Cantidad.Items.Insert(1, "0");
+            comboBox_Cantidad.Items.Insert(2, "1");
+            comboBox_Cantidad.Items.Insert(3, "2");
+            comboBox_Cantidad.Items.Insert(4, "3");
+            comboBox_Cantidad.Items.Insert(5, "4");
+            comboBox_Cantidad.Items.Insert(6, "5");
+            comboBox_Cantidad.Items.Insert(7, "6");
+            comboBox_Cantidad.Items.Insert(8, "7");
+            comboBox_Cantidad.Items.Insert(9, "8");
+            comboBox_Cantidad.Items.Insert(10, "9");
+            comboBox_Cantidad.Items.Insert(11, "10");
+            comboBox_Cantidad.Items.Insert(12, "11");
+            comboBox_Cantidad.Items.Insert(13, "12");
+            comboBox_Cantidad.SelectedIndex = 0;
             GestionarComboBox();
 
             MostrarDatos();
@@ -49,10 +68,18 @@ namespace ProyectoAllphoneSF {
         int idMedioPagoSeleccionado;
         decimal tasaInteres;
         decimal precioProducto;
-        int cantidad = 0;
+        int cantidad;
+        int restoStock = 0;
+        int cuotas = 0;
         private bool Validaciones() {
             bool respuesta = false;
 
+            if (int.TryParse(comboBox_Cantidad.Text, out cantidad)) {
+
+            } else {
+
+                MessageBox.Show("Por favor, ingrese una cantidad válida.");
+            }
             if (string.IsNullOrEmpty(textBox_Nombre.Text) || textBox_Nombre.Text.All(char.IsDigit)) {
                 MessageBox.Show("Errora al ingresar Nombre", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 textBox_Nombre.Clear();
@@ -117,7 +144,7 @@ namespace ProyectoAllphoneSF {
         private void MostrarDatos() {
             dataGridView1.DataSource = null;
 
-            var dato = LogicaDatosCompra.Instancia.ListarCompra();
+            var dato = ListarClienteCompra.Instancia.ListarCompras();
 
             dataGridView1.DataSource = dato;
         }
@@ -125,21 +152,24 @@ namespace ProyectoAllphoneSF {
             bool respuesta = false;
 
             try {
-
+                
                 DatosCompra nuevaCompra = new DatosCompra();
                 Cliente BUSCARIDCLIENTE = new Cliente();
                 Productos productos = new Productos();
 
+                
+
                 foreach (ProductoConTipo item in ListarProducto.Instancia.ListaProductos()) {
+
                     if (item.ProductoID == idProductoSeleccionado) {
-                        cantidad = item.Stock - 1;
+                        restoStock = item.Stock - cantidad;
 
                         productos.ProductoID = item.ProductoID;
                         productos.Nombre = item.Nombre;
                         productos.TipoID = item.TipoID;
                         productos.PrecioCosto = item.PrecioCosto;
                         productos.PrecioVenta = item.PrecioVenta;
-                        productos.Stock = cantidad;
+                        productos.Stock = restoStock;
 
                         Console.WriteLine($"{productos.ProductoID},{productos.Nombre},{productos.TipoID},{productos.PrecioCosto},{productos.PrecioVenta},{productos.Stock}");
 
@@ -166,11 +196,13 @@ namespace ProyectoAllphoneSF {
                 nuevaCompra.FormaPagoID = idMedioPagoSeleccionado;
                 nuevaCompra.Fecha = DateTime.Now;
                 nuevaCompra.MonedaID = idMonedaSeleccionada;
-                nuevaCompra.Cantidad = 1;
+                nuevaCompra.Cantidad = cantidad;
                 nuevaCompra.TotalVenta = (precioProducto * CotizacionMoneda) * (1 + tasaInteres / 100);
+                nuevaCompra.Cuotas = cuotas;
+                
                 
 
-                LogicaDatosCompra.Instancia.CargarCompra(nuevaCompra);
+                 LogicaDatosCompra.Instancia.CargarCompra(nuevaCompra);
                 
                 return respuesta = true;
                 
@@ -307,6 +339,22 @@ namespace ProyectoAllphoneSF {
     
                 }
             }
+        }
+
+        private void comboBox_Cantidad_SelectedIndexChanged(object sender, EventArgs e) {
+
+            if (int.TryParse(comboBox_Cantidad.Text, out cantidad)){
+
+            }
+                     
+                    
+        }
+
+        private void comboBox_CantCuotas_SelectedIndexChanged(object sender, EventArgs e) {
+            if (int.TryParse(comboBox_CantCuotas.Text, out cuotas)) {
+
+            }
+           
         }
     }
 }

@@ -39,7 +39,7 @@ namespace ProyectoAllphoneSF.LOGICA {
                 conexion.Open();
 
 
-                string query = "INSERT INTO DatosCompra (ClienteID,ProductoID,FormaPagoID,Fecha,MonedaID,Cantidad,TotalVenta) VALUES(@ClienteID,@ProductoID,@FormaPagoID,@Fecha,@MonedaID,@Cantidad,@TotalVenta)";
+                string query = "INSERT INTO DatosCompra (ClienteID,ProductoID,FormaPagoID,Fecha,MonedaID,Cantidad,TotalVenta,Cuotas) VALUES(@ClienteID,@ProductoID,@FormaPagoID,@Fecha,@MonedaID,@Cantidad,@TotalVenta,@Cuotas)";
 
                 SQLiteCommand cmd = new SQLiteCommand(query, conexion);
 
@@ -50,6 +50,7 @@ namespace ProyectoAllphoneSF.LOGICA {
                 cmd.Parameters.Add(new SQLiteParameter("@MonedaID", comp.MonedaID));
                 cmd.Parameters.Add(new SQLiteParameter("@Cantidad", comp.Cantidad));
                 cmd.Parameters.Add(new SQLiteParameter("@TotalVenta", comp.TotalVenta));
+                cmd.Parameters.Add(new SQLiteParameter("@Cuotas", comp.Cuotas));
 
 
 
@@ -68,7 +69,7 @@ namespace ProyectoAllphoneSF.LOGICA {
         }
 
 
-        public List<DatosCompra> ListarCompra() {
+        /*public List<DatosCompra> ListarCompra() {
             List<DatosCompra> listaDatosCompra = new List<DatosCompra>();
 
             using (SQLiteConnection conexion = new SQLiteConnection(cadena)) {
@@ -87,7 +88,7 @@ namespace ProyectoAllphoneSF.LOGICA {
                 Productos.PrecioVenta, 
                 FormaPago.FormaPagoID, 
                 FormaPago.MetodoPago, 
-                FormaPago.Descuento,
+                FormaPago.TasaInteres,
                 DatosCompra.Cantidad, 
                 DatosCompra.TotalVenta, 
                 DatosCompra.Fecha
@@ -113,6 +114,7 @@ namespace ProyectoAllphoneSF.LOGICA {
                             FormaPagoID = int.Parse(reader["FormaPagoID"].ToString()), // Ahora esto funcionará
                             Cantidad = int.Parse(reader["Cantidad"].ToString()),
                             TotalVenta = decimal.Parse(reader["TotalVenta"].ToString()),
+                            Cuotas = int.Parse(reader["TotalVenta"].ToString()),
                             Fecha = DateTime.Parse(reader["Fecha"].ToString())
                         };
 
@@ -122,7 +124,7 @@ namespace ProyectoAllphoneSF.LOGICA {
             }
 
             return listaDatosCompra; // Retornar la lista de compras
-        }
+        }*/
 
 
     }

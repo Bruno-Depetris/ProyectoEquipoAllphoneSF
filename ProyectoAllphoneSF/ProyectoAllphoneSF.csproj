@@ -132,6 +132,7 @@
     <Compile Include="GradienteButtonTop.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="LOGICA\ListarClienteCompra.cs" />
     <Compile Include="LOGICA\ListarProducto.cs" />
     <Compile Include="LOGICA\LogicaCliente.cs" />
     <Compile Include="LOGICA\LogicaDatosCompra.cs" />
@@ -144,6 +145,7 @@
     <Compile Include="MODELO\Cliente.cs" />
     <Compile Include="MODELO\DatosCompra .cs" />
     <Compile Include="MODELO\FormaPago .cs" />
+    <Compile Include="MODELO\ListarCompra.cs" />
     <Compile Include="MODELO\Monedas .cs" />
     <Compile Include="MODELO\MovimientosCaja .cs" />
     <Compile Include="MODELO\ProductoConTipo .cs" />

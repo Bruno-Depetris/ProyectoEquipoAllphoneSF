@@ -43,12 +43,12 @@ namespace ProyectoAllphoneSF.LOGICA
                 conexion.Open();
 
 
-                string query = "INSERT INTO FormaPago (MetodoPago,Descuento) VALUES (@MetodoPago,@Descuento)";
+                string query = "INSERT INTO FormaPago (MetodoPago,TasaInteres) VALUES (@MetodoPago,@TasaInteres)";
 
                 SQLiteCommand cmd = new SQLiteCommand(query, conexion);
 
                 cmd.Parameters.Add(new SQLiteParameter("@MetodoPago",forma.Metodopago));
-                cmd.Parameters.Add(new SQLiteParameter("@Descuento", forma.TasaInteres));
+                cmd.Parameters.Add(new SQLiteParameter("@TasaInteres", forma.TasaInteres));
 
                 if (cmd.ExecuteNonQuery() < 1)
                 {
@@ -98,7 +98,7 @@ namespace ProyectoAllphoneSF.LOGICA
             {
                 conexion.Open();
 
-                string query = "SELECT FormaPagoID,MetodoPago,Descuento FROM FormaPago";
+                string query = "SELECT FormaPagoID,MetodoPago,TasaInteres FROM FormaPago";
 
 
                 SQLiteCommand cmd = new SQLiteCommand(query, conexion);
@@ -114,7 +114,7 @@ namespace ProyectoAllphoneSF.LOGICA
 
                             FormaPagoID = int.Parse(reader["FormaPagoID"].ToString()),
                             Metodopago = reader["MetodoPago"].ToString(),
-                            TasaInteres = decimal.Parse(reader["Descuento"].ToString()),
+                            TasaInteres = decimal.Parse(reader["TasaInteres"].ToString()),
                         });
 
                     }
