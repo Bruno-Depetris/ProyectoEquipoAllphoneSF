@@ -154,6 +154,7 @@ namespace ProyectoAllphoneSF {
 
                 int clienteID = 0;
                 var datos = LogicaCliente.Instancia.ListarCliente();
+
                 foreach (Cliente item in datos) {
                     if (nuevaCompra.ClienteID != item.ClienteID) {
                         clienteID = item.ClienteID;

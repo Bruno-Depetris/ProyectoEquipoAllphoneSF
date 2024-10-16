@@ -187,8 +187,7 @@ namespace ProyectoAllphoneSF
                         resultado = DialogResult.Cancel;
                     }
                 }
-            }
-            
+            } 
         }       
         private void comboBox_Tipo_SelectedIndexChanged(object sender, EventArgs e) {
 
