@@ -30,6 +30,9 @@ namespace ProyectoAllphoneSF
             var datosSecciones = LogicaTipoProducto.Instancia.ListarTipos();
             var datosZona = LogicaZona.Instancia.ListarZonas();
 
+
+            
+
             dataGridView_Monedas.DataSource = datosMoneda;
             dataGridView_MediosPago.DataSource = datosMP;
             dataGridView_Seccion.DataSource = datosSecciones;
@@ -122,7 +125,7 @@ namespace ProyectoAllphoneSF
 
         private void iconButton_Zonas_Click(object sender, EventArgs e) {
             if (string.IsNullOrEmpty(textBox_Zona.Text) || textBox_Zona.Text.All(char.IsDigit)) {
-                MessageBox.Show("Error al ingresar los tipos", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Error al ingresar las zonas", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 textBox_Zona.Focus();
                 textBox_Zona.Clear();
                 return;
@@ -137,6 +140,7 @@ namespace ProyectoAllphoneSF
                 LogicaZona.Instancia.CargarZona(nuevaZona);
 
                 MessageBox.Show("Zona Cargada con exito", "FELICIDAD😎");
+
                 textBox_Zona.Focus();
                 textBox_Zona.Clear();
                 CargarDatasGreed();

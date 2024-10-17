@@ -185,6 +185,7 @@
             this.comboBox_Tipo.Name = "comboBox_Tipo";
             this.comboBox_Tipo.Size = new System.Drawing.Size(315, 33);
             this.comboBox_Tipo.TabIndex = 50;
+            this.comboBox_Tipo.SelectedIndexChanged += new System.EventHandler(this.comboBox_Tipo_SelectedIndexChanged);
             // 
             // button_Salir
             // 
@@ -234,7 +235,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BtnNuevoProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.BtnNuevoProducto_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

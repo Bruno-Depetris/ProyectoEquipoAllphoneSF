@@ -129,7 +129,7 @@ namespace ProyectoAllphoneSF.LOGICA {
         }
 
 
-        public List<Cliente> ListarCliente(Cliente cli) {
+        public List<Cliente> ListarCliente() {
 
             List<Cliente> DatosCliente = new List<Cliente>();
 

@@ -29,8 +29,8 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dateTimePicker_Fecha = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.iconButton_BuscarNombre = new FontAwesome.Sharp.IconButton();
             this.iconButton_Ordenar = new FontAwesome.Sharp.IconButton();
+            this.iconButton_BuscarNombre = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -83,6 +83,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(775, 275);
             this.dataGridView1.TabIndex = 46;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // dateTimePicker_Fecha
             // 
@@ -107,26 +108,6 @@
             this.panel1.Size = new System.Drawing.Size(800, 396);
             this.panel1.TabIndex = 55;
             // 
-            // iconButton_BuscarNombre
-            // 
-            this.iconButton_BuscarNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.iconButton_BuscarNombre.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton_BuscarNombre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton_BuscarNombre.Font = new System.Drawing.Font("Arboria Book", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton_BuscarNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(191)))), ((int)(((byte)(236)))));
-            this.iconButton_BuscarNombre.IconChar = FontAwesome.Sharp.IconChar.Searchengin;
-            this.iconButton_BuscarNombre.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(191)))), ((int)(((byte)(236)))));
-            this.iconButton_BuscarNombre.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton_BuscarNombre.IconSize = 25;
-            this.iconButton_BuscarNombre.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton_BuscarNombre.Location = new System.Drawing.Point(246, 6);
-            this.iconButton_BuscarNombre.Name = "iconButton_BuscarNombre";
-            this.iconButton_BuscarNombre.Size = new System.Drawing.Size(102, 30);
-            this.iconButton_BuscarNombre.TabIndex = 54;
-            this.iconButton_BuscarNombre.Text = "Buscar";
-            this.iconButton_BuscarNombre.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton_BuscarNombre.UseVisualStyleBackColor = false;
-            // 
             // iconButton_Ordenar
             // 
             this.iconButton_Ordenar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
@@ -146,6 +127,26 @@
             this.iconButton_Ordenar.Text = "Ordenar";
             this.iconButton_Ordenar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButton_Ordenar.UseVisualStyleBackColor = false;
+            // 
+            // iconButton_BuscarNombre
+            // 
+            this.iconButton_BuscarNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.iconButton_BuscarNombre.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton_BuscarNombre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton_BuscarNombre.Font = new System.Drawing.Font("Arboria Book", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton_BuscarNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(191)))), ((int)(((byte)(236)))));
+            this.iconButton_BuscarNombre.IconChar = FontAwesome.Sharp.IconChar.Searchengin;
+            this.iconButton_BuscarNombre.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(191)))), ((int)(((byte)(236)))));
+            this.iconButton_BuscarNombre.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton_BuscarNombre.IconSize = 25;
+            this.iconButton_BuscarNombre.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton_BuscarNombre.Location = new System.Drawing.Point(246, 6);
+            this.iconButton_BuscarNombre.Name = "iconButton_BuscarNombre";
+            this.iconButton_BuscarNombre.Size = new System.Drawing.Size(102, 30);
+            this.iconButton_BuscarNombre.TabIndex = 54;
+            this.iconButton_BuscarNombre.Text = "Buscar";
+            this.iconButton_BuscarNombre.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.iconButton_BuscarNombre.UseVisualStyleBackColor = false;
             // 
             // Stock
             // 

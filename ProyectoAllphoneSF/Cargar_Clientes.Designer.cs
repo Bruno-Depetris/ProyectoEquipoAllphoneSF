@@ -40,6 +40,8 @@
             this.label12 = new System.Windows.Forms.Label();
             this.comboBox_Zona = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBox_Moneda = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dateTimePicker_Fecha = new System.Windows.Forms.DateTimePicker();
@@ -56,7 +58,7 @@
             this.comboBox_MedioPago.BackColor = System.Drawing.Color.White;
             this.comboBox_MedioPago.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_MedioPago.FormattingEnabled = true;
-            this.comboBox_MedioPago.Location = new System.Drawing.Point(139, 251);
+            this.comboBox_MedioPago.Location = new System.Drawing.Point(139, 290);
             this.comboBox_MedioPago.Name = "comboBox_MedioPago";
             this.comboBox_MedioPago.Size = new System.Drawing.Size(333, 29);
             this.comboBox_MedioPago.TabIndex = 7;
@@ -132,7 +134,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(17, 254);
+            this.label11.Location = new System.Drawing.Point(17, 293);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(114, 21);
             this.label11.TabIndex = 40;
@@ -222,6 +224,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.comboBox_Moneda);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.comboBox_Zona);
@@ -243,6 +247,27 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(514, 450);
             this.panel1.TabIndex = 53;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // comboBox_Moneda
+            // 
+            this.comboBox_Moneda.BackColor = System.Drawing.Color.White;
+            this.comboBox_Moneda.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_Moneda.FormattingEnabled = true;
+            this.comboBox_Moneda.Location = new System.Drawing.Point(139, 252);
+            this.comboBox_Moneda.Name = "comboBox_Moneda";
+            this.comboBox_Moneda.Size = new System.Drawing.Size(333, 29);
+            this.comboBox_Moneda.TabIndex = 48;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(6, 255);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(127, 21);
+            this.label1.TabIndex = 49;
+            this.label1.Text = "Moneda de pago";
             // 
             // panel2
             // 
@@ -362,5 +387,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private FontAwesome.Sharp.IconButton iconButton_BuscarFecha;
         private System.Windows.Forms.DateTimePicker dateTimePicker_Fecha;
+        private System.Windows.Forms.ComboBox comboBox_Moneda;
+        private System.Windows.Forms.Label label1;
     }
 }

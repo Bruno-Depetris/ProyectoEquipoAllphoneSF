@@ -19,8 +19,11 @@ namespace ProyectoAllphoneSF
             InitializeComponent();
             comboBox_Tipo.Items.Insert(0, "Seleccine una seccion");
             comboBox_Tipo.SelectedIndex = 0;
+            GestionarComboBox();
+            
         }
 
+        int IDSeleccionado = 0;
         decimal PrecioCosto;
         decimal PrecioVenta;
         private bool Validaciones() {
@@ -72,43 +75,75 @@ namespace ProyectoAllphoneSF
 
             return respuesta = true;
         }
-        private void BtnNuevoProducto_Load(object sender, EventArgs e) {
+        private void Restaurar() {
+            textBox_Nombre.Clear();
+            textBox_Nombre.Clear();
+            textBox_PrecioCosto.Clear();
+            textBox_PrecioVenta.Clear();
+            textBox_Cantidad.Clear();
 
         }
-
         private void button_Salir_Click(object sender, EventArgs e) {
             this.Close();
-        }
+        } 
+        private void GestionarComboBox() {
 
+            comboBox_Tipo.Items.Clear();
+            comboBox_Tipo.Items.Insert(0, "Seleccine una seccion");
+            comboBox_Tipo.SelectedIndex = 0;
+            
+
+            foreach (TiposProductos tipo in LogicaTipoProducto.Instancia.ListarTipos()) {
+                comboBox_Tipo.Items.Add(tipo.NombreTipo);
+               
+            }
+            
+
+        }
         private void button_CargarNuevoProducto_Click(object sender, EventArgs e) {
             if (Validaciones()) {
                 DialogResult resultado = MessageBox.Show("Desea cargar este producto?","ADVERTENCIA",MessageBoxButtons.YesNo,MessageBoxIcon.Stop);
 
                 if (resultado == DialogResult.Yes) {
                     try {
-
                         Productos NuevoProducto = new Productos();
+
                         NuevoProducto.Nombre = textBox_Nombre.Text;
-                        NuevoProducto.TipoID = comboBox_Tipo.SelectedIndex;
+                        NuevoProducto.TipoID = IDSeleccionado;
                         NuevoProducto.PrecioCosto = PrecioCosto;
                         NuevoProducto.PrecioVenta = PrecioVenta;
-
+                        NuevoProducto.Stock = int.Parse(textBox_Cantidad.Text);
 
                         bool Estado = LogicaProducto.Instancia.cargarProducto(NuevoProducto);
 
                         if (Estado) {
-                            MessageBox.Show("Producto cargado", "EXITOS", MessageBoxButtons.OK,MessageBoxIcon.Information);
+                            MessageBox.Show("Producto cargado", "EXITOS 🥵", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Restaurar();
+                        } else {
+                            MessageBox.Show("Error al cargar Productos", "EXITOS 🥺😭😭", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
 
+                        
 
 
                     } catch (Exception ex) {
                         MessageBox.Show(ex.Message);
                     }
                 } else {
-                    this.Close();
+                    resultado = DialogResult.Cancel;
+                }
+            }
+        }       
+        private void comboBox_Tipo_SelectedIndexChanged(object sender, EventArgs e) {
+
+            foreach (TiposProductos tipo in LogicaTipoProducto.Instancia.ListarTipos()) {
+                if (comboBox_Tipo.Text.Contains(tipo.NombreTipo)) {
+                    IDSeleccionado = tipo.TipoID;
+                    Console.WriteLine("ID SELCCIONADO:" + IDSeleccionado);
                 }
             }
         }
+
+
     }
 }
