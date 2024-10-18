@@ -60,17 +60,18 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(23, 81);
+            this.label6.Location = new System.Drawing.Point(14, 68);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(81, 25);
             this.label6.TabIndex = 35;
             this.label6.Text = "Nombre";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(329, 81);
+            this.label1.Location = new System.Drawing.Point(318, 68);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 25);
             this.label1.TabIndex = 36;
@@ -80,7 +81,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(23, 143);
+            this.label2.Location = new System.Drawing.Point(14, 132);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(115, 25);
             this.label2.TabIndex = 37;
@@ -90,7 +91,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(329, 143);
+            this.label3.Location = new System.Drawing.Point(318, 132);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(116, 25);
             this.label3.TabIndex = 38;
@@ -100,7 +101,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(23, 204);
+            this.label4.Location = new System.Drawing.Point(14, 194);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(88, 25);
             this.label4.TabIndex = 39;
@@ -141,7 +142,7 @@
             this.textBox_Cantidad.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBox_Cantidad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_Cantidad.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Cantidad.Location = new System.Drawing.Point(19, 217);
+            this.textBox_Cantidad.Location = new System.Drawing.Point(19, 222);
             this.textBox_Cantidad.Name = "textBox_Cantidad";
             this.textBox_Cantidad.Size = new System.Drawing.Size(292, 33);
             this.textBox_Cantidad.TabIndex = 46;
@@ -152,8 +153,8 @@
             this.button_CargarNuevoProducto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_CargarNuevoProducto.FlatAppearance.BorderSize = 0;
             this.button_CargarNuevoProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_CargarNuevoProducto.Font = new System.Drawing.Font("Arboria Book", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_CargarNuevoProducto.Location = new System.Drawing.Point(334, 212);
+            this.button_CargarNuevoProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_CargarNuevoProducto.Location = new System.Drawing.Point(334, 217);
             this.button_CargarNuevoProducto.Name = "button_CargarNuevoProducto";
             this.button_CargarNuevoProducto.Size = new System.Drawing.Size(294, 38);
             this.button_CargarNuevoProducto.TabIndex = 48;
@@ -192,12 +193,12 @@
             this.button_Salir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(191)))), ((int)(((byte)(236)))));
             this.button_Salir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Salir.Font = new System.Drawing.Font("Arboria Book", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Salir.Location = new System.Drawing.Point(612, 12);
             this.button_Salir.Name = "button_Salir";
             this.button_Salir.Size = new System.Drawing.Size(26, 24);
             this.button_Salir.TabIndex = 51;
-            this.button_Salir.Text = "x";
+            this.button_Salir.Text = "X";
             this.button_Salir.UseVisualStyleBackColor = false;
             this.button_Salir.Click += new System.EventHandler(this.button_Salir_Click);
             // 
