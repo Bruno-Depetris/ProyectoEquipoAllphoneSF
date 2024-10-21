@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -20,7 +21,20 @@ namespace ProyectoAllphoneSF {
             InitializeComponent();
             FormNuevo = new BtnNuevoProducto(this);
 
+            comboBox_OrdenarPor.Items.Insert(0, "Ordenar Por...");
+            comboBox_OrdenarPor.Items.Insert(1, "Nombre");
+            comboBox_OrdenarPor.Items.Insert(2, "Precio Costo");
+            comboBox_OrdenarPor.Items.Insert(3, "Precio Venta");
+            comboBox_OrdenarPor.Items.Insert(4, "Seccion");
+            comboBox_OrdenarPor.Items.Insert(5, "Stock");
+            comboBox_OrdenarPor .SelectedIndex = 0; 
+
+
         }
+
+        string BuscarPorNombre;
+        string BuscarPorCategorias;
+
         private void Stock_Load(object sender, EventArgs e) {
 
             MostrarDatos();
@@ -30,6 +44,8 @@ namespace ProyectoAllphoneSF {
 
             dataGridView1.DataSource = null;
 
+            
+            
             var datos = ListarProducto.Instancia.ListaProductos();
 
             dataGridView1.DataSource = datos;
@@ -209,6 +225,27 @@ namespace ProyectoAllphoneSF {
 
                 }
             }
+        }
+
+        private void iconButton_BuscarNombre_Click(object sender, EventArgs e) {
+            if (string.IsNullOrEmpty(textBox_BusquedaNombre.Text)) {
+                MessageBox.Show("Complete el campo antes de continuar","ADVERTENCIA",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+            }
+            BuscarPorNombre = textBox_BusquedaNombre.Text;
+            var productosOrdenados = ListarProducto.Instancia.ListaProductosConOrden("Nombre", BuscarPorNombre);
+
+            dataGridView1.DataSource = productosOrdenados;
+        }
+
+        private void comboBox_OrdenarPor_SelectedIndexChanged(object sender, EventArgs e) {
+
+            BuscarPorCategorias = comboBox_OrdenarPor.Text;
+            dataGridView1.DataSource = null;
+            var productosOrdenados = ListarProducto.Instancia.ListaProductosConOrden(BuscarPorCategorias, BuscarPorNombre);
+
+            dataGridView1.DataSource = productosOrdenados;
+            AgregarColumnasBotones();
+            ConfigurarColumnas();
         }
     }
 }

@@ -116,7 +116,7 @@ namespace ProyectoAllphoneSF
         private void button_CargarNuevoProducto_Click(object sender, EventArgs e) {
             if (editar) {
                 if (Validaciones()) {
-                    DialogResult resultado = MessageBox.Show("Desea cargar este producto?", "ADVERTENCIA", MessageBoxButtons.YesNo, MessageBoxIcon.Stop);
+                    DialogResult resultado = MessageBox.Show("Desea cargar este producto?", "ADVERTENCIA", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
                     if (resultado == DialogResult.Yes) {
 
@@ -136,7 +136,7 @@ namespace ProyectoAllphoneSF
                             bool Estado = LogicaProducto.Instancia.EditarProducto(NuevoProducto);
 
                             if (Estado) {
-                                MessageBox.Show("Producto cargado", "EXITOS 🥵", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Producto cargado", "EXITOS 🥵", MessageBoxButtons.OK);
                                 formPadre.MostrarDatos();
                                 Restaurar();
                             } else {

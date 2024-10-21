@@ -325,6 +325,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Allphone.SF";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormContenedor_Load);
             this.panel_ContenedorMenu.ResumeLayout(false);
             this.panel_Botones.ResumeLayout(false);
