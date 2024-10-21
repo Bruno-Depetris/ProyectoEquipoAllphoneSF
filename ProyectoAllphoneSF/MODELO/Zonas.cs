@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ProyectoAllphoneSF.MODELO {
-    internal class Zonas {
+    public class Zonas {
 
-        int ZonaID { get; set; }
-        string Localidad {  get; set; } 
+        public int ZonaID { get; set; }
+        public string Localidad {  get; set; } 
     }
 }

@@ -38,7 +38,7 @@ namespace ProyectoAllphoneSF.LOGICA {
                 conexion.Open();
 
 
-                string query = "INSERT INTO Monedas(MonedaName) VALUES (@MonedaName)";
+                string query = "INSERT INTO Monedas (Moneda) VALUES (@MonedaName)";
 
                 SQLiteCommand cmd = new SQLiteCommand(query, conexion);
 
@@ -50,8 +50,9 @@ namespace ProyectoAllphoneSF.LOGICA {
                     return respuesta;
                 }
 
-                return respuesta = true;
+                Console.WriteLine("Moneda guardada con exito");
             }
+            return respuesta = true;
         }
         public bool EliminarMoneda(Monedas Mon)
         {
@@ -88,7 +89,7 @@ namespace ProyectoAllphoneSF.LOGICA {
             {
                 conexion.Open();
 
-                string query = $"UPDATE Monedas SET MonedaName = @MonedaName WHERE MonedaID = @MonedaID";
+                string query = $"UPDATE Monedas SET Moneda = @MonedaName WHERE MonedaID = @MonedaID";
                 SQLiteCommand cmd = new SQLiteCommand(query, conexion);
 
                 cmd.Parameters.Add(new SQLiteParameter("@MonedaID", Mon.MonedaID));
@@ -105,7 +106,7 @@ namespace ProyectoAllphoneSF.LOGICA {
             }
             return respuesta=true;
         }
-        public List<Monedas> ListarMoneda(Monedas mon)
+        public List<Monedas> ListarMoneda()
         {
 
             List<Monedas> DatosMonedas = new List<Monedas>();
@@ -114,7 +115,7 @@ namespace ProyectoAllphoneSF.LOGICA {
             {
                 conexion.Open();
 
-                string query = "SELECT MonedaID,MonedaName";
+                string query = "SELECT MonedaID, Moneda FROM Monedas";
 
 
                 SQLiteCommand cmd = new SQLiteCommand(query, conexion);
@@ -129,7 +130,7 @@ namespace ProyectoAllphoneSF.LOGICA {
                         {
 
                             MonedaID = int.Parse(reader["MonedaID"].ToString()),
-                            MonedaName = reader["MonedaName"].ToString(),
+                            MonedaName = reader["Moneda"].ToString(),
                         });
 
                     }

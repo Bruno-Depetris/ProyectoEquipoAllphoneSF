@@ -64,6 +64,7 @@ namespace ProyectoAllphoneSF.LOGICA {
             bool respuesta = false;
 
             using (SQLiteConnection conexion = new SQLiteConnection(cadena)) {
+
                 conexion.Open();
 
 
@@ -114,40 +115,6 @@ namespace ProyectoAllphoneSF.LOGICA {
             }
             return respuesta = true;
         }
-
-        public List<Productos> ListarCliente(Productos produc) {
-
-            List<Productos> DatosProductos = new List<Productos>();
-
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena)) {
-                conexion.Open();
-
-                string query = "SELECT ProductoID,Nombre,TipoID,PrecioCosto,PrecioVenta,Stock";
-
-
-                SQLiteCommand cmd = new SQLiteCommand(query, conexion);
-
-                using (SQLiteDataReader reader = cmd.ExecuteReader()) {
-
-                    while (reader.Read()) {
-
-                        DatosProductos.Add(new Productos() {
-
-                            ProductoID = int.Parse(reader["ProductoID"].ToString()),
-                            Nombre = reader["Nombre"].ToString(),
-                            TipoID = int.Parse(reader["TipoID"].ToString()),
-                            PrecioCosto = decimal.Parse(reader["PrecioCosto"].ToString()),
-                            PrecioVenta = decimal.Parse(reader["PrecioVenta"].ToString()),
-                            Stock = int.Parse(reader["Stock"].ToString())
-                        });
-
-                    }
-
-                    return DatosProductos;
-
-                }
-            }
-        }
     }
-    
+
 }

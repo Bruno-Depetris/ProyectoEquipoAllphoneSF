@@ -39,14 +39,16 @@ namespace ProyectoAllphoneSF.LOGICA {
                 conexion.Open();
 
 
-                string query = "INSERT INTO Cliente (Nombre,Apellido,Telefono,Email,ZonaID) VALUES (@Nombre,@Apellido,@Telefono,@Email,@ZonaID)";
+                string query = "INSERT INTO Cliente (Nombre,Apellido,Telefono,Email,Direccion,ZonaID) VALUES (@Nombre,@Apellido,@Telefono,@Email,@Direccion,@ZonaID)";
 
                 SQLiteCommand cmd = new SQLiteCommand(query, conexion);
 
                 cmd.Parameters.Add(new SQLiteParameter("@Nombre", cli.Nombre));
                 cmd.Parameters.Add(new SQLiteParameter("@Apellido", cli.Apellido));
                 cmd.Parameters.Add(new SQLiteParameter("@Telefono", cli.Telefono));
+                cmd.Parameters.Add(new SQLiteParameter("@Telefono", cli.Telefono));
                 cmd.Parameters.Add(new SQLiteParameter("@Email", cli.Email));
+                cmd.Parameters.Add(new SQLiteParameter("@Direccion", cli.Direccion));
                 cmd.Parameters.Add(new SQLiteParameter("@ZonaID", cli.ZonaID));
 
 
@@ -64,7 +66,7 @@ namespace ProyectoAllphoneSF.LOGICA {
         }
 
 
-       public bool EliminarCliente (Cliente cli) {
+       /*public bool EliminarCliente (Cliente cli) {
             bool respuesta = false;
 
             using (SQLiteConnection conexion = new SQLiteConnection(cadena)) {
@@ -93,9 +95,9 @@ namespace ProyectoAllphoneSF.LOGICA {
             return respuesta = true;
 
 
-        }
+        }*/
 
-        public bool EditarCliente(Cliente cli) {
+        /*public bool EditarCliente(Cliente cli) {
 
             bool respuesta = false; 
 
@@ -126,10 +128,10 @@ namespace ProyectoAllphoneSF.LOGICA {
 
             return respuesta = true;
 
-        }
+        }*/
 
 
-        public List<Cliente> ListarCliente(Cliente cli) {
+        public List<Cliente> ListarCliente() {
 
             List<Cliente> DatosCliente = new List<Cliente>();
 
@@ -163,32 +165,6 @@ namespace ProyectoAllphoneSF.LOGICA {
             }
 
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 
 }
