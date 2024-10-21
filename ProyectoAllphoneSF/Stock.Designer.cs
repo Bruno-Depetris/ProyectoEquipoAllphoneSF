@@ -24,12 +24,11 @@
         /// </summary>
         private void InitializeComponent() {
             this.btn_CargarNuevoProducto = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox_BusquedaNombre = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dateTimePicker_Fecha = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.iconButton_Ordenar = new FontAwesome.Sharp.IconButton();
+            this.comboBox_OrdenarPor = new System.Windows.Forms.ComboBox();
             this.iconButton_BuscarNombre = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -51,15 +50,14 @@
             this.btn_CargarNuevoProducto.UseVisualStyleBackColor = false;
             this.btn_CargarNuevoProducto.Click += new System.EventHandler(this.btn_CargarNuevoProducto_Click);
             // 
-            // textBox1
+            // textBox_BusquedaNombre
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Arboria Book", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(4, 6);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(236, 30);
-            this.textBox1.TabIndex = 42;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox_BusquedaNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox_BusquedaNombre.Font = new System.Drawing.Font("Arboria Book", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_BusquedaNombre.Location = new System.Drawing.Point(4, 6);
+            this.textBox_BusquedaNombre.Name = "textBox_BusquedaNombre";
+            this.textBox_BusquedaNombre.Size = new System.Drawing.Size(236, 30);
+            this.textBox_BusquedaNombre.TabIndex = 42;
             // 
             // label12
             // 
@@ -85,48 +83,30 @@
             this.dataGridView1.TabIndex = 46;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // dateTimePicker_Fecha
-            // 
-            this.dateTimePicker_Fecha.CalendarFont = new System.Drawing.Font("Arboria Book", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker_Fecha.Font = new System.Drawing.Font("Arboria Book", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker_Fecha.Location = new System.Drawing.Point(404, 6);
-            this.dateTimePicker_Fecha.Name = "dateTimePicker_Fecha";
-            this.dateTimePicker_Fecha.Size = new System.Drawing.Size(224, 30);
-            this.dateTimePicker_Fecha.TabIndex = 53;
-            // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.iconButton_Ordenar);
+            this.panel1.Controls.Add(this.comboBox_OrdenarPor);
             this.panel1.Controls.Add(this.iconButton_BuscarNombre);
-            this.panel1.Controls.Add(this.dateTimePicker_Fecha);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.btn_CargarNuevoProducto);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.textBox_BusquedaNombre);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 54);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 396);
             this.panel1.TabIndex = 55;
             // 
-            // iconButton_Ordenar
+            // comboBox_OrdenarPor
             // 
-            this.iconButton_Ordenar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.iconButton_Ordenar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton_Ordenar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton_Ordenar.Font = new System.Drawing.Font("Arboria Book", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton_Ordenar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(191)))), ((int)(((byte)(236)))));
-            this.iconButton_Ordenar.IconChar = FontAwesome.Sharp.IconChar.RankingStar;
-            this.iconButton_Ordenar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(191)))), ((int)(((byte)(236)))));
-            this.iconButton_Ordenar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton_Ordenar.IconSize = 25;
-            this.iconButton_Ordenar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton_Ordenar.Location = new System.Drawing.Point(634, 6);
-            this.iconButton_Ordenar.Name = "iconButton_Ordenar";
-            this.iconButton_Ordenar.Size = new System.Drawing.Size(102, 30);
-            this.iconButton_Ordenar.TabIndex = 55;
-            this.iconButton_Ordenar.Text = "Ordenar";
-            this.iconButton_Ordenar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton_Ordenar.UseVisualStyleBackColor = false;
+            this.comboBox_OrdenarPor.BackColor = System.Drawing.Color.White;
+            this.comboBox_OrdenarPor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_OrdenarPor.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_OrdenarPor.FormattingEnabled = true;
+            this.comboBox_OrdenarPor.Location = new System.Drawing.Point(397, 7);
+            this.comboBox_OrdenarPor.Name = "comboBox_OrdenarPor";
+            this.comboBox_OrdenarPor.Size = new System.Drawing.Size(231, 29);
+            this.comboBox_OrdenarPor.TabIndex = 56;
+            this.comboBox_OrdenarPor.SelectedIndexChanged += new System.EventHandler(this.comboBox_OrdenarPor_SelectedIndexChanged);
             // 
             // iconButton_BuscarNombre
             // 
@@ -147,6 +127,7 @@
             this.iconButton_BuscarNombre.Text = "Buscar";
             this.iconButton_BuscarNombre.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButton_BuscarNombre.UseVisualStyleBackColor = false;
+            this.iconButton_BuscarNombre.Click += new System.EventHandler(this.iconButton_BuscarNombre_Click);
             // 
             // Stock
             // 
@@ -170,12 +151,11 @@
         #endregion
 
         private System.Windows.Forms.Button btn_CargarNuevoProducto;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox_BusquedaNombre;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker_Fecha;
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton iconButton_BuscarNombre;
-        private FontAwesome.Sharp.IconButton iconButton_Ordenar;
+        private System.Windows.Forms.ComboBox comboBox_OrdenarPor;
     }
 }

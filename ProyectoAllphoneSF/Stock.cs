@@ -7,31 +7,45 @@ using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProyectoAllphoneSF {
     public partial class Stock : Form {
-        public Stock() {
 
+        BtnNuevoProducto FormNuevo;
+
+        public Stock() {
             InitializeComponent();
-            
+            FormNuevo = new BtnNuevoProducto(this);
+
+            comboBox_OrdenarPor.Items.Insert(0, "Ordenar Por...");
+            comboBox_OrdenarPor.Items.Insert(1, "Nombre");
+            comboBox_OrdenarPor.Items.Insert(2, "Precio Costo");
+            comboBox_OrdenarPor.Items.Insert(3, "Precio Venta");
+            comboBox_OrdenarPor.Items.Insert(4, "Seccion");
+            comboBox_OrdenarPor.Items.Insert(5, "Stock");
+            comboBox_OrdenarPor .SelectedIndex = 0; 
+
 
         }
+
+        string BuscarPorNombre;
+        string BuscarPorCategorias;
 
         private void Stock_Load(object sender, EventArgs e) {
 
             MostrarDatos();
 
         }
-
-
-
-        private void MostrarDatos() {
+        public void MostrarDatos() {
 
             dataGridView1.DataSource = null;
 
+            
+            
             var datos = ListarProducto.Instancia.ListaProductos();
 
             dataGridView1.DataSource = datos;
@@ -41,18 +55,16 @@ namespace ProyectoAllphoneSF {
 
         }
         private void btn_CargarNuevoProducto_Click(object sender, EventArgs e) {
-            Form formNuevoProducto = new BtnNuevoProducto();
+
+            BtnNuevoProducto formNuevoProducto = new BtnNuevoProducto(this);
+
+            formNuevoProducto.Owner = this;
+            formNuevoProducto.TopMost = true; 
             formNuevoProducto.ShowDialog();
+
+
+            MostrarDatos();
         }
-
-        private void button_BuscarPorProducto_Click(object sender, EventArgs e) {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e) {
-
-        }
-
         private void ConfigurarColumnas() {
             // Configurar el orden de las columnas de botones para que estén al final
             dataGridView1.Columns["Edit"].DisplayIndex = 8;
@@ -69,11 +81,6 @@ namespace ProyectoAllphoneSF {
 
             // Ajustar la altura de las filas automáticamente
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-
-
-
-
-
 
 
         }
@@ -159,27 +166,24 @@ namespace ProyectoAllphoneSF {
             var PrecioVenta = seleccionarRow.Cells[7].Value;
             var Stock = seleccionarRow.Cells[8].Value;
 
-            
             Productos prod = new Productos() {
-                ProductoID = Convert.ToInt32(ProductoID), // Convertir a int si es un número
+                ProductoID = Convert.ToInt32(ProductoID), 
                 Nombre = Nombre.ToString(),
                 TipoID = Convert.ToInt32(TipoID),
-                PrecioCosto = Convert.ToDecimal(PrecioCosto), // Convertir a decimal
+                PrecioCosto = Convert.ToDecimal(PrecioCosto), 
                 PrecioVenta = Convert.ToDecimal(PrecioVenta),
-                Stock = Convert.ToInt32(Stock) // Convertir a int
-                
+                Stock = Convert.ToInt32(Stock) 
             };
 
-            bool estado = LogicaProducto.Instancia.EditarProducto(prod);
 
-            if (estado) {
-                List<Productos> EnviarLista = new List<Productos>();
-                
-                
-            }
+            FormNuevo.EditarDatos(prod);
+
+            FormNuevo.Owner = this;
+            FormNuevo.TopMost = true; // Forzar que el formulario esté al frente
+            FormNuevo.ShowDialog();
+
 
         }
-
         private void BorrarFila(int rowIndex) {
             var seleccionarRow = dataGridView1.Rows[rowIndex];
 
@@ -207,24 +211,41 @@ namespace ProyectoAllphoneSF {
                 return;
             }
         }
-
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e) {
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0) {
-
                 string columnName = dataGridView1.Columns[e.ColumnIndex].Name;
 
                 switch (columnName) {
                    case "Edit":
                         EditarFila(e.RowIndex);
-
                         break;
                     case "Delete":
                         BorrarFila(e.RowIndex);
-
                         break;
 
                 }
             }
+        }
+
+        private void iconButton_BuscarNombre_Click(object sender, EventArgs e) {
+            if (string.IsNullOrEmpty(textBox_BusquedaNombre.Text)) {
+                MessageBox.Show("Complete el campo antes de continuar","ADVERTENCIA",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+            }
+            BuscarPorNombre = textBox_BusquedaNombre.Text;
+            var productosOrdenados = ListarProducto.Instancia.ListaProductosConOrden("Nombre", BuscarPorNombre);
+
+            dataGridView1.DataSource = productosOrdenados;
+        }
+
+        private void comboBox_OrdenarPor_SelectedIndexChanged(object sender, EventArgs e) {
+
+            BuscarPorCategorias = comboBox_OrdenarPor.Text;
+            dataGridView1.DataSource = null;
+            var productosOrdenados = ListarProducto.Instancia.ListaProductosConOrden(BuscarPorCategorias, BuscarPorNombre);
+
+            dataGridView1.DataSource = productosOrdenados;
+            AgregarColumnasBotones();
+            ConfigurarColumnas();
         }
     }
 }

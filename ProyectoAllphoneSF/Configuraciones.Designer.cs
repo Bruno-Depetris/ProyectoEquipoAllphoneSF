@@ -37,6 +37,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.textBox_TasaInteres = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -143,6 +144,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel2.Controls.Add(this.textBox_TasaInteres);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
@@ -165,6 +167,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1000, 286);
             this.panel2.TabIndex = 60;
+            // 
+            // textBox_TasaInteres
+            // 
+            this.textBox_TasaInteres.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox_TasaInteres.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_TasaInteres.Font = new System.Drawing.Font("Arboria Book", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_TasaInteres.Location = new System.Drawing.Point(426, 38);
+            this.textBox_TasaInteres.Name = "textBox_TasaInteres";
+            this.textBox_TasaInteres.Size = new System.Drawing.Size(63, 33);
+            this.textBox_TasaInteres.TabIndex = 63;
             // 
             // label6
             // 
@@ -202,7 +214,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.label4.Location = new System.Drawing.Point(327, 20);
+            this.label4.Location = new System.Drawing.Point(249, 20);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(86, 17);
             this.label4.TabIndex = 60;
@@ -216,7 +228,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.label3.Location = new System.Drawing.Point(88, 18);
+            this.label3.Location = new System.Drawing.Point(85, 20);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 17);
             this.label3.TabIndex = 59;
@@ -252,6 +264,7 @@
             this.dataGridView_Zona.Name = "dataGridView_Zona";
             this.dataGridView_Zona.Size = new System.Drawing.Size(240, 150);
             this.dataGridView_Zona.TabIndex = 11;
+            this.dataGridView_Zona.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Zona_CellContentClick);
             // 
             // textBox_Zona
             // 
@@ -337,6 +350,7 @@
             this.dataGridView_Seccion.Name = "dataGridView_Seccion";
             this.dataGridView_Seccion.Size = new System.Drawing.Size(240, 150);
             this.dataGridView_Seccion.TabIndex = 6;
+            this.dataGridView_Seccion.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Seccion_CellContentClick);
             // 
             // dataGridView_MediosPago
             // 
@@ -345,6 +359,7 @@
             this.dataGridView_MediosPago.Name = "dataGridView_MediosPago";
             this.dataGridView_MediosPago.Size = new System.Drawing.Size(240, 150);
             this.dataGridView_MediosPago.TabIndex = 5;
+            this.dataGridView_MediosPago.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_MediosPago_CellContentClick);
             // 
             // dataGridView_Monedas
             // 
@@ -353,6 +368,7 @@
             this.dataGridView_Monedas.Name = "dataGridView_Monedas";
             this.dataGridView_Monedas.Size = new System.Drawing.Size(240, 150);
             this.dataGridView_Monedas.TabIndex = 4;
+            this.dataGridView_Monedas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Monedas_CellContentClick);
             // 
             // textBox_Seccion
             // 
@@ -372,7 +388,7 @@
             this.textBox_MediosPago.Font = new System.Drawing.Font("Arboria Book", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_MediosPago.Location = new System.Drawing.Point(249, 38);
             this.textBox_MediosPago.Name = "textBox_MediosPago";
-            this.textBox_MediosPago.Size = new System.Drawing.Size(240, 33);
+            this.textBox_MediosPago.Size = new System.Drawing.Size(171, 33);
             this.textBox_MediosPago.TabIndex = 2;
             // 
             // textBox_Monedas
@@ -407,6 +423,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Configuraciones";
             this.Text = "Configuraciones";
+            this.Load += new System.EventHandler(this.Configuraciones_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -446,5 +463,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox_TasaInteres;
     }
 }

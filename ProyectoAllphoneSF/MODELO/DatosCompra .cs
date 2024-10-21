@@ -15,6 +15,7 @@ namespace ProyectoAllphoneSF.MODELO {
         public DateTime Fecha {  get; set; }
         public int MonedaID { get; set; }
         public int Cantidad {  get; set; }
+        public int Cuotas { get; set; }
         public decimal TotalVenta { get; set; }    
     }
 }

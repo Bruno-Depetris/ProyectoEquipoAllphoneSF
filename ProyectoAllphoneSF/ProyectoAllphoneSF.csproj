@@ -36,6 +36,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.Cryptography.2.4.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -44,6 +47,9 @@
     </Reference>
     <Reference Include="FontAwesome.Sharp, Version=6.6.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.6.6.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.4, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.4\lib\net461\itextsharp.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -132,6 +138,7 @@
     <Compile Include="GradienteButtonTop.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="LOGICA\ListarClienteCompra.cs" />
     <Compile Include="LOGICA\ListarProducto.cs" />
     <Compile Include="LOGICA\LogicaCliente.cs" />
     <Compile Include="LOGICA\LogicaDatosCompra.cs" />
@@ -144,6 +151,7 @@
     <Compile Include="MODELO\Cliente.cs" />
     <Compile Include="MODELO\DatosCompra .cs" />
     <Compile Include="MODELO\FormaPago .cs" />
+    <Compile Include="MODELO\ListarCompra.cs" />
     <Compile Include="MODELO\Monedas .cs" />
     <Compile Include="MODELO\MovimientosCaja .cs" />
     <Compile Include="MODELO\ProductoConTipo .cs" />
@@ -223,22 +231,7 @@
   <ItemGroup>
     <Content Include="bin\Debug\System.Data.SQLite.Linq.dll" />
     <Content Include="bin\Debug\System.Data.SQLite.xml" />
-    <Content Include="IMG\caja-registradora %281%29.png" />
-    <Content Include="IMG\Captura de pantalla 2024-10-05 030139 %281%29 %281%29.png" />
-    <Content Include="IMG\Captura de pantalla 2024-10-05 030139 %281%29.png" />
-    <Content Include="IMG\Captura de pantalla 2024-10-05 030139.png" />
-    <Content Include="IMG\cerrar.png" />
-    <Content Include="IMG\clientes.png" />
-    <Content Include="IMG\compras.png" />
-    <Content Include="IMG\configuraciones %281%29 %281%29.png" />
-    <Content Include="IMG\configuraciones %281%29.png" />
-    <Content Include="IMG\configuraciones.png" />
-    <Content Include="IMG\minimazar.png" />
-    <Content Include="IMG\pagos.png" />
-    <Content Include="IMG\producto.png" />
-    <Content Include="IMG\reportes.png" />
-    <Content Include="IMG\venta.png" />
-    <Content Include="IMG\WhatsApp Image 2024-10-04 at 21.03.11.png" />
+    <Content Include="IMG\logo.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Debug\bin\Debug\" />

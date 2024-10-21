@@ -25,9 +25,13 @@ namespace ProyectoAllphoneSF {
             comboBox1.SelectedIndex = 0;
             comboBox2.SelectedIndex = 0;
         }
+
         // ejemplo
         int[] ventasPorMes = { 50, 70, 60, 80, 90, 100, 110, 120, 140, 230, 310, 550 };
         private void ConfigurarGraficoVentas(int[] ventasPorMes)
+
+        private void CrearGraficoDona()
+
         {
             // Limpiar las series anteriores del gráfico
             chart1.Series.Clear();

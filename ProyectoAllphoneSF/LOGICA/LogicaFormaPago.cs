@@ -43,12 +43,12 @@ namespace ProyectoAllphoneSF.LOGICA
                 conexion.Open();
 
 
-                string query = "INSERT INTO FormaPago (MetodoPago,Descuento) VALUES (@MetodoPago,@Descuento)";
+                string query = "INSERT INTO FormaPago (MetodoPago,TasaInteres) VALUES (@MetodoPago,@TasaInteres)";
 
                 SQLiteCommand cmd = new SQLiteCommand(query, conexion);
 
                 cmd.Parameters.Add(new SQLiteParameter("@MetodoPago",forma.Metodopago));
-                cmd.Parameters.Add(new SQLiteParameter("@Descuento", forma.Descuento));
+                cmd.Parameters.Add(new SQLiteParameter("@TasaInteres", forma.TasaInteres));
 
                 if (cmd.ExecuteNonQuery() < 1)
                 {
@@ -88,28 +88,7 @@ namespace ProyectoAllphoneSF.LOGICA
             }
             return respuesta = true;
         }
-        public bool EditarFormaPago(FormaPago forma)
-        {
-            bool respuesta = false;
-
-            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
-            {
-                conexion.Open();
-
-                string query = $"UPDATE FormaPago SET MetodoPago = @MetodoPago, Descuento = @Descuento WHERE FormaPagoID = @FormaPagoID";
-                SQLiteCommand cmd = new SQLiteCommand(query, conexion);              
-
-                if (cmd.ExecuteNonQuery() < 1)
-                {
-                    Console.WriteLine("Error Logica EDITAR FORMA DE PAGO");
-                    return respuesta;
-                }
-
-                Console.WriteLine("Forma de Pago Editada con EXITO");
-
-            }
-            return respuesta = true;
-        }
+     
         public List<FormaPago> ListarFormaPago()
         {
 
@@ -119,7 +98,7 @@ namespace ProyectoAllphoneSF.LOGICA
             {
                 conexion.Open();
 
-                string query = "SELECT FormaPagoID,MetodoPago,Descuento FROM FormaPago";
+                string query = "SELECT FormaPagoID,MetodoPago,TasaInteres FROM FormaPago";
 
 
                 SQLiteCommand cmd = new SQLiteCommand(query, conexion);
@@ -135,7 +114,7 @@ namespace ProyectoAllphoneSF.LOGICA
 
                             FormaPagoID = int.Parse(reader["FormaPagoID"].ToString()),
                             Metodopago = reader["MetodoPago"].ToString(),
-                            Descuento = decimal.Parse(reader["Descuento"].ToString()),
+                            TasaInteres = decimal.Parse(reader["TasaInteres"].ToString()),
                         });
 
                     }
