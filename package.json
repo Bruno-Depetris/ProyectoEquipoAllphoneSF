@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "@electron-forge/maker-squirrel": "^7.5.0"
+  }
+}
