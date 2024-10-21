@@ -17,39 +17,93 @@ using System.Windows.Forms.DataVisualization.Charting;
 
 namespace ProyectoAllphoneSF {
     public partial class DashBoard : Form {
-        
-        public DashBoard()
-        {
+
+        public DashBoard() {
             InitializeComponent();
-            CrearGraficoDona();
+            ConfigurarGraficoVentas(ventasPorMes);
+
         }
-        private void CrearGraficoDona()
-        {
+        // ejemplo
+        int[] ventasPorMes = { 50, 70, 60, 80, 90, 100, 110, 120, 140, 230, 310, 550 };
+        private void ConfigurarGraficoVentas(int[] ventasPorMes) {
+            // Limpiar las series anteriores del gráfico
+            chart1.Series.Clear();
+            chart1.Titles.Clear();
+            chart1.Titles.Add("Ventas de Productos en el Año");
 
-            // Crear una nueva serie de datos
-            Series series = new Series("Datos");
+            // Crear una nueva serie del tipo Spline
+            var series = new System.Windows.Forms.DataVisualization.Charting.Series("Ventas");
+            series.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series.BorderWidth = 5; // Ajustamos el grosor de la línea
 
-            // Definir el tipo de gráfico (Dona)
-            series.ChartType = SeriesChartType.Doughnut;
+            series.IsValueShownAsLabel = true;
+            series.LabelForeColor = Color.Black;
+            series.MarkerSize = 13;
+            series.MarkerStyle = MarkerStyle.Circle;
+            series.LabelForeColor = Color.White; // Color de los valores en los puntos
 
-            // Agregar datos de ejemplo (enteros)
-            series.Points.AddXY("", 30);
-            series.Points.AddXY("", 20);
-            series.Points.AddXY("", 25);
-            series.Points.AddXY("", 15);
-            series.Points.AddXY("", 10);
 
-            // Agregar la serie al gráfico
-            chart_GraficoDonaVentas.Series.Clear();  // Limpiar las series previas si existen
-            chart_GraficoDonaVentas.Series.Add(series);
+            // Agregar los puntos de datos a la serie
+            for (int i = 0; i < ventasPorMes.Length; i++) {
+                series.Points.AddXY(i + 1, ventasPorMes[i]);
+            }
 
-            // Opcional: Personalizar el gráfico
-            chart_GraficoDonaVentas.Legends.Add(new Legend("Leyenda"));
-            chart_GraficoDonaVentas.Legends["Leyenda"].Docking = Docking.Bottom; 
-          
+            // Añadir la serie al gráfico
+            chart1.Series.Add(series);
+
+            string[] meses = { "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" };
+            chart1.ChartAreas[0].AxisX.CustomLabels.Clear();
+
+            for (int i = 0; i < meses.Length; i++) {
+                chart1.ChartAreas[0].AxisX.CustomLabels.Add(i + 0.5, i + 1.5, meses[i]);
+            }
+
+            chart1.ChartAreas[0].AxisY.Title = "Cant.Vendidos";
+            // Cambiar color de las etiquetas y títulos de los ejes a blanco
+            chart1.ChartAreas[0].AxisX.LabelStyle.ForeColor = Color.White; // Nombres de los meses en blanco
+            chart1.ChartAreas[0].AxisY.LabelStyle.ForeColor = Color.White; // Números del eje Y en blanco
+            chart1.ChartAreas[0].AxisX.TitleForeColor = Color.White; // Título del eje X en blanco
+            chart1.ChartAreas[0].AxisY.TitleForeColor = Color.White; // Título del eje Y en blanco
+
+
+
+
+
+
         }
+
+
+
 
         private void label6_Click(object sender, EventArgs e) {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e) {
+
+        }
+
+        private void lbl_valor_stok_Click(object sender, EventArgs e) {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e) {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e) {
+
+        }
+
+        private void label__total_productos_Click(object sender, EventArgs e) {
+
+        }
+
+        private void label__Valor_stock_Click(object sender, EventArgs e) {
+
+        }
+
+        private void label__Ganancias_mes_Click(object sender, EventArgs e) {
 
         }
     }
