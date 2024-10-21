@@ -31,7 +31,7 @@ namespace ProyectoAllphoneSF {
             try {
                 SQLiteConnection conexion = new SQLiteConnection(cadena);
                 conexion.Open();
-
+                //cree
                 respuesta = true;
 
                 conexion.Close();
