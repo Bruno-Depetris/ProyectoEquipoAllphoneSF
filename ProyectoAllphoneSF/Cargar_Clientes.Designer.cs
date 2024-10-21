@@ -196,7 +196,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(201, 59);
+            this.label5.Location = new System.Drawing.Point(192, 54);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(67, 21);
             this.label5.TabIndex = 35;
@@ -206,7 +206,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(26, 59);
+            this.label6.Location = new System.Drawing.Point(14, 54);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 21);
             this.label6.TabIndex = 34;
@@ -267,7 +267,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(421, 450);
+            this.panel1.Size = new System.Drawing.Size(417, 450);
             this.panel1.TabIndex = 53;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -295,7 +295,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(267, 289);
+            this.label4.Location = new System.Drawing.Point(262, 289);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 21);
             this.label4.TabIndex = 56;
@@ -307,9 +307,9 @@
             this.comboBox_Cantidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_Cantidad.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_Cantidad.FormattingEnabled = true;
-            this.comboBox_Cantidad.Location = new System.Drawing.Point(345, 286);
+            this.comboBox_Cantidad.Location = new System.Drawing.Point(340, 286);
             this.comboBox_Cantidad.Name = "comboBox_Cantidad";
-            this.comboBox_Cantidad.Size = new System.Drawing.Size(50, 29);
+            this.comboBox_Cantidad.Size = new System.Drawing.Size(55, 29);
             this.comboBox_Cantidad.TabIndex = 10;
             this.comboBox_Cantidad.SelectedIndexChanged += new System.EventHandler(this.comboBox_Cantidad_SelectedIndexChanged);
             // 
@@ -340,7 +340,7 @@
             this.textBox_Cotizacion.BackColor = System.Drawing.Color.White;
             this.textBox_Cotizacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_Cotizacion.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Cotizacion.Location = new System.Drawing.Point(167, 287);
+            this.textBox_Cotizacion.Location = new System.Drawing.Point(155, 287);
             this.textBox_Cotizacion.Name = "textBox_Cotizacion";
             this.textBox_Cotizacion.Size = new System.Drawing.Size(101, 29);
             this.textBox_Cotizacion.TabIndex = 9;
@@ -381,7 +381,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(421, 0);
+            this.panel2.Location = new System.Drawing.Point(417, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(2, 450);
             this.panel2.TabIndex = 54;
@@ -394,9 +394,9 @@
             this.panel3.Controls.Add(this.dataGridView1);
             this.panel3.Controls.Add(this.gradientPanel1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(423, 0);
+            this.panel3.Location = new System.Drawing.Point(419, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(577, 450);
+            this.panel3.Size = new System.Drawing.Size(581, 450);
             this.panel3.TabIndex = 55;
             // 
             // dateTimePicker_Fecha
@@ -439,13 +439,13 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(16, 59);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(549, 379);
+            this.dataGridView1.Size = new System.Drawing.Size(553, 379);
             this.dataGridView1.TabIndex = 50;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // gradientPanel1
             // 
-            this.gradientPanel1.ColorLeft = System.Drawing.Color.Silver;
+            this.gradientPanel1.ColorLeft = System.Drawing.Color.Gray;
             this.gradientPanel1.ColorRight = System.Drawing.Color.Empty;
             this.gradientPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.gradientPanel1.Location = new System.Drawing.Point(0, 0);

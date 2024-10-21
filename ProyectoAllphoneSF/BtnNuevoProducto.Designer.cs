@@ -60,7 +60,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(23, 81);
+            this.label6.Location = new System.Drawing.Point(14, 54);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(81, 25);
             this.label6.TabIndex = 35;
@@ -70,7 +70,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(329, 81);
+            this.label1.Location = new System.Drawing.Point(318, 54);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 25);
             this.label1.TabIndex = 36;
@@ -80,7 +80,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(23, 143);
+            this.label2.Location = new System.Drawing.Point(14, 124);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(115, 25);
             this.label2.TabIndex = 37;
@@ -90,7 +90,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(329, 143);
+            this.label3.Location = new System.Drawing.Point(318, 122);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(116, 25);
             this.label3.TabIndex = 38;
@@ -100,7 +100,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(23, 204);
+            this.label4.Location = new System.Drawing.Point(14, 189);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(88, 25);
             this.label4.TabIndex = 39;
@@ -111,7 +111,7 @@
             this.textBox_Nombre.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBox_Nombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_Nombre.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Nombre.Location = new System.Drawing.Point(19, 96);
+            this.textBox_Nombre.Location = new System.Drawing.Point(19, 82);
             this.textBox_Nombre.Name = "textBox_Nombre";
             this.textBox_Nombre.Size = new System.Drawing.Size(292, 33);
             this.textBox_Nombre.TabIndex = 42;
@@ -121,7 +121,7 @@
             this.textBox_PrecioCosto.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBox_PrecioCosto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_PrecioCosto.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_PrecioCosto.Location = new System.Drawing.Point(19, 158);
+            this.textBox_PrecioCosto.Location = new System.Drawing.Point(19, 150);
             this.textBox_PrecioCosto.Name = "textBox_PrecioCosto";
             this.textBox_PrecioCosto.Size = new System.Drawing.Size(292, 33);
             this.textBox_PrecioCosto.TabIndex = 44;
@@ -131,7 +131,7 @@
             this.textBox_PrecioVenta.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBox_PrecioVenta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_PrecioVenta.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_PrecioVenta.Location = new System.Drawing.Point(323, 158);
+            this.textBox_PrecioVenta.Location = new System.Drawing.Point(323, 150);
             this.textBox_PrecioVenta.Name = "textBox_PrecioVenta";
             this.textBox_PrecioVenta.Size = new System.Drawing.Size(315, 33);
             this.textBox_PrecioVenta.TabIndex = 45;
@@ -181,7 +181,7 @@
             this.comboBox_Tipo.BackColor = System.Drawing.Color.WhiteSmoke;
             this.comboBox_Tipo.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_Tipo.FormattingEnabled = true;
-            this.comboBox_Tipo.Location = new System.Drawing.Point(323, 95);
+            this.comboBox_Tipo.Location = new System.Drawing.Point(323, 81);
             this.comboBox_Tipo.Name = "comboBox_Tipo";
             this.comboBox_Tipo.Size = new System.Drawing.Size(315, 33);
             this.comboBox_Tipo.TabIndex = 50;

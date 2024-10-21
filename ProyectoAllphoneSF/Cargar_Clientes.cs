@@ -210,10 +210,9 @@ namespace ProyectoAllphoneSF {
                 nuevaCompra.TotalVenta = ((precioProducto * cantidad) * CotizacionMoneda) * (1 + tasaInteres / 100);
                 nuevaCompra.Cuotas = cuotas;
                 
-                
+                LogicaDatosCompra.Instancia.CargarCompra(nuevaCompra);
 
-                 LogicaDatosCompra.Instancia.CargarCompra(nuevaCompra);
-                
+
                 return respuesta = true;
                 
                
@@ -222,7 +221,7 @@ namespace ProyectoAllphoneSF {
                 return respuesta;
             }
 
-
+            
         }
         private void RestaurarInputs() {
             textBox_Nombre.Text = string.Empty;

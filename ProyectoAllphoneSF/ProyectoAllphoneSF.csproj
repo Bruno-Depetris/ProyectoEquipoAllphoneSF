@@ -140,6 +140,7 @@
     </Compile>
     <Compile Include="LOGICA\ListarClienteCompra.cs" />
     <Compile Include="LOGICA\ListarProducto.cs" />
+    <Compile Include="LOGICA\LogicaAcumulativo.cs" />
     <Compile Include="LOGICA\LogicaCliente.cs" />
     <Compile Include="LOGICA\LogicaDatosCompra.cs" />
     <Compile Include="LOGICA\LogicaFormaPago.cs" />
@@ -147,9 +148,11 @@
     <Compile Include="LOGICA\LogicaProducto.cs" />
     <Compile Include="LOGICA\LogicaTipoProducto.cs" />
     <Compile Include="LOGICA\LogicaZona.cs" />
+    <Compile Include="MODELO\Acumulativos.cs" />
     <Compile Include="MODELO\Caja .cs" />
     <Compile Include="MODELO\Cliente.cs" />
     <Compile Include="MODELO\DatosCompra .cs" />
+    <Compile Include="MODELO\Estadisticas.cs" />
     <Compile Include="MODELO\FormaPago .cs" />
     <Compile Include="MODELO\ListarCompra.cs" />
     <Compile Include="MODELO\Monedas .cs" />

@@ -23,7 +23,7 @@ namespace ProyectoAllphoneSF {
             ConfigurarGraficoVentas(ventasPorMes);
 
         }
-        // ejemplo
+        
         int[] ventasPorMes = { 50, 70, 60, 80, 90, 100, 110, 120, 140, 230, 310, 550 };
         private void ConfigurarGraficoVentas(int[] ventasPorMes) {
             // Limpiar las series anteriores del gráfico
@@ -31,10 +31,10 @@ namespace ProyectoAllphoneSF {
             chart1.Titles.Clear();
             chart1.Titles.Add("Ventas de Productos en el Año");
 
-            // Crear una nueva serie del tipo Spline
+            
             var series = new System.Windows.Forms.DataVisualization.Charting.Series("Ventas");
             series.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series.BorderWidth = 5; // Ajustamos el grosor de la línea
+            series.BorderWidth = 2; // Ajustamos el grosor de la línea
 
             series.IsValueShownAsLabel = true;
             series.LabelForeColor = Color.Black;
@@ -43,12 +43,12 @@ namespace ProyectoAllphoneSF {
             series.LabelForeColor = Color.White; // Color de los valores en los puntos
 
 
-            // Agregar los puntos de datos a la serie
+  
             for (int i = 0; i < ventasPorMes.Length; i++) {
                 series.Points.AddXY(i + 1, ventasPorMes[i]);
             }
 
-            // Añadir la serie al gráfico
+            
             chart1.Series.Add(series);
 
             string[] meses = { "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" };
@@ -64,46 +64,6 @@ namespace ProyectoAllphoneSF {
             chart1.ChartAreas[0].AxisY.LabelStyle.ForeColor = Color.White; // Números del eje Y en blanco
             chart1.ChartAreas[0].AxisX.TitleForeColor = Color.White; // Título del eje X en blanco
             chart1.ChartAreas[0].AxisY.TitleForeColor = Color.White; // Título del eje Y en blanco
-
-
-
-
-
-
-        }
-
-
-
-
-        private void label6_Click(object sender, EventArgs e) {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e) {
-
-        }
-
-        private void lbl_valor_stok_Click(object sender, EventArgs e) {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e) {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e) {
-
-        }
-
-        private void label__total_productos_Click(object sender, EventArgs e) {
-
-        }
-
-        private void label__Valor_stock_Click(object sender, EventArgs e) {
-
-        }
-
-        private void label__Ganancias_mes_Click(object sender, EventArgs e) {
 
         }
     }
