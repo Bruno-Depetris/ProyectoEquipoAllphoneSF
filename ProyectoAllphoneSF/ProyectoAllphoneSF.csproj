@@ -231,11 +231,10 @@
   <ItemGroup>
     <Content Include="bin\Debug\System.Data.SQLite.Linq.dll" />
     <Content Include="bin\Debug\System.Data.SQLite.xml" />
-    <Content Include="LOGICA\logo.png" />
+    <Content Include="IMG\logo.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Debug\bin\Debug\" />
-    <Folder Include="IMG\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

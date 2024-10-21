@@ -70,7 +70,7 @@
             this.comboBox_MedioPago.Location = new System.Drawing.Point(139, 321);
             this.comboBox_MedioPago.Name = "comboBox_MedioPago";
             this.comboBox_MedioPago.Size = new System.Drawing.Size(256, 29);
-            this.comboBox_MedioPago.TabIndex = 7;
+            this.comboBox_MedioPago.TabIndex = 11;
             this.comboBox_MedioPago.SelectedIndexChanged += new System.EventHandler(this.comboBox_MedioPago_SelectedIndexChanged);
             // 
             // Button_ConcretarVenta
@@ -85,7 +85,7 @@
             this.Button_ConcretarVenta.Location = new System.Drawing.Point(139, 393);
             this.Button_ConcretarVenta.Name = "Button_ConcretarVenta";
             this.Button_ConcretarVenta.Size = new System.Drawing.Size(222, 45);
-            this.Button_ConcretarVenta.TabIndex = 47;
+            this.Button_ConcretarVenta.TabIndex = 13;
             this.Button_ConcretarVenta.Text = "Concretar Venta";
             this.Button_ConcretarVenta.UseVisualStyleBackColor = false;
             this.Button_ConcretarVenta.Click += new System.EventHandler(this.Button_ConcretarVenta_Click);
@@ -99,7 +99,7 @@
             this.comboBox_Producto.Location = new System.Drawing.Point(88, 211);
             this.comboBox_Producto.Name = "comboBox_Producto";
             this.comboBox_Producto.Size = new System.Drawing.Size(307, 29);
-            this.comboBox_Producto.TabIndex = 6;
+            this.comboBox_Producto.TabIndex = 7;
             this.comboBox_Producto.SelectedIndexChanged += new System.EventHandler(this.comboBox_Producto_SelectedIndexChanged);
             // 
             // textBox_Email
@@ -110,7 +110,7 @@
             this.textBox_Email.Location = new System.Drawing.Point(88, 176);
             this.textBox_Email.Name = "textBox_Email";
             this.textBox_Email.Size = new System.Drawing.Size(307, 29);
-            this.textBox_Email.TabIndex = 5;
+            this.textBox_Email.TabIndex = 6;
             // 
             // textBox_Telefono
             // 
@@ -120,7 +120,7 @@
             this.textBox_Telefono.Location = new System.Drawing.Point(88, 141);
             this.textBox_Telefono.Name = "textBox_Telefono";
             this.textBox_Telefono.Size = new System.Drawing.Size(307, 29);
-            this.textBox_Telefono.TabIndex = 4;
+            this.textBox_Telefono.TabIndex = 5;
             // 
             // textBox_Apellido
             // 
@@ -233,7 +233,7 @@
             this.comboBox_Zona.Location = new System.Drawing.Point(315, 106);
             this.comboBox_Zona.Name = "comboBox_Zona";
             this.comboBox_Zona.Size = new System.Drawing.Size(80, 29);
-            this.comboBox_Zona.TabIndex = 3;
+            this.comboBox_Zona.TabIndex = 4;
             this.comboBox_Zona.SelectedIndexChanged += new System.EventHandler(this.comboBox_Zona_SelectedIndexChanged);
             // 
             // panel1
@@ -279,7 +279,7 @@
             this.textBox_Direccion.Location = new System.Drawing.Point(92, 106);
             this.textBox_Direccion.Name = "textBox_Direccion";
             this.textBox_Direccion.Size = new System.Drawing.Size(166, 29);
-            this.textBox_Direccion.TabIndex = 58;
+            this.textBox_Direccion.TabIndex = 3;
             // 
             // label13
             // 
@@ -295,7 +295,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(274, 289);
+            this.label4.Location = new System.Drawing.Point(267, 289);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 21);
             this.label4.TabIndex = 56;
@@ -310,7 +310,7 @@
             this.comboBox_Cantidad.Location = new System.Drawing.Point(345, 286);
             this.comboBox_Cantidad.Name = "comboBox_Cantidad";
             this.comboBox_Cantidad.Size = new System.Drawing.Size(50, 29);
-            this.comboBox_Cantidad.TabIndex = 55;
+            this.comboBox_Cantidad.TabIndex = 10;
             this.comboBox_Cantidad.SelectedIndexChanged += new System.EventHandler(this.comboBox_Cantidad_SelectedIndexChanged);
             // 
             // comboBox_CantCuotas
@@ -322,7 +322,7 @@
             this.comboBox_CantCuotas.Location = new System.Drawing.Point(140, 357);
             this.comboBox_CantCuotas.Name = "comboBox_CantCuotas";
             this.comboBox_CantCuotas.Size = new System.Drawing.Size(256, 29);
-            this.comboBox_CantCuotas.TabIndex = 53;
+            this.comboBox_CantCuotas.TabIndex = 12;
             this.comboBox_CantCuotas.SelectedIndexChanged += new System.EventHandler(this.comboBox_CantCuotas_SelectedIndexChanged);
             // 
             // label3
@@ -343,7 +343,7 @@
             this.textBox_Cotizacion.Location = new System.Drawing.Point(167, 287);
             this.textBox_Cotizacion.Name = "textBox_Cotizacion";
             this.textBox_Cotizacion.Size = new System.Drawing.Size(101, 29);
-            this.textBox_Cotizacion.TabIndex = 52;
+            this.textBox_Cotizacion.TabIndex = 9;
             // 
             // label2
             // 
@@ -364,7 +364,7 @@
             this.comboBox_Moneda.Location = new System.Drawing.Point(139, 252);
             this.comboBox_Moneda.Name = "comboBox_Moneda";
             this.comboBox_Moneda.Size = new System.Drawing.Size(256, 29);
-            this.comboBox_Moneda.TabIndex = 48;
+            this.comboBox_Moneda.TabIndex = 8;
             this.comboBox_Moneda.SelectedIndexChanged += new System.EventHandler(this.comboBox_Moneda_SelectedIndexChanged);
             // 
             // label1

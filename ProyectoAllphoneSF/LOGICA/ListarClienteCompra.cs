@@ -181,15 +181,22 @@ namespace ProyectoAllphoneSF.LOGICA {
                                 documento.AddCreator("AllphoneSF");
                                 documento.AddTitle("Recibo de Compra - AllphoneSF");
 
-                                // Añadir imagen del logo (asegúrate de tener la ruta correcta)
-                                string logoPath = "logo.png";
+                                Console.WriteLine("Base Directory: " + AppDomain.CurrentDomain.BaseDirectory);
+
+
+                                string logoPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\IMG\logo.png");
+
+                                Console.WriteLine("Ruta de la imagen: " + logoPath); // Para verificar
 
                                 if (File.Exists(logoPath)) {
                                     Image logo = Image.GetInstance(logoPath);
                                     logo.Alignment = Element.ALIGN_CENTER;
-                                    logo.ScaleToFit(150f, 150f); // Ajustar tamaño del logo
+                                    logo.ScaleToFit(150f, 150f); 
                                     documento.Add(logo);
+                                } else {
+                                    Console.WriteLine("NO LO ENCONTRE");
                                 }
+
 
                                 // Espacio entre el logo y el contenido
                                 documento.Add(new Paragraph("\n"));
@@ -235,11 +242,19 @@ namespace ProyectoAllphoneSF.LOGICA {
 
                                 // Mensaje final de agradecimiento
                                 Font fontFinal = FontFactory.GetFont(FontFactory.HELVETICA_OBLIQUE, 12);
+
                                 Paragraph mensajeFinal = new Paragraph(
                                     "Esperamos que disfrutes tu compra. ¡Gracias por elegir AllphoneSF!",
                                     fontFinal);
                                 mensajeFinal.Alignment = Element.ALIGN_CENTER;
                                 documento.Add(mensajeFinal);
+
+
+                                Paragraph leyenda = new Paragraph(
+                                    "Comprobante no valido como factura",
+                                    fontFinal);
+                                leyenda.Alignment = Element.ALIGN_CENTER;
+                                documento.Add(leyenda);
 
                                 // Cerrar el documento
                                 documento.Close();
