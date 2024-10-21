@@ -23,6 +23,7 @@ namespace ProyectoAllphoneSF {
             InitializeComponent();
             CrearGraficoDona();
         }
+
         private void CrearGraficoDona()
         {
 
