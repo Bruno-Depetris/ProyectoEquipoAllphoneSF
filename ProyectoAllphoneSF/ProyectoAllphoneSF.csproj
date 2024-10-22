@@ -26,7 +26,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationRevision>15</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -44,13 +44,14 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>2BF679696F9ADA6BAC3029B16A6B1E0C1EBE397C</ManifestCertificateThumbprint>
@@ -196,6 +197,8 @@
     <Compile Include="MovimientoCaja.Designer.cs">
       <DependentUpon>MovimientoCaja.cs</DependentUpon>
     </Compile>
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+    <Compile Include="obj\Release\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Stock.cs">
@@ -231,6 +234,28 @@
     <EmbeddedResource Include="MovimientoCaja.resx">
       <DependentUpon>MovimientoCaja.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\ProyectoAllphoneSF.BtnNuevoProducto.resources" />
+    <EmbeddedResource Include="obj\Debug\ProyectoAllphoneSF.Cargar_Clientes.resources" />
+    <EmbeddedResource Include="obj\Debug\ProyectoAllphoneSF.Configuraciones.resources" />
+    <EmbeddedResource Include="obj\Debug\ProyectoAllphoneSF.DashBoard.resources" />
+    <EmbeddedResource Include="obj\Debug\ProyectoAllphoneSF.Est_Fecha.resources" />
+    <EmbeddedResource Include="obj\Debug\ProyectoAllphoneSF.Est_Monetaria.resources" />
+    <EmbeddedResource Include="obj\Debug\ProyectoAllphoneSF.Est_Zona.resources" />
+    <EmbeddedResource Include="obj\Debug\ProyectoAllphoneSF.FormContenedor.resources" />
+    <EmbeddedResource Include="obj\Debug\ProyectoAllphoneSF.MovimientoCaja.resources" />
+    <EmbeddedResource Include="obj\Debug\ProyectoAllphoneSF.Properties.Resources.resources" />
+    <EmbeddedResource Include="obj\Debug\ProyectoAllphoneSF.Stock.resources" />
+    <EmbeddedResource Include="obj\Release\ProyectoAllphoneSF.BtnNuevoProducto.resources" />
+    <EmbeddedResource Include="obj\Release\ProyectoAllphoneSF.Cargar_Clientes.resources" />
+    <EmbeddedResource Include="obj\Release\ProyectoAllphoneSF.Configuraciones.resources" />
+    <EmbeddedResource Include="obj\Release\ProyectoAllphoneSF.DashBoard.resources" />
+    <EmbeddedResource Include="obj\Release\ProyectoAllphoneSF.Est_Fecha.resources" />
+    <EmbeddedResource Include="obj\Release\ProyectoAllphoneSF.Est_Monetaria.resources" />
+    <EmbeddedResource Include="obj\Release\ProyectoAllphoneSF.Est_Zona.resources" />
+    <EmbeddedResource Include="obj\Release\ProyectoAllphoneSF.FormContenedor.resources" />
+    <EmbeddedResource Include="obj\Release\ProyectoAllphoneSF.MovimientoCaja.resources" />
+    <EmbeddedResource Include="obj\Release\ProyectoAllphoneSF.Properties.Resources.resources" />
+    <EmbeddedResource Include="obj\Release\ProyectoAllphoneSF.Stock.resources" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -243,13 +268,34 @@
     <EmbeddedResource Include="Stock.resx">
       <DependentUpon>Stock.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="bin\Debug\AllphoneSF_BD" />
-    <None Include="bin\Debug\AllphoneSF_BD.db" />
-    <None Include="bin\Debug\AllphoneSF_BD_FILES.db.sqbpro" />
-    <None Include="bin\Release\AllphoneSF_BD" />
-    <None Include="bin\Release\AllphoneSF_BD.db" />
-    <None Include="bin\Release\AllphoneSF_BD_FILES.db.sqbpro" />
-    <None Include="bin\Release\ProyectoAllphoneSF.exe.config" />
+    <None Include="bin\Debug\AllphoneSF_BD">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\AllphoneSF_BD.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\AllphoneSF_BD_FILES.db.sqbpro">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Release\AllphoneSF_BD">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Release\AllphoneSF_BD.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Release\AllphoneSF_BD_FILES.db.sqbpro">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\ProyectoAllphoneSF.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\ProyectoAllphoneSF.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\ProyectoAllphoneSF.csproj.GenerateResource.cache" />
+    <None Include="obj\Release\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Release\ProyectoAllphoneSF.csproj.AssemblyReference.cache" />
+    <None Include="obj\Release\ProyectoAllphoneSF.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Release\ProyectoAllphoneSF.csproj.GenerateResource.cache" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -260,27 +306,41 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="ProyectoAllphoneSF_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Debug\System.Data.SQLite.Linq.dll" />
-    <Content Include="bin\Debug\System.Data.SQLite.xml" />
-    <Content Include="bin\Debug\x64\SQLite.Interop.dll" />
-    <Content Include="bin\Debug\x86\SQLite.Interop.dll" />
+    <Content Include="bin\Debug\System.Data.SQLite.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bin\Debug\x64\SQLite.Interop.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bin\Debug\x86\SQLite.Interop.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="bin\Release\app.publish\ProyectoAllphoneSF.exe" />
-    <Content Include="bin\Release\ProyectoAllphoneSF.exe" />
-    <Content Include="bin\Release\ProyectoAllphoneSF.pdb" />
-    <Content Include="bin\Release\x64\SQLite.Interop.dll" />
-    <Content Include="bin\Release\x86\SQLite.Interop.dll" />
     <Content Include="IMG\logo.png" />
+    <Content Include="obj\Debug\ProyectoAllphoneSF.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\ProyectoAllphoneSF.exe" />
+    <Content Include="obj\Debug\ProyectoAllphoneSF.pdb" />
+    <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="obj\Release\ProyectoAllphoneSF.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Release\ProyectoAllphoneSF.exe" />
+    <Content Include="obj\Release\ProyectoAllphoneSF.pdb" />
+    <Content Include="obj\Release\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="SQLite.Interop.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="x64\SQLite.Interop.dll" />
     <Content Include="x86\SQLite.Interop.dll" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Debug\bin\Debug\" />
+    <Folder Include="bin\Release\x64\" />
+    <Folder Include="bin\Release\x86\" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
